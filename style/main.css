@@ -6,6 +6,6 @@
     font-style: normal;
 }
 
-* {
-	font-family: 'Pretendard-Regular';
+.console-color {
+    background-color: #000000;
 }

@@ -1,0 +1,187 @@
+@import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css');
+
+
+div.cursor-default {
+    animation: bad 0.01s infinite;
+}
+
+div.cursor-pointer {
+    animation: bap 0.01s infinite;
+}
+
+div.cursor-text {
+    cursor: url(../cursor/Beam.cur) 2 2, default;
+}
+
+div.cursor-wait {
+    cursor: url(../cursor/Cursor_3.cur) 2 2, default;
+}
+
+@keyframes bad {
+    0% {
+        cursor: none;
+    }
+
+    50% {
+        cursor: url(../cursor/arrow.cur) 2 2, default;
+    }
+
+    100% {
+        cursor: none;
+    }
+}
+
+@keyframes bap {
+    0% {
+        cursor: none;
+    }
+
+    50% {
+        cursor: url(../cursor/Cursor_15.cur) 8 8, pointer;
+    }
+
+    100% {
+        cursor: none;
+    }
+}
+
+@keyframes mfk {
+    0% {
+        opacity: 0.995;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.curnone {
+    cursor: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-color {
+    background-color: #000000;
+}
+
+.taskbar {
+    height: 28px;
+    background-color: #c0c0c0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-top: ridge 2px #ffffff;
+}
+
+.start {
+    background-color: #c0c0c0;
+    float: left;
+    width: 64px;
+    height: 21px;
+    display: inline-block;
+    padding: 1px 2px;
+    margin-left: 2px;
+    cursor: default;
+    user-select: none;
+}
+
+.startRest {
+    border-top: ridge 2px white;
+    border-left: ridge 2px white;
+    border-bottom: ridge 2px black;
+    border-right: ridge 2px black;
+}
+
+.startimg {
+    margin-top: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
+    width: 21px;
+}
+
+.startfont {
+    font-size: 15px;
+    font-family: 'NeoDunggeunmo';
+    float: left;
+    text-align: left;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.startRest:hover {
+    border-top: ridge 2px #000000;
+    border-left: ridge 2px #000000;
+    border-bottom: ridge 2px #ffffff;
+    border-right: ridge 2px #ffffff;
+}
+
+.start:hover {
+    background-color: #aaaaaa;
+}
+
+.notifications {
+    width: 100px;
+    height: 23px;
+    margin-right: 2px;
+    border-top: inset 2px grey;
+    border-left: inset 2px grey;
+    border-bottom: inset 2px white;
+    border-right: inset 2px white;
+    display: inline-block;
+    float: right;
+}
+
+.desktop {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.screen {
+    background-color: #008080;
+    width: 66.7%;
+    height: 0;
+    padding-bottom: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#sounddisplay {
+    margin-top: 4px;
+    margin-left: 6px;
+    float: left;
+    width: 16px;
+}
+
+#timedisplay {
+    font-family: 'NeoDunggeunmo';
+    font-size: 13px;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+}
+
+
+.dragnull {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
