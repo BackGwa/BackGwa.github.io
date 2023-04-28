@@ -6,6 +6,8 @@ const returnDOS = document.getElementById("returnDOS");
 scope.addEventListener("contextmenu", (e) => {
     e.preventDefault();
 
+    context.classList.add("anime");
+
     const {
         clientX: mouseX,
         clientY: mouseY
@@ -15,6 +17,10 @@ scope.addEventListener("contextmenu", (e) => {
     context.style.left = mouseX + 'px';
 
     context.classList.add("visible");
+
+    setTimeout(function(){
+        context.classList.remove("anime");
+    }, 300)
 
 })
 

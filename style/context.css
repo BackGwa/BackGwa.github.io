@@ -45,6 +45,9 @@
 
 #context.visible {
     display: block;
+}
+
+.anime {
     animation: smt98 0.2s ease-in-out;
 }
 
