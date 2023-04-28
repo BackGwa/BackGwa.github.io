@@ -193,8 +193,8 @@ body {
 #box {
     width: 1px;
     height: 1px;
-    background-color: #00000010;
-    border: #ffffff70 dashed 1px;
+    background-color: #00000000;
+    border: #ffffffAF dashed 1px;
     position: absolute;
     z-index: 1;
     transform: translate(-100%, -100%);
