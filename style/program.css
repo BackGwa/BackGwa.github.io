@@ -36,7 +36,7 @@
 .INFO {
     width: 250px;
     height: 75px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .IMAGE {
@@ -57,7 +57,7 @@
 }
 
 .IMAGE .TITLE {
-    background: #000080;
+    background: #868a8e;
 }
 
 .TITLE .TEXT {

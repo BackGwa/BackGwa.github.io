@@ -90,13 +90,21 @@ document.onmouseup = () => {
 function INFO_over(){
     window_INFO.style.zIndex = '3';
     window_IMAGE.style.zIndex = '2';
-    document.querySelector(".IMAGE .TITLE").style.background = '#868a8e';
-    document.querySelector(".INFO .TITLE").style.background = '#000080';
+    try {
+        document.querySelector(".INFO .TITLE").style.background = '#000080';
+        document.querySelector(".IMAGE .TITLE").style.background = '#868a8e';
+    } catch {
+
+    }
 }
 
 function IMAGE_over(){
     window_IMAGE.style.zIndex = '3';
     window_INFO.style.zIndex = '2';
-    document.querySelector(".INFO .TITLE").style.background = '#868a8e';
-    document.querySelector(".IMAGE .TITLE").style.background = '#000080';
+    try {
+        document.querySelector(".IMAGE .TITLE").style.background = '#000080';
+        document.querySelector(".INFO .TITLE").style.background = '#868a8e';
+    } catch {
+        
+    }
 }
