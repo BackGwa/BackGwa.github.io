@@ -62,15 +62,13 @@ document.onmousemove = (e) => {
 title_INFO.onmousedown = () => {
     windowsDrag = true;
     INFO = true;
-    window_INFO.style.zIndex = '3';
-    window_IMAGE.style.zIndex = '2';
+    INFO_over()
 }
 
 title_IMAGE.onmousedown = () => {
     windowsDrag = true;
     IMAGE = true;
-    window_IMAGE.style.zIndex = '3';
-    window_INFO.style.zIndex = '2';
+    IMAGE_over();
 }
 
 document.onmousedown = (e) => {
@@ -87,4 +85,18 @@ document.onmouseup = () => {
     box.style.width = '0px';
     box.style.height = '0px';
     box.style.opacity = '0.0';
+}
+
+function INFO_over(){
+    window_INFO.style.zIndex = '3';
+    window_IMAGE.style.zIndex = '2';
+    document.querySelector(".IMAGE .TITLE").style.background = '#868a8e';
+    document.querySelector(".INFO .TITLE").style.background = '#000080';
+}
+
+function IMAGE_over(){
+    window_IMAGE.style.zIndex = '3';
+    window_INFO.style.zIndex = '2';
+    document.querySelector(".INFO .TITLE").style.background = '#868a8e';
+    document.querySelector(".IMAGE .TITLE").style.background = '#000080';
 }

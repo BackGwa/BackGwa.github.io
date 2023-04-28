@@ -46,11 +46,18 @@
 }
 
 .TITLE {
-    background: #000080;
     color: #FFF;
     font-family: 'Gulim';
     font-size: 15px;
     padding: 2px;
+}
+
+.INFO .TITLE {
+    background: #000080;
+}
+
+.IMAGE .TITLE {
+    background: #000080;
 }
 
 .TITLE .TEXT {
