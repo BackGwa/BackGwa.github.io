@@ -1,4 +1,5 @@
 const time = document.getElementById('timedisplay');
+const box = document.getElementById("box");
 
 function fullscreen(){
     var elem = document.documentElement;
@@ -14,3 +15,9 @@ const counter = setInterval(function(){
     var options = {timeStyle: 'short'};
     time.innerHTML = today.toLocaleTimeString("ko-kr", options);
 }, 100);
+
+
+document.onmousemove = (e) => {
+    box.style.left = e.pageX + 'px';
+    box.style.top = e.pageY + 'px';
+}

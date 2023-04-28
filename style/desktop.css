@@ -84,6 +84,7 @@ body {
     left: 0px;
     right: 0px;
     border-top: ridge 2px #ffffff;
+    z-index: 2;
 }
 
 .start {
@@ -184,4 +185,17 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none
+}
+
+#box {
+    width: 0px;
+    height: 0px;
+    background-color: #00000005;
+    border: #ffffff55 dashed 1.5px;
+    position: absolute;
+    z-index: 1;
+}
+
+.curz {
+    pointer-events: none;
 }
