@@ -38,26 +38,6 @@
         <!-- Desktop area -->
         <div class="desktop cursor-default" id="desktop">
 
-            <!-- Program Windows -->
-            <div class="program">
-
-                <!-- INFO Windows -->
-                <div class="WINDOW" id="hintdisable">
-                    <div class="TITLE dragnull">
-                        <div class="TEXT">정보</div>
-                        <div class="BUTTON">
-                            <button class="BORDER"></button>
-                            <button class="BORDER"></button>
-                            <button class="BORDER"></button>
-                        </div>
-                    </div>
-                    <div class="DETAIL">
-                        이곳은 아무런 내용 영역입니다.
-                    </div>
-                </div>
-
-            </div>
-
             <!-- Taskbar area -->
             <div class="taskbar cursor-default">
 
@@ -76,15 +56,41 @@
             </div>
         </div>
 
+        <!-- Program Windows -->
+        <div class="program dragnull">
+
+            <!-- INFO Windows -->
+            <div id="hintdisable">
+                <div class="WINDOW cursor-default INFO" id="INFO">
+                    <div class="TITLE" id="INFOTITLE">
+                        <div class="TEXT">정보</div>
+                        <div class="BUTTON">
+                            <button class="BORDER"></button>
+                            <button class="BORDER"></button>
+                            <button class="BORDER"></button>
+                        </div>
+                    </div>
+                    <div class="DETAIL">
+                        이곳에 정보가 삽입됩니다.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <!-- Context Menu -->
         <div id="context" class="dragnull">
             <div class="item" id="_">메뉴 1</div>
             <div class="item" id="_">메뉴 2</div>
-            <div class="cthr"><hr></div>
+            <div class="cthr">
+                <hr>
+            </div>
             <div class="item" id="_">메뉴 1</div>
             <div class="item" id="_">메뉴 2</div>
             <div class="item" id="_">메뉴 3</div>
-            <div class="cthr"><hr></div>
+            <div class="cthr">
+                <hr>
+            </div>
             <div class="item" id="fstoggle">꽉 찬 화면</div>
         </div>
 
