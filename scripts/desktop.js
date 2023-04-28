@@ -5,6 +5,9 @@ const desktop = document.getElementById("desktop");
 const window_INFO = document.getElementById("INFO");
 const title_INFO = document.getElementById("INFOTITLE");
 
+const window_IMAGE = document.getElementById("IMAGE");
+const title_IMAGE = document.getElementById("IMAGETITLE");
+
 const INFOEXIT = document.getElementById("INFOEXIT");
 
 
@@ -13,6 +16,7 @@ let isDragging;
 
 let windowsDrag = false;
 let INFO = false;
+let IMAGE = false;
 
 const counter = setInterval(function(){
     const today = new Date();
@@ -30,6 +34,13 @@ document.onmousemove = (e) => {
         window_INFO.style.top = `${e.pageY}px`;
         window_INFO.style.left = `${e.pageX - 250}px`;
         window_INFO.style.transform = `translate(-50%, -5%)`
+    }
+
+    if (windowsDrag && IMAGE && isDragging) {
+        console.log(`${e.pageX}, ${e.pageY}`);
+        window_IMAGE.style.top = `${e.pageY}px`;
+        window_IMAGE.style.left = `${e.pageX - 250}px`;
+        window_IMAGE.style.transform = `translate(-50%, -5%)`
     }
 
     if (isDragging && e.target.id != 'hintdisable' && !windowsDrag) {
@@ -53,6 +64,11 @@ title_INFO.onmousedown = () => {
     INFO = true;
 }
 
+title_IMAGE.onmousedown = () => {
+    windowsDrag = true;
+    IMAGE = true;
+}
+
 document.onmousedown = (e) => {
     isDragging = true;
     startPosition = [e.clientX, e.clientY];
@@ -63,6 +79,7 @@ document.onmouseup = () => {
     isDragging = false;
     windowsDrag = false;
     INFO = false;
+    IMAGE = false;
     box.style.width = '0px';
     box.style.height = '0px';
     box.style.opacity = '0.0';

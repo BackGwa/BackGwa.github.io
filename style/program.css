@@ -13,11 +13,6 @@
 .WINDOW {
     position: absolute;
 
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
     background: #c0c0c0;
     border-top: ridge 6px #ffffff;
     border-left: ridge 6px #ffffff;
@@ -26,9 +21,26 @@
 
 }
 
+.WINDOW.INFO {
+    top: 50%;
+    left: 50%;
+    transform: translate(-85%, -200%);
+}
+
+.WINDOW.IMAGE {
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -40%);
+}
+
 .INFO {
     width: 250px;
     height: 75px;
+}
+
+.IMAGE {
+    width: 250px;
+    height: 250px;
 }
 
 .TITLE {
