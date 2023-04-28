@@ -36,11 +36,13 @@
 .INFO {
     width: 250px;
     height: 75px;
+    z-index: 2;
 }
 
 .IMAGE {
     width: 250px;
     height: 250px;
+    z-index: 2;
 }
 
 .TITLE {

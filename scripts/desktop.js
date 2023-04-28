@@ -62,11 +62,15 @@ document.onmousemove = (e) => {
 title_INFO.onmousedown = () => {
     windowsDrag = true;
     INFO = true;
+    window_INFO.style.zIndex = '3';
+    window_IMAGE.style.zIndex = '2';
 }
 
 title_IMAGE.onmousedown = () => {
     windowsDrag = true;
     IMAGE = true;
+    window_IMAGE.style.zIndex = '3';
+    window_INFO.style.zIndex = '2';
 }
 
 document.onmousedown = (e) => {
