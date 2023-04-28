@@ -17,7 +17,10 @@
 
 <body class="desktop-color curnone crt">
     <div id="box" class="curz"></div>
+    <div class="effect dragnull"><img src="./image/CRTRound.png" class="crtbox"></div>
     <div class="screen cursor-default">
+        <div class="digital digital1"></div>
+        <div class="digital digital2"></div>
         <div class="desktop cursor-default" id="desktop">
             <div class="taskbar cursor-default">
                 <div class="start startRest cursor-pointer dragnull">
@@ -30,9 +33,11 @@
                 </div>
             </div>
         </div>
-        <div id="context">
-            <div class="item">DOS로 돌아가기</div>
-            <div class="item">최대화로 변경</div>
+        <div id="context" class="dragnull">
+            <div class="item" id="_">_</div>
+            <div class="item" id="returnDOS">DOS로 돌아가기</div>
+            <div class="cthr"><hr></div>
+            <div class="item" id="fstoggle">꽉 찬 화면</div>
         </div>
     </div>
     <script src="./scripts/desktop.js"></script>

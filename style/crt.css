@@ -46,3 +46,19 @@
 .crt {
     text-shadow: #00000055 1px 1px;
 }
+
+.effect {
+    margin: 0;
+    padding: 0;
+}
+
+.crtbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 67.5%;
+    height: 103vh;
+    z-index: 4;
+    pointer-events: none;
+}

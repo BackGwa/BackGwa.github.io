@@ -5,20 +5,14 @@ const desktop = document.getElementById("desktop");
 let startPosition;
 let isDragging;
 
-function fullscreen() {
-    var elem = document.documentElement;
-
-    if (elem.requestFullscreen) elem.requestFullscreen();
-    else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
-    else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
-}
-
-
-const counter = setInterval(function () {
+function timeset() {
     const today = new Date();
     var options = { timeStyle: 'short' };
     time.innerHTML = today.toLocaleTimeString("ko-kr", options);
-}, 100);
+}
+
+timeset()
+const counter = setInterval(timeset(), 10000);
 
 
 document.onmousemove = (e) => {

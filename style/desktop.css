@@ -204,3 +204,46 @@ body {
 .curz {
     pointer-events: none;
 }
+
+.digital {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    z-index: 2;
+    filter: blur(8px);
+}
+
+.digital1 {
+    background: linear-gradient(#ff000090, #00ff0090);
+    animation: downscroll1 0.25s infinite;
+}
+
+
+.digital2 {
+    background: linear-gradient(#00ff0090, #0000ff90);
+    animation: downscroll2 0.35s infinite;
+}
+
+@keyframes downscroll1 {
+    0% {
+        top: 0%;
+    }
+    50% {
+        top: 75%
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes downscroll2 {
+    0% {
+        top: 0%;
+    }
+    75% {
+        top: 25%
+    }
+    100% {
+        top: 100%;
+    }
+}
