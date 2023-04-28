@@ -4,10 +4,3 @@
     font-weight: normal;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'GulimChe';
-    src: url(../font/GulimChe.ttf) format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
