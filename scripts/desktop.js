@@ -5,14 +5,12 @@ const desktop = document.getElementById("desktop");
 let startPosition;
 let isDragging;
 
-function timeset() {
+
+const counter = setInterval(function(){
     const today = new Date();
     var options = { timeStyle: 'short' };
     time.innerHTML = today.toLocaleTimeString("ko-kr", options);
-}
-
-timeset()
-const counter = setInterval(timeset(), 10000);
+}, 1000);
 
 
 document.onmousemove = (e) => {
