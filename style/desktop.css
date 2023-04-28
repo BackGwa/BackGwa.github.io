@@ -213,7 +213,8 @@ body {
     width: 1px;
     height: 1px;
     background-color: #00000000;
-    border: #ffffffAF dashed 1px;
+    border: #ffffffFF dashed 2px;
+    mix-blend-mode: difference;
     position: absolute;
     z-index: 1;
     transform: translate(-100%, -100%);
