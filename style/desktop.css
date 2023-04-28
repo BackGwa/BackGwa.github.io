@@ -112,19 +112,19 @@ body {
     background-color: #c0c0c0;
     float: left;
     width: 64px;
-    height: 21px;
+    height: 20px;
     display: inline-block;
     padding: 1px 2px;
-    margin-left: 2px;
+    margin-left: 5px;
     cursor: default;
     user-select: none;
 }
 
 .startRest {
-    border-top: ridge 2px white;
-    border-left: ridge 2px white;
-    border-bottom: ridge 2px black;
-    border-right: ridge 2px black;
+    border-top: ridge 3px #ffffff;
+    border-left: ridge 3px #ffffff;
+    border-bottom: ridge 3px #000000;
+    border-right: ridge 3px #000000;
 }
 
 .startimg {
@@ -146,10 +146,10 @@ body {
 }
 
 .startRest:hover {
-    border-top: ridge 2px #000000;
-    border-left: ridge 2px #000000;
-    border-bottom: ridge 2px #ffffff;
-    border-right: ridge 2px #ffffff;
+    border-top: ridge 3px #000000;
+    border-left: ridge 3px #000000;
+    border-bottom: ridge 3px #ffffff;
+    border-right: ridge 3px #ffffff;
 }
 
 .start:hover {
@@ -158,12 +158,12 @@ body {
 
 .notifications {
     width: 100px;
-    height: 23px;
-    margin-right: 2px;
-    border-top: inset 2px grey;
-    border-left: inset 2px grey;
-    border-bottom: inset 2px white;
-    border-right: inset 2px white;
+    height: 22px;
+    margin-right: 5px;
+    border-top: inset 3px #808080;
+    border-left: inset 3px #808080;
+    border-bottom: inset 3px #ffffff;
+    border-right: inset 3px #ffffff;
     display: inline-block;
     float: right;
 }

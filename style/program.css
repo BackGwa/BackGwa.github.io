@@ -19,16 +19,16 @@
     transform: translate(-50%, -50%);
 
     background: #c0c0c0;
-    border-top: ridge 6px white;
-    border-left: ridge 6px white;
-    border-bottom: ridge 6px black;
-    border-right: ridge 6px black;
+    border-top: ridge 6px #ffffff;
+    border-left: ridge 6px #ffffff;
+    border-bottom: ridge 6px #000000;
+    border-right: ridge 6px #000000;
 
 }
 
 .INFO {
     width: 250px;
-    height: 250px;
+    height: 75px;
 }
 
 .TITLE {
@@ -57,18 +57,18 @@
     height: 22px;
 
     background: #c0c0c0;
-    border-top: ridge 2px white;
-    border-left: ridge 2px white;
-    border-bottom: ridge 2px black;
-    border-right: ridge 2px black;
+    border-top: ridge 2px #ffffff;
+    border-left: ridge 2px #ffffff;
+    border-bottom: ridge 2px #000000;
+    border-right: ridge 2px #000000;
 }
 
 .BUTTON .BORDER:focus {
     background: #aaaaaa;
-    border-top: ridge 2px black;
-    border-left: ridge 2px black;
-    border-bottom: ridge 2px white;
-    border-right: ridge 2px white;
+    border-top: ridge 2px #000000;
+    border-left: ridge 2px #000000;
+    border-bottom: ridge 2px #ffffff;
+    border-right: ridge 2px #ffffff;
 }
 
 
@@ -82,4 +82,5 @@
     font-weight: bold;
     font-size: 15px;
     padding: 0;
+    animation: bap 0.01s infinite;
 }
