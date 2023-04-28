@@ -16,25 +16,45 @@
 </head>
 
 <body class="desktop-color curnone crt">
+
+    <!-- Pillarbox -->
     <div class="fbl"></div>
     <div class="fbr"></div>
+
+    <!-- Drag hint area -->
     <div id="box" class="curz"></div>
+
+    <!-- CRT Screen Image 1 -->
     <div class="effect dragnull"><img src="./image/CRTRound.png" class="crtbox"></div>
+
+    <!-- Desktop Screen -->
     <div class="screen cursor-default">
+
+        <!-- CRT Effects -->
         <div class="digital digital1 dragnull"></div>
         <div class="digital digital2 dragnull"></div>
+
+        <!-- Desktop area -->
         <div class="desktop cursor-default" id="desktop">
+            <!-- Taskbar area -->
             <div class="taskbar cursor-default">
+
+                <!-- Start menu -->
                 <div class="start startRest cursor-pointer dragnull">
                     <img src="./image/Start.png" class="startimg">
                     <div class="startfont">시작</div>
                 </div>
+
+                <!-- Notifications -->
                 <div class="notifications cursor-default dragnull cursor-pointer">
                     <img src="./image/Sound.png" id="sounddisplay">
                     <div id="timedisplay"></div>
                 </div>
+                
             </div>
         </div>
+
+        <!-- Context Menu -->
         <div id="context" class="dragnull">
             <div class="item" id="_">메뉴 1</div>
             <div class="item" id="_">메뉴 2</div>
@@ -45,7 +65,10 @@
             <div class="cthr"><hr></div>
             <div class="item" id="fstoggle">꽉 찬 화면</div>
         </div>
+
     </div>
+
+    <!-- Site Script -->
     <script src="./scripts/desktop.js"></script>
     <script src="./scripts/context.js"></script>
 </body>
