@@ -156,6 +156,20 @@ body {
     background-color: #aaaaaa;
 }
 
+.diver {
+    position: relative;
+    top: 1px;
+    height: 75%;
+    float: left;
+    text-align: left;
+    margin-left: 6px;
+    width: 1px;
+    border-top: ridge 2px #ffffff;
+    border-left: ridge 1px #ffffff;
+    border-bottom: ridge 2px #000000;
+    border-right: ridge 1px #000000;
+}
+
 .notifications {
     width: 100px;
     height: 22px;
