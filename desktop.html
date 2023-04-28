@@ -48,7 +48,7 @@
                 </div>
 
                 <!-- Notifications -->
-                <div class="notifications cursor-default dragnull cursor-pointer">
+                <div class="notifications dragnull cursor-pointer">
                     <img src="./image/Sound.png" id="sounddisplay">
                     <div id="timedisplay"></div>
                 </div>
@@ -60,14 +60,12 @@
         <div class="program dragnull">
 
             <!-- INFO Windows -->
-            <div id="hintdisable">
+            <div class="INFOPROGRAM" id="hintdisable">
                 <div class="WINDOW cursor-default INFO" id="INFO">
                     <div class="TITLE" id="INFOTITLE">
                         <div class="TEXT">정보</div>
                         <div class="BUTTON">
-                            <button class="BORDER"></button>
-                            <button class="BORDER"></button>
-                            <button class="BORDER"></button>
+                            <button class="BORDER EXIT" id="EXITINFO" onclick="window_INFO.remove();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">

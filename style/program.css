@@ -51,7 +51,6 @@
     position: relative;
     right: 2px;
     float: right;
-    bottom: 1px;
 }
 
 .BUTTON .BORDER {
@@ -65,7 +64,23 @@
     border-right: ridge 2px black;
 }
 
+.BUTTON .BORDER:focus {
+    background: #aaaaaa;
+    border-top: ridge 2px black;
+    border-left: ridge 2px black;
+    border-bottom: ridge 2px white;
+    border-right: ridge 2px white;
+}
+
+
 .DETAIL {
     padding: 4px;
     font-family: 'Gulim';
+}
+
+.EXIT {
+    font-family: 'Gulim';
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0;
 }

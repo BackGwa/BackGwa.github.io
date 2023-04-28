@@ -5,6 +5,7 @@ const desktop = document.getElementById("desktop");
 const window_INFO = document.getElementById("INFO");
 const title_INFO = document.getElementById("INFOTITLE");
 
+const INFOEXIT = document.getElementById("INFOEXIT");
 
 
 let startPosition;
