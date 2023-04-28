@@ -18,16 +18,36 @@
     margin: 1px;
     color: #000000;
     border-radius: inherit;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break:break-all
 }
 
 #context .item:hover {
     color: #FFF;
-    background: #000080;
+    background: #0000aa;
+}
+
+
+@keyframes smt98 {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+
+    100% {
+        width: 150px;
+        height: 85px;
+    }
 }
 
 #context.visible {
     display: block;
+    animation: smt98 0.2s ease-in-out;
 }
+
 
 .cthr hr {
     padding: 0;
