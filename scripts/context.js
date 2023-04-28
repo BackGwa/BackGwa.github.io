@@ -1,3 +1,4 @@
+
 const context = document.getElementById("context");
 const scope = document.querySelector("body");
 const fstoggle = document.getElementById("fstoggle");
