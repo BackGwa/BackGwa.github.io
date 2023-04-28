@@ -25,16 +25,26 @@ document.onmousemove = (e) => {
     if (isDragging) {
         let distanceX = e.pageX - startPosition[0];
         let distanceY = e.pageY - startPosition[1];
+
+        let translateX = distanceX < 0 ? '0%' : '-100%';
+        let translateY = distanceY < 0 ? '0%' : '-100%';
+
+        if(translateX == '0%') distanceX = startPosition[0] - e.pageX;
+        if (translateY == '0%') distanceY = startPosition[1] - e.pageY;
+
+        box.style.transform = `translate(${translateX}, ${translateY})`;
+        
+        console.log(`PX=${e.pageX} / PY=${e.pageY}\nSP0=${startPosition[0]} / SP1=${startPosition[1]}\nDX=${distanceX} / DY=${distanceY}`);
+
         box.style.width = distanceX + 'px';
         box.style.height = distanceY + 'px';
-        console.log(`${distanceX} // ${distanceY}`);
+
     }
 }
 
 document.onmousedown = (e) => {
     isDragging = true;
     startPosition = [e.clientX, e.clientY];
-    console.log(startPosition);
 }
 
 document.onmouseup = () => {
