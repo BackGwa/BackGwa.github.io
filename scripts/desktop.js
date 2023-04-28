@@ -10,6 +10,7 @@ const title_IMAGE = document.getElementById("IMAGETITLE");
 
 const INFOEXIT = document.getElementById("INFOEXIT");
 
+const audio1 = document.getElementById("audio1")
 
 let startPosition;
 let isDragging;
@@ -105,6 +106,11 @@ function IMAGE_over(){
         document.querySelector(".IMAGE .TITLE").style.background = '#000080';
         document.querySelector(".INFO .TITLE").style.background = '#868a8e';
     } catch {
-        
+
     }
+}
+
+
+function killscreen(){
+    audio1.play();
 }

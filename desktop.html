@@ -18,6 +18,8 @@
 
 <body class="desktop-color curnone crt">
 
+    <audio src="./sounds/Interaction.mp3" id="audio1"></audio>
+
     <!-- Pillarbox -->
     <div class="fbl"></div>
     <div class="fbr"></div>
@@ -67,7 +69,7 @@
                     <div class="TITLE" id="INFOTITLE">
                         <div class="TEXT">내 WINDOS 정보</div>
                         <div class="BUTTON">
-                            <button class="BORDER EXIT" id="EXITINFO" onclick="window_INFO.remove();">Χ</button>
+                            <button class="BORDER EXIT" id="EXITINFO" onclick="window_INFO.remove();killscreen();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
@@ -83,7 +85,7 @@
                     <div class="TITLE" id="IMAGETITLE">
                         <div class="TEXT">사진 뷰어 : Setup.jpg</div>
                         <div class="BUTTON">
-                            <button class="BORDER EXIT" id="EXITIMAGE" onclick="window_IMAGE.remove();">Χ</button>
+                            <button class="BORDER EXIT" id="EXITIMAGE" onclick="window_IMAGE.remove();killscreen();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
