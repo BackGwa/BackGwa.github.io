@@ -57,8 +57,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 67.5%;
-    height: 103vh;
+    width: 67.7%;
+    height: 103.5vh;
     z-index: 4;
     pointer-events: none;
 }
