@@ -1,4 +1,3 @@
-@import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css');
 
 * {
     overflow: hidden;
@@ -119,11 +118,12 @@ body {
 
 .startfont {
     font-size: 15px;
-    font-family: 'NeoDunggeunmo';
+    font-family: 'GulimChe';
+    font-weight: bold;
     float: left;
     text-align: left;
     margin-left: 3px;
-    margin-top: 3px;
+    margin-top: 1px;
 }
 
 .startRest:hover {
@@ -175,9 +175,9 @@ body {
 }
 
 #timedisplay {
-    font-family: 'NeoDunggeunmo';
+    font-family: 'GulimChe';
     font-size: 13px;
-    margin-top: 5px;
+    margin-top: 3px;
     margin-right: 5px;
     float: right;
 }
@@ -193,7 +193,7 @@ body {
 #box {
     width: 1px;
     height: 1px;
-    background-color: #00000002;
+    background-color: #00000010;
     border: #ffffff70 dashed 1px;
     position: absolute;
     z-index: 1;

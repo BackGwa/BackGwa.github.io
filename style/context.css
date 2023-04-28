@@ -1,11 +1,10 @@
 
 #context {
     position: fixed;
-    z-index: 5;
+    z-index: 2;
     width: 150px;
     background: #c0c0c0;
     display: none;
-
     border-top: ridge 2px #FFF;
     border-left: ridge 2px #FFF;
     border-bottom: ridge 2px #000;
@@ -13,8 +12,11 @@
 }
 
 #context .item {
+    font-family: 'GulimChe';
     padding: 4px 10px;
     font-size: 13px;
+    background: #c0c0c0;
+    margin: 1px;
     color: #000000;
     border-radius: inherit;
 }
