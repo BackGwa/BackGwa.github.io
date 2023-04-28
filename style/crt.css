@@ -23,7 +23,7 @@
     right: 0;
     background: rgba(18, 16, 16, 0.1);
     opacity: 0;
-    z-index: 5;
+    z-index: 7;
     pointer-events: none;
     animation: flicker 0.05s infinite;
 }
@@ -38,7 +38,7 @@
     bottom: 0;
     right: 0;
     background: linear-gradient(rgba(44, 35, 35, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.063), rgba(0, 0, 255, 0.108));
-    z-index: 5;
+    z-index: 7;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
 }
@@ -59,6 +59,6 @@
     transform: translate(-50%, -50%);
     width: 67.7%;
     height: 103.5vh;
-    z-index: 4;
+    z-index: 6;
     pointer-events: none;
 }
