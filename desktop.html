@@ -11,12 +11,13 @@
 
     <link rel="stylesheet" href="style/desktop.css">
     <link rel="stylesheet" href="style/crt.css">
+    <link rel="stylesheet" href="style/context.css">
 </head>
 
 <body class="desktop-color curnone crt">
     <div id="box" class="curz"></div>
     <div class="screen cursor-default">
-        <div class="desktop cursor-default">
+        <div class="desktop cursor-default" id="desktop">
             <div class="taskbar cursor-default">
                 <div class="start startRest cursor-pointer dragnull">
                     <img src="./image/Start.png" class="startimg">
@@ -27,6 +28,10 @@
                     <div id="timedisplay"></div>
                 </div>
             </div>
+        </div>
+        <div id="context">
+            <div class="item">DOS로 돌아가기</div>
+            <div class="item">최대화로 변경</div>
         </div>
     </div>
     <script src="./scripts/desktop.js"></script>

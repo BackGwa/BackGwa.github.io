@@ -1,5 +1,8 @@
 @import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css');
 
+* {
+    overflow: hidden;
+}
 
 div.cursor-default {
     animation: bad 0.01s infinite;
@@ -190,11 +193,12 @@ body {
 #box {
     width: 1px;
     height: 1px;
-    background-color: #00000005;
-    border: #ffffff55 dashed 1.5px;
+    background-color: #00000002;
+    border: #ffffff70 dashed 1px;
     position: absolute;
     z-index: 1;
     transform: translate(-100%, -100%);
+    opacity: 0.0;
 }
 
 .curz {
