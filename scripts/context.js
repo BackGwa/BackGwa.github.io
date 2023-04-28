@@ -20,7 +20,7 @@ scope.addEventListener("contextmenu", (e) => {
 
     setTimeout(function(){
         context.classList.remove("anime");
-    }, 300)
+    }, 300);
 
 })
 
