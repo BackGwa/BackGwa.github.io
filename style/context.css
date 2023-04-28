@@ -3,19 +3,25 @@
     position: fixed;
     z-index: 5;
     width: 150px;
-    background: #bfbfbf;
+    background: #c0c0c0;
     display: none;
+
+    border-top: ridge 2px #FFF;
+    border-left: ridge 2px #FFF;
+    border-bottom: ridge 2px #000;
+    border-right: ridge 2px #000;
 }
 
 #context .item {
-    padding: 8px 10px;
-    font-size: 15px;
+    padding: 4px 10px;
+    font-size: 13px;
     color: #000000;
     border-radius: inherit;
 }
 
 #context .item:hover {
-    background: #aaaaaa;
+    color: #FFF;
+    background: #000080;
 }
 
 #context.visible {
