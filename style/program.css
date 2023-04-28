@@ -1,0 +1,56 @@
+
+.program {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+
+    z-index: 2;
+}
+
+.WINDOW {
+    background: #c0c0c0;
+    border-top: ridge 6px white;
+    border-left: ridge 6px white;
+    border-bottom: ridge 6px black;
+    border-right: ridge 6px black;
+
+    width: 50%;
+    height: 50%;
+}
+
+.TITLE {
+    background: #000080;
+    color: #FFF;
+    font-family: 'Gulim';
+    font-size: 15px;
+    padding: 2px;
+}
+
+.TITLE .TEXT {
+    position: relative;
+    top: 3px;
+    left: 2px;
+    float: left;
+}
+
+.TITLE .BUTTON {
+    position: relative;
+    right: 2px;
+    float: right;
+    bottom: 1px;
+}
+
+.BUTTON .BORDER {
+    width: 22px;
+    height: 22px;
+
+    background: #c0c0c0;
+    border-top: ridge 2px white;
+    border-left: ridge 2px white;
+    border-bottom: ridge 2px black;
+    border-right: ridge 2px black;
+}

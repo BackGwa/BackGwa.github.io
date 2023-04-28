@@ -17,7 +17,7 @@ document.onmousemove = (e) => {
     box.style.left = e.pageX + 'px';
     box.style.top = e.pageY + 'px';
 
-    if (isDragging) {
+    if (isDragging && e.target.id != 'hintdisable') {
         let distanceX = e.pageX - startPosition[0];
         let distanceY = e.pageY - startPosition[1];
 
@@ -27,6 +27,8 @@ document.onmousemove = (e) => {
         box.style.transform = `translate(${translateX}, ${translateY})`;
         box.style.width = Math.abs(distanceX) + 'px';
         box.style.height = Math.abs(distanceY) + 'px';
+    } else if(isDragging) {
+        box.style.opacity = '0.0';
     }
 }
 

@@ -5,28 +5,32 @@ const fstoggle = document.getElementById("fstoggle");
 const returnDOS = document.getElementById("returnDOS");
 
 scope.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
+    if (e.target.id != 'hintdisable') {
+        e.preventDefault();
 
-    context.classList.add("anime");
+        context.classList.add("anime");
 
-    const {
-        clientX: mouseX,
-        clientY: mouseY
-    } = e;
+        const {
+            clientX: mouseX,
+            clientY: mouseY
+        } = e;
 
-    context.style.top = mouseY + 'px';
-    context.style.left = mouseX + 'px';
+        context.style.top = mouseY + 'px';
+        context.style.left = mouseX + 'px';
 
-    context.classList.add("visible");
+        context.classList.add("visible");
 
-    setTimeout(function(){
-        context.classList.remove("anime");
-    }, 300);
+        setTimeout(function () {
+            context.classList.remove("anime");
+        }, 300);
+    } else {
+        e.preventDefault();
+    }
 
 })
 
 scope.addEventListener("click", (e) => {
-    if(e.target.offsetParent != context) {
+    if (e.target.offsetParent != context) {
         context.classList.remove("visible");
     }
 })
