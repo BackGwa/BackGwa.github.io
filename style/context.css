@@ -1,12 +1,10 @@
-/*
-참고 : https://itnext.io/how-to-create-a-custom-right-click-menu-with-javascript-9c368bb58724
-*/
 
 #context {
     position: fixed;
     z-index: 5;
     width: 150px;
     background: #bfbfbf;
+    display: none;
 }
 
 #context .item {
@@ -18,4 +16,8 @@
 
 #context .item:hover {
     background: #aaaaaa;
+}
+
+#context.visible {
+    display: block;
 }
