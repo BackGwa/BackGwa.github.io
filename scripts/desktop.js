@@ -179,6 +179,7 @@ function ERROR_Disable(){
 }
 
 function removepiler(){
+    fbremove.remove();
     piler = false;
     pagesize = [0 , 0];
     document.querySelector('.fbl').remove();
