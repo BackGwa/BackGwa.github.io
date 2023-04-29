@@ -1,0 +1,32 @@
+
+.bootscreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+}
+
+.progress {
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    height: 76px;
+    padding-bottom: 0;
+    background: #c1bec5;
+
+    border-top: ridge 2px #000000A0;
+    border-left: ridge 2px #fff;
+    border-bottom: ridge 2px #fff;
+    border-right: ridge 2px #fff;
+}
+
+.rtext {
+    position: absolute;
+    left: 50%;
+    top: 98%;
+    transform: translate(-50%, -50%);
+    text-align : center;
+    font-family: 'Gulim';
+    font-size: 14px;
+}
