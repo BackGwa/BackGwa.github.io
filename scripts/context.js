@@ -1,10 +1,10 @@
-
 const context = document.getElementById("context");
 const scope = document.querySelector("body");
 const fstoggle = document.getElementById("fstoggle");
 const fbremove = document.getElementById("fbremove");
 const audioCM = document.getElementById("audioCM")
 const audioER = document.getElementById("audioER")
+const ERRORA = document.getElementById("ERROR");
 
 scope.addEventListener("contextmenu", (e) => {
     audioCM.play();
@@ -70,5 +70,7 @@ fstoggle.addEventListener("click", function () {
 
 fbremove.addEventListener("click", function () {
     audioER.play();
+    ERRORA.classList.remove('ALARMHIDDEN');
+    ERROR_over();
     context.classList.remove("visible");
 })

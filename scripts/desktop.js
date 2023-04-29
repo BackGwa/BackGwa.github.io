@@ -21,12 +21,13 @@ let isDragging;
 let windowsDrag = false;
 let INFO = false;
 let IMAGE = false;
+let ERROR = false;
 
 const counter = setInterval(function(){
     const today = new Date();
     var options = { timeStyle: 'short' };
     time.innerHTML = today.toLocaleTimeString("ko-kr", options);
-}, 1000);
+}, 500);
 
 
 document.onmousemove = (e) => {
@@ -146,4 +147,8 @@ function ERROR_over(){
 
 function killscreen(){
     audio1.play();
+}
+
+function ERROR_Disable(){
+    ERRORA.classList.add('ALARMHIDDEN');
 }

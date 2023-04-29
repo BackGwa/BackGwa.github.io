@@ -68,12 +68,11 @@
 
             <!-- ERROR Windows -->
             <div class="ERRORPROGRAM" id="hintdisable">
-                <div class="WINDOW cursor-default ERROR" id="ERROR">
+                <div class="WINDOW cursor-default ERROR ALARMHIDDEN" id="ERROR">
                     <div class="TITLE" id="ERRORTITLE">
                         <div class="TEXT">수직 비율 상자 제거</div>
                         <div class="BUTTON">
-                            <button class="BORDER EXIT" id="EXITERROR"
-                                onclick="window_ERROR.remove();killscreen();">Χ</button>
+                            <button class="BORDER EXIT" id="EXITERROR" disabled>Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
@@ -83,8 +82,8 @@
                                 정말로 진행하시겠습니까?
                             </p>
                             <div class="rbtn">
-                                <button id="ATAG">유지합니다.</button>
-                                <button id="BTAG">제거합니다.</button>
+                                <button id="ATAG" onclick="ERROR_Disable();">유지합니다.</button>
+                                <button id="BTAG" onclick="ERROR_Disable();">제거합니다.</button>
                             </div>
                         </div>
                     </div>
