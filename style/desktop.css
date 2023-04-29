@@ -10,12 +10,12 @@
     animation: bap 0.01s infinite;
 }
 
-.cursor-text {
-    cursor: url(../cursor/Beam.cur) 2 2, text;
-}
-
 .cursor-wait {
     cursor: url(../cursor/Cursor_3.cur) 2 2, wait;
+}
+
+input {
+    cursor: url(../cursor/Beam.cur) 2 2, text;
 }
 
 .cursor-err {
