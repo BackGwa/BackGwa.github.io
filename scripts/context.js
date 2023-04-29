@@ -1,9 +1,11 @@
 const context = document.getElementById("context");
 const scope = document.querySelector("body");
+const sysreboot = document.getElementById("sysreboot");
 const fstoggle = document.getElementById("fstoggle");
 const fbremove = document.getElementById("fbremove");
 const audioCM = document.getElementById("audioCM")
 const audioER = document.getElementById("audioER")
+const audioLO = document.getElementById("audioLO")
 const ERRORA = document.getElementById("ERROR");
 
 scope.addEventListener("contextmenu", (e) => {
@@ -62,6 +64,18 @@ function toggleFullScreen() {
     }
 }
 
+function removeall(){
+    const removeElement = (element) => {
+        if (element && element.parentNode) {
+          element.parentNode.removeChild(element);
+        }
+      };
+      
+      removeElement(window_INFO);
+      removeElement(window_IMAGE);
+      removeElement(window_ERROR);
+}
+
 
 fstoggle.addEventListener("click", function () {
     toggleFullScreen();
@@ -76,4 +90,23 @@ fbremove.addEventListener("click", function () {
     ERRORA.classList.remove('ALARMHIDDEN');
     ERROR_over();
     context.classList.remove("visible");
+})
+
+sysreboot.addEventListener("click", function () {
+    context.classList.remove("visible");
+    document.getElementById('iswait').classList.remove('cursor-default');
+    document.getElementById('iswait').classList.add('cursor-wait');
+    setTimeout(function(){
+        removeall();
+    }, 1000)
+    setTimeout(function(){
+        document.querySelector('.taskbar').remove();
+    }, 2000)
+    setTimeout(function(){
+        audioLO.play();
+        document.querySelector('.CRTON').style.animation = "ONEFFECT 5s reverse ease-out";
+    }, 2500);
+    setTimeout(function(){
+        location.href = './index.html';
+    }, 7000);
 })

@@ -22,6 +22,8 @@
     <audio src="./sounds/Interaction.mp3" id="audio1"></audio>
     <audio src="./sounds/ContextMenu.wav" id="audioCM"></audio>
     <audio src="./sounds/Error.mp3" id="audioER"></audio>
+    <audio src="./sounds/Logoff.wav" id="audioLO"></audio>
+
 
     <!-- Pillarbox -->
     <div class="fbl"></div>
@@ -34,7 +36,7 @@
     <div class="effect dragnull"><img src="./image/CRTRound.png" class="crtbox"></div>
 
     <!-- Desktop Screen -->
-    <div class="screen cursor-default">
+    <div class="screen cursor-default" id="iswait">
 
         <!-- CRT Effects -->
         <div class="digital digital1 dragnull"></div>
@@ -128,7 +130,7 @@
 
         <!-- Context Menu -->
         <div id="context" class="dragnull">
-            <div class="item" id="_">메뉴 1</div>
+            <div class="item" id="sysreboot">시스템 재시동</div>
             <div class="cthr">
                 <hr>
             </div>
@@ -144,7 +146,7 @@
     </div>
 
     <!-- CRT on Effect -->
-    <!-- <div class="CRTON dragnull"></div> -->
+    <div class="CRTON dragnull"></div>
 
     <!-- Site Script -->
     <script src="./scripts/desktop.js"></script>
