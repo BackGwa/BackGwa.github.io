@@ -79,6 +79,16 @@
     margin-top: 10px;
 }
 
+.infotext hr {
+    width: 99%;
+    border-top: ridge 1px #ffffff;
+    border-left: ridge 1px #ffffff;
+    border-bottom: ridge 1px #000000;
+    border-right: ridge 1px #000000;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
 .IMAGE {
     width: 250px;
     height: 250px;
