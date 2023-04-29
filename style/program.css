@@ -53,11 +53,11 @@
 }
 
 .INFO .TITLE {
-    background: #000080;
+    background: linear-gradient(0.25turn, #00003f, #a6c6f7);
 }
 
 .IMAGE .TITLE {
-    background: #868a8e;
+    background: linear-gradient(0.25turn, #808080, #c3c2bf);
 }
 
 .TITLE .TEXT {

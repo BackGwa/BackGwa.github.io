@@ -92,8 +92,8 @@ function INFO_over(){
     window_INFO.style.zIndex = '3';
     window_IMAGE.style.zIndex = '2';
     try {
-        document.querySelector(".INFO .TITLE").style.background = '#000080';
-        document.querySelector(".IMAGE .TITLE").style.background = '#868a8e';
+        document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
+        document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
     } catch {
 
     }
@@ -103,8 +103,8 @@ function IMAGE_over(){
     window_IMAGE.style.zIndex = '3';
     window_INFO.style.zIndex = '2';
     try {
-        document.querySelector(".IMAGE .TITLE").style.background = '#000080';
-        document.querySelector(".INFO .TITLE").style.background = '#868a8e';
+        document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
+        document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
     } catch {
 
     }
