@@ -1,4 +1,8 @@
 
+* {
+    cursor: non;
+}
+
 .bootscreen {
     position: absolute;
     width: 100%;
@@ -29,4 +33,22 @@
     text-align : center;
     font-family: 'Gulim';
     font-size: 14px;
+}
+
+.bootimg {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64vh;
+    z-index: 1;
+}
+
+.logoimg {
+    position: absolute;
+    top: 4%;
+    right: 0;
+    transform: translate(-20%, -50%);
+    width: 19vh;
+    z-index: 1;
 }

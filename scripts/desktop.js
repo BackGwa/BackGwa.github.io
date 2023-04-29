@@ -130,7 +130,6 @@ document.onmouseup = (e) => {
 }
 
 
-
 function INFO_over(){
     window_INFO.style.zIndex = '3';
     window_IMAGE.style.zIndex = '2';
@@ -143,6 +142,7 @@ function INFO_over(){
 
     }
 }
+
 
 function IMAGE_over(){
     window_IMAGE.style.zIndex = '3';
