@@ -10,12 +10,12 @@ const itv = setInterval(() => {
     setTimeout(function(){
         pgvalue -= 1;
         pgbar.value = `${pgvalue}`;
-    }, randint(50));
+    }, randint(1500));
     if(pgvalue <= 0){
         clearInterval(itv);
         start();
     }
-}, 50);
+}, 150);
 
 function start(){
     document.querySelector('.bootscreen').remove();
