@@ -179,10 +179,10 @@
 
 .ALARM button:focus {
     background: #aaaaaa;
-    border-top: ridge 2px #000000;
-    border-left: ridge 2px #000000;
-    border-bottom: ridge 2px #ffffff;
-    border-right: ridge 2px #ffffff;
+    border-top: ridge 4px #000000;
+    border-left: ridge 4px #000000;
+    border-bottom: ridge 4px #ffffff;
+    border-right: ridge 4px #ffffff;
 }
 
 .rbtn {
