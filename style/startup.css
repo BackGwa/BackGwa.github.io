@@ -1,5 +1,5 @@
 * {
-    cursor: non;
+    cursor: none;
 }
 
 .bootscreen {
@@ -38,7 +38,7 @@
     display: flex;
     position: absolute;
     left: 50%;
-    top: 95%;
+    top: 94.5%;
     transform: translate(-50%, -50%);
 }
 
