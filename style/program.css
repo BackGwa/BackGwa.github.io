@@ -47,8 +47,9 @@
 
 .windowhint {
     position: absolute;
-    border: #ffffffFF dashed 1px;
+    border: #FFF dashed 1px;
     mix-blend-mode: difference;
+    z-index: 3;
 }
 
 #infohint {
