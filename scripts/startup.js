@@ -10,13 +10,18 @@ const itv = setInterval(() => {
     setTimeout(function(){
         pgvalue -= 1;
         pgbar.value = `${pgvalue}`;
-    }, randint(2000));
+    }, randint(50));
     if(pgvalue <= 0){
         clearInterval(itv);
         start();
     }
-}, 125);
+}, 50);
 
 function start(){
-    location.href = './desktop.html';
+    document.querySelector('.bootscreen').remove();
+    document.querySelector('.bootimg').remove();
+    document.querySelector('.logoimg').remove();
+    setTimeout(function(){
+        location.href = './preload.html';
+    }, 1000);
 }

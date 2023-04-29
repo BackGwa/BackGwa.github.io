@@ -6,8 +6,9 @@
     bottom: 0;
     margin: 0;
     padding: 0;
-
     z-index: 1;
+
+    animation: window 2s forwards steps(1, end);
 }
 
 .WINDOW {
@@ -196,18 +197,18 @@
     font-weight: bold;
 
     background: #c0c0c0;
-    border-top: ridge 4px #ffffff;
-    border-left: ridge 4px #ffffff;
-    border-bottom: ridge 4px #000000;
-    border-right: ridge 4px #000000;
+    border-top: ridge 3px #ffffff;
+    border-left: ridge 3px #ffffff;
+    border-bottom: ridge 3px #000000;
+    border-right: ridge 3px #000000;
 }
 
 .ALARM button:focus {
     background: #aaaaaa;
-    border-top: ridge 4px #000000;
-    border-left: ridge 4px #000000;
-    border-bottom: ridge 4px #ffffff;
-    border-right: ridge 4px #ffffff;
+    border-top: ridge 3px #000000;
+    border-left: ridge 3px #000000;
+    border-bottom: ridge 3px #ffffff;
+    border-right: ridge 3px #ffffff;
 }
 
 .rbtn {
@@ -228,4 +229,15 @@
 
 .ALARMHIDDEN {
     display: none;
+}
+
+@keyframes window {
+    0%{
+        cursor: url(../cursor/Cursor_3.cur) 2 2, wait;
+        opacity: 0.0;
+    }
+    100% {
+        cursor: url(../cursor/arrow.cur) 2 2, default;
+        opacity: 1.0;
+    }
 }

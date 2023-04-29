@@ -107,6 +107,6 @@ sysreboot.addEventListener("click", function () {
         document.querySelector('.CRTON').style.animation = "ONEFFECT 5s reverse ease-out";
     }, 2500);
     setTimeout(function(){
-        location.href = './index.html';
+        location.href = './startup.html';
     }, 7000);
 })

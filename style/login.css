@@ -1,0 +1,152 @@
+.program {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.WINDOW {
+    position: absolute;
+
+    background: #c0c0c0;
+    border-top: ridge 6px #ffffff;
+    border-left: ridge 6px #ffffff;
+    border-bottom: ridge 6px #000000;
+    border-right: ridge 6px #000000;
+
+}
+
+.WINDOW.INFO {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.INFO {
+    width: 500px;
+    height: 320px;
+    z-index: 3;
+}
+
+.TITLE {
+    color: #FFF;
+    font-family: 'Gulim';
+    font-size: 15px;
+    padding: 2px;
+}
+
+.INFO .TITLE {
+    background: linear-gradient(0.25turn, #00003f, #a6c6f7);
+}
+
+.TITLE .TEXT {
+    position: relative;
+    top: 3px;
+    left: 2px;
+    float: left;
+    padding-bottom: 4px;
+}
+
+.DETAIL {
+    padding: 1px;
+    font-family: 'Gulim';
+}
+
+.ALARM button {
+    width: 100px;
+    height: 28px;
+
+    font-family: 'Gulim';
+    font-size: 13px;
+    font-weight: bold;
+
+    background: #c0c0c0;
+    border-top: ridge 3px #ffffff;
+    border-left: ridge 3px #ffffff;
+    border-bottom: ridge 3px #000000;
+    border-right: ridge 3px #000000;
+}
+
+.ALARM button:focus {
+    background: #aaaaaa;
+    border-top: ridge 3px #000000;
+    border-left: ridge 3px #000000;
+    border-bottom: ridge 3px #ffffff;
+    border-right: ridge 3px #ffffff;
+}
+
+.marq {
+    margin: 0;
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    left: 50%;
+    top: 165px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(0.25turn, #00299c, #0073de, #00299c);
+}
+
+.user {
+    position: absolute;
+    top: 190px;
+    left: 20px;
+    display: flex;
+}
+
+.pass {
+    position: absolute;
+    top: 220px;
+    left: 20px;
+    display: flex;
+}
+
+.textbox {
+    width: 300px;
+    color: #000;
+    background: #FFF;
+    border-top: ridge 2px #000;
+    border-left: ridge 2px #000;
+    border-bottom: ridge 2px #FFF;
+    border-right: ridge 2px #FFF;
+
+    font-family: 'Gulim';
+    font-size: 13px;
+}
+
+.namebox {
+    font-family: 'Gulim';
+    font-size: 15px;
+    margin-right: 24px;
+}
+
+.passbox {
+    font-family: 'Gulim';
+    font-size: 15px;
+    margin-right: 74px;
+}
+
+.rbtn {
+    display: flex;
+}
+
+.ALARM #ATAG {
+    margin-left: 255px;
+    margin-top: 95px;
+    margin-right: 2px;
+}
+
+.ALARM #BTAG {
+    margin-left: 2px;
+}
+
+.ALARMHIDDEN {
+    display: none;
+}
+
+.logonimg {
+    width: 100%;
+}

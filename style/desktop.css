@@ -112,6 +112,8 @@ body {
     right: 0px;
     border-top: ridge 2px #ffffff;
     z-index: 2;
+
+    animation: taskfirst 0.5s forwards steps(1, end);
 }
 
 .start {
@@ -289,5 +291,16 @@ body {
 
     100% {
         top: 100%;
+    }
+}
+
+@keyframes taskfirst {
+    0%{
+        cursor: url(../cursor/Cursor_3.cur) 2 2, wait;
+        opacity: 0.0;
+    }
+    100% {
+        cursor: url(../cursor/arrow.cur) 2 2, default;
+        opacity: 1.0;
     }
 }

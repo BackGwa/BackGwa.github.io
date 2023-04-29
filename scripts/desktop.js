@@ -100,6 +100,7 @@ document.onmousedown = (e) => {
     box.style.opacity = '1.0';
 }
 
+
 document.onmouseup = (e) => {
     isDragging = false;
     windowsDrag = false;

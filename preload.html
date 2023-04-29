@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>WINDOS</title>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style/desktop.css">
+    <link rel="stylesheet" href="./style/crt.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+
+<body class="desktop-color curnone crt">
+
+    <audio src="./sounds/Logon.wav" id="audioON"></audio>
+
+    <!-- Pillarbox -->
+    <div class="fbl"></div>
+    <div class="fbr"></div>
+
+    <!-- CRT Screen Image 1 -->
+    <div class="effect dragnull"><img src="./image/CRTRound.png" class="crtbox"></div>
+
+    <!-- Desktop Screen -->
+    <div class="screen cursor-default">
+
+        <!-- CRT Effects -->
+        <div class="digital digital1 dragnull"></div>
+        <div class="digital digital2 dragnull"></div>
+
+        <div class="program">
+            <div class="INFOPROGRAM">
+                <div class="WINDOW cursor-default INFO" id="INFO">
+                    <div class="TITLE dragnull" id="INFOTITLE">
+                        <div class="TEXT">Windos 2023 Amateur Editon 로그온</div>
+                    </div>
+                    <div class="DETAIL dragnull">
+                        <div class="marq"></div>
+                        <img src="./image/logon.jpg" class="logonimg">
+                        <div class="user dragnull">
+                            <div class="namebox">사용자 이름(U) : </div>
+                            <input type="text" class="textbox" value="Administrator">
+                        </div>
+                        <div class="pass dragnull">
+                            <div class="passbox">암호(P) : </div>
+                            <input type="password" class="textbox" value="0000">
+                        </div>
+                        <div class="ALARM">
+                            <button id="ATAG" onclick="start();">확인</button>
+                            <button id="BTAG" disabled>취소</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="windowhint" id="infohint"></div>
+            </div>
+        </div>
+
+        <!-- Desktop area -->
+        <div class="desktop cursor-default" id="desktop"></div>
+    </div>
+
+    <script src="./scripts/preload.js"></script>
+
+</html>
