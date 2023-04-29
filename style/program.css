@@ -45,6 +45,30 @@
     z-index: 3;
 }
 
+.windowhint {
+    position: absolute;
+    border: #ffffffFF dashed 1px;
+    mix-blend-mode: difference;
+}
+
+#infohint {
+    visibility: collapse;
+    width: 250px;
+    height: 75px;
+}
+
+#imagehint {
+    visibility: collapse;
+    width: 250px;
+    height: 250px;
+}
+
+#errorhint {
+    visibility: collapse;
+    width: 350px;
+    height: 125px;
+}
+
 .IMAGE {
     width: 250px;
     height: 250px;

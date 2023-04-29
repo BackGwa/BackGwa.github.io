@@ -3,12 +3,15 @@ const box = document.getElementById("box");
 const desktop = document.getElementById("desktop");
 
 const window_INFO = document.getElementById("INFO");
+const hint_INFO = document.getElementById("infohint");
 const title_INFO = document.getElementById("INFOTITLE");
 
 const window_IMAGE = document.getElementById("IMAGE");
+const hint_IMAGE = document.getElementById("imagehint");
 const title_IMAGE = document.getElementById("IMAGETITLE");
 
 const window_ERROR = document.getElementById("ERROR");
+const hint_ERROR = document.getElementById("errorhint");
 const title_ERROR = document.getElementById("ERRORTITLE");
 
 const INFOEXIT = document.getElementById("INFOEXIT");
@@ -37,24 +40,24 @@ document.onmousemove = (e) => {
     box.style.top = e.pageY + 'px';
 
     if (windowsDrag && INFO && isDragging) {
-        console.log(`${e.pageX}, ${e.pageY}`);
-        window_INFO.style.top = `${e.pageY}px`;
-        window_INFO.style.left = `${e.pageX - pagesize[0]}px`;
-        window_INFO.style.transform = `translate(-50%, -5%)`
+        hint_INFO.style.visibility = 'visible';
+        hint_INFO.style.top = `${e.pageY}px`;
+        hint_INFO.style.left = `${e.pageX - pagesize[0]}px`;
+        hint_INFO.style.transform = `translate(-50%, -5%)`
     }
 
     if (windowsDrag && IMAGE && isDragging) {
-        console.log(`${e.pageX}, ${e.pageY}`);
-        window_IMAGE.style.top = `${e.pageY}px`;
-        window_IMAGE.style.left = `${e.pageX - pagesize[0]}px`;
-        window_IMAGE.style.transform = `translate(-50%, -5%)`
+        hint_IMAGE.style.visibility = 'visible';
+        hint_IMAGE.style.top = `${e.pageY}px`;
+        hint_IMAGE.style.left = `${e.pageX - pagesize[0]}px`;
+        hint_IMAGE.style.transform = `translate(-50%, -5%)`
     }
 
     if (windowsDrag && ERROR && isDragging) {
-        console.log(`${e.pageX}, ${e.pageY}`);
-        window_ERROR.style.top = `${e.pageY}px`;
-        window_ERROR.style.left = `${e.pageX - pagesize[1]}px`;
-        window_ERROR.style.transform = `translate(-50%, -5%)`
+        hint_ERROR.style.visibility = 'visible';
+        hint_ERROR.style.top = `${e.pageY}px`;
+        hint_ERROR.style.left = `${e.pageX - pagesize[1]}px`;
+        hint_ERROR.style.transform = `translate(-50%, -5%)`
     }
 
     if (isDragging && e.target.id != 'hintdisable' && !windowsDrag) {
@@ -97,16 +100,36 @@ document.onmousedown = (e) => {
     box.style.opacity = '1.0';
 }
 
-document.onmouseup = () => {
+document.onmouseup = (e) => {
     isDragging = false;
     windowsDrag = false;
-    INFO = false;
-    IMAGE = false;
-    ERROR = false;
+    if(INFO){
+        INFO = false;
+        hint_INFO.style.visibility = 'collapse';
+        window_INFO.style.top = `${e.pageY}px`;
+        window_INFO.style.left = `${e.pageX - pagesize[0]}px`;
+        window_INFO.style.transform = `translate(-50%, -5%)`
+    }
+    else if(IMAGE){
+        IMAGE = false;
+        hint_IMAGE.style.visibility = 'collapse';
+        window_IMAGE.style.top = `${e.pageY}px`;
+        window_IMAGE.style.left = `${e.pageX - pagesize[0]}px`;
+        window_IMAGE.style.transform = `translate(-50%, -5%)`
+    }
+    else if(ERROR){
+        ERROR = false;
+        hint_ERROR.style.visibility = 'collapse';
+        window_ERROR.style.top = `${e.pageY}px`;
+        window_ERROR.style.left = `${e.pageX - pagesize[1]}px`;
+        window_ERROR.style.transform = `translate(-50%, -5%)`
+    }
     box.style.width = '0px';
     box.style.height = '0px';
     box.style.opacity = '0.0';
 }
+
+
 
 function INFO_over(){
     window_INFO.style.zIndex = '3';
