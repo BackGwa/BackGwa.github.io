@@ -36,6 +36,8 @@
 
 .load {
     display: flex;
+    justify-content: center;
+    width: 100%;
     position: absolute;
     left: 50%;
     top: 94.5%;
@@ -46,6 +48,7 @@
     margin-right: 12px;
     font-family: 'Gulim';
     font-size: 14px;
+    white-space:nowrap;
 }
 
 .marq {
@@ -61,9 +64,10 @@
 progress {
     rotate: 180deg;
     height: 16px;
+    width: 20%;
     background-image: url(../image/Progress.png);
     border: 1px solid #999999;
-    background-size: 11%;
+    background-size: 5%;
     padding: 0;
     background-color: transparent;
 }
