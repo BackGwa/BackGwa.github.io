@@ -69,6 +69,9 @@ fstoggle.addEventListener("click", function () {
 })
 
 fbremove.addEventListener("click", function () {
+    ERRORA.style.top = '50%';
+    ERRORA.style.left = '50%';
+    ERRORA.style.transform = 'translate(-50%, -50%)';
     audioER.play();
     ERRORA.classList.remove('ALARMHIDDEN');
     ERROR_over();
