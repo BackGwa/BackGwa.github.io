@@ -32,17 +32,26 @@
 
 
 @keyframes smt2000 {
-    /*
     0% {
         width: 0px;
         height: 0px;
+    }
+
+    10%{
+        width: 10px;
+        height: 1px;
+    }
+
+    50%{
+        width: 75px;
+        height: 5px;
     }
 
     100% {
         width: 150px;
         height: 130px;
     }
-    */
+    /*
     0% {
         opacity: 0.0;
     }
@@ -50,6 +59,7 @@
     100% {
         opacity: 1.0;
     }
+    */
 }
 
 #context.visible {
@@ -57,8 +67,8 @@
 }
 
 .anime {
-    /*animation: smt2000 0.2s ease-in-out;*/
-    animation: smt2000 0.22s ease-out;
+    animation: smt2000 0.22s ease-in;
+    /*animation: smt2000 0.22s ease-out;*/
 }
 
 
