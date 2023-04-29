@@ -25,13 +25,13 @@
 .WINDOW.INFO {
     top: 50%;
     left: 50%;
-    transform: translate(-85%, -200%);
+    transform: translate(-90%, -70%);
 }
 
 .WINDOW.IMAGE {
     top: 50%;
     left: 50%;
-    transform: translate(-30%, -40%);
+    transform: translate(-10%, -30%);
 }
 
 .WINDOW.ERROR {
@@ -41,8 +41,8 @@
 }
 
 .INFO {
-    width: 250px;
-    height: 75px;
+    width: 350px;
+    height: 450px;
     z-index: 3;
 }
 
