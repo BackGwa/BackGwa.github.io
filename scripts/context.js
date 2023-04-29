@@ -2,7 +2,9 @@
 const context = document.getElementById("context");
 const scope = document.querySelector("body");
 const fstoggle = document.getElementById("fstoggle");
+const fbremove = document.getElementById("fbremove");
 const audioCM = document.getElementById("audioCM")
+const audioER = document.getElementById("audioER")
 
 scope.addEventListener("contextmenu", (e) => {
     audioCM.play();
@@ -63,5 +65,10 @@ function toggleFullScreen() {
 
 fstoggle.addEventListener("click", function () {
     toggleFullScreen();
+    context.classList.remove("visible");
+})
+
+fbremove.addEventListener("click", function () {
+    audioER.play();
     context.classList.remove("visible");
 })

@@ -20,6 +20,8 @@
 
     <!-- Sounds -->
     <audio src="./sounds/Interaction.mp3" id="audio1"></audio>
+    <audio src="./sounds/ContextMenu.wav" id="audioCM"></audio>
+    <audio src="./sounds/Error.mp3" id="audioER"></audio>
 
     <!-- Pillarbox -->
     <div class="fbl"></div>
@@ -64,13 +66,39 @@
         <!-- Program Windows -->
         <div class="program dragnull">
 
+            <!-- ERROR Windows -->
+            <div class="ERRORPROGRAM" id="hintdisable">
+                <div class="WINDOW cursor-default ERROR" id="ERROR">
+                    <div class="TITLE" id="ERRORTITLE">
+                        <div class="TEXT">수직 비율 상자 제거</div>
+                        <div class="BUTTON">
+                            <button class="BORDER EXIT" id="EXITERROR"
+                                onclick="window_ERROR.remove();killscreen();">Χ</button>
+                        </div>
+                    </div>
+                    <div class="DETAIL">
+                        <div class="ALARM">
+                            <img src="./image/Warning.png">
+                            <p>다음 작업을 진행하면 다시는 되돌릴 수 없습니다.
+                                정말로 진행하시겠습니까?
+                            </p>
+                            <div class="rbtn">
+                                <button id="ATAG">유지합니다.</button>
+                                <button id="BTAG">제거합니다.</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- INFO Windows -->
             <div class="INFOPROGRAM" id="hintdisable">
                 <div class="WINDOW cursor-default INFO" id="INFO">
                     <div class="TITLE" id="INFOTITLE">
                         <div class="TEXT">내 WINDOS 정보</div>
                         <div class="BUTTON">
-                            <button class="BORDER EXIT" id="EXITINFO" onclick="window_INFO.remove();killscreen();">Χ</button>
+                            <button class="BORDER EXIT" id="EXITINFO"
+                                onclick="window_INFO.remove();killscreen();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
@@ -86,7 +114,8 @@
                     <div class="TITLE" id="IMAGETITLE">
                         <div class="TEXT">사진 뷰어 : Setup.jpg</div>
                         <div class="BUTTON">
-                            <button class="BORDER EXIT" id="EXITIMAGE" onclick="window_IMAGE.remove();killscreen();">Χ</button>
+                            <button class="BORDER EXIT" id="EXITIMAGE"
+                                onclick="window_IMAGE.remove();killscreen();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
@@ -101,17 +130,16 @@
         <!-- Context Menu -->
         <div id="context" class="dragnull">
             <div class="item" id="_">메뉴 1</div>
-            <div class="item" id="_">메뉴 2</div>
             <div class="cthr">
                 <hr>
             </div>
             <div class="item" id="_">메뉴 1</div>
             <div class="item" id="_">메뉴 2</div>
-            <div class="item" id="_">메뉴 3</div>
             <div class="cthr">
                 <hr>
             </div>
             <div class="item" id="fstoggle">꽉 찬 화면</div>
+            <div class="item" id="fbremove">수직 비율 상자 제거</div>
         </div>
 
     </div>

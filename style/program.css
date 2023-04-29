@@ -33,6 +33,12 @@
     transform: translate(-30%, -40%);
 }
 
+.WINDOW.ERROR {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .INFO {
     width: 250px;
     height: 75px;
@@ -43,6 +49,12 @@
     width: 250px;
     height: 250px;
     z-index: 2;
+}
+
+.ERROR {
+    width: 350px;
+    height: 125px;
+    z-index: 2;  
 }
 
 .TITLE {
@@ -59,6 +71,11 @@
 .IMAGE .TITLE {
     background: linear-gradient(0.25turn, #808080, #c3c2bf);
 }
+
+.ERROR .TITLE {
+    background: linear-gradient(0.25turn, #808080, #c3c2bf);
+}
+
 
 .TITLE .TEXT {
     position: relative;
@@ -121,4 +138,58 @@
     font-family: 'Gulim';
     font-weight: bold;
     font-size: 15px;
+}
+
+.ALARM img {
+    position: absolute;
+    bottom: 42px;
+    left: 10px;
+    width: 50px;
+}
+
+.ALARM p {
+    position: absolute;
+    font-family: 'Gulim';
+    font-size: 14px;
+    left: 65px;
+    margin-right: 10px;
+}
+
+.ALARM button {
+    width: 100px;
+    height: 28px;
+
+    font-family: 'Gulim';
+    font-size: 13px;
+    font-weight: bold;
+
+    background: #c0c0c0;
+    border-top: ridge 4px #ffffff;
+    border-left: ridge 4px #ffffff;
+    border-bottom: ridge 4px #000000;
+    border-right: ridge 4px #000000;
+}
+
+.ALARM button:focus {
+    background: #aaaaaa;
+    border-top: ridge 2px #000000;
+    border-left: ridge 2px #000000;
+    border-bottom: ridge 2px #ffffff;
+    border-right: ridge 2px #ffffff;
+}
+
+.rbtn {
+    display: flex;
+}
+
+.ALARM #ATAG {
+    margin-left: 140px;
+    margin-top: 60px;
+    margin-right: 2px;
+}
+
+.ALARM #BTAG {
+    margin-left: 2px;
+    margin-right: 10px;
+    margin-top: 60px;
 }

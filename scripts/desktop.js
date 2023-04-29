@@ -8,6 +8,9 @@ const title_INFO = document.getElementById("INFOTITLE");
 const window_IMAGE = document.getElementById("IMAGE");
 const title_IMAGE = document.getElementById("IMAGETITLE");
 
+const window_ERROR = document.getElementById("ERROR");
+const title_ERROR = document.getElementById("ERRORTITLE");
+
 const INFOEXIT = document.getElementById("INFOEXIT");
 
 const audio1 = document.getElementById("audio1")
@@ -44,6 +47,13 @@ document.onmousemove = (e) => {
         window_IMAGE.style.transform = `translate(-50%, -5%)`
     }
 
+    if (windowsDrag && ERROR && isDragging) {
+        console.log(`${e.pageX}, ${e.pageY}`);
+        window_ERROR.style.top = `${e.pageY}px`;
+        window_ERROR.style.left = `${e.pageX - 350}px`;
+        window_ERROR.style.transform = `translate(-50%, -5%)`
+    }
+
     if (isDragging && e.target.id != 'hintdisable' && !windowsDrag) {
         let distanceX = e.pageX - startPosition[0];
         let distanceY = e.pageY - startPosition[1];
@@ -72,6 +82,12 @@ title_IMAGE.onmousedown = () => {
     IMAGE_over();
 }
 
+title_ERROR.onmousedown = () => {
+    windowsDrag = true;
+    ERROR = true;
+    ERROR_over();
+}
+
 document.onmousedown = (e) => {
     isDragging = true;
     startPosition = [e.clientX, e.clientY];
@@ -83,6 +99,7 @@ document.onmouseup = () => {
     windowsDrag = false;
     INFO = false;
     IMAGE = false;
+    ERROR = false;
     box.style.width = '0px';
     box.style.height = '0px';
     box.style.opacity = '0.0';
@@ -91,9 +108,11 @@ document.onmouseup = () => {
 function INFO_over(){
     window_INFO.style.zIndex = '3';
     window_IMAGE.style.zIndex = '2';
+    window_ERROR.style.zIndex = '2';
     try {
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
         document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+        document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
     } catch {
 
     }
@@ -102,14 +121,28 @@ function INFO_over(){
 function IMAGE_over(){
     window_IMAGE.style.zIndex = '3';
     window_INFO.style.zIndex = '2';
+    window_ERROR.style.zIndex = '2';
     try {
         document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+        document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
     } catch {
 
     }
 }
 
+function ERROR_over(){
+    window_ERROR.style.zIndex = '3';
+    window_INFO.style.zIndex = '2';
+    window_IMAGE.style.zIndex = '2'
+    try {
+        document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
+        document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+        document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+    } catch {
+
+    }
+}
 
 function killscreen(){
     audio1.play();
