@@ -23,6 +23,8 @@ let INFO = false;
 let IMAGE = false;
 let ERROR = false;
 
+let pagesize = [250, 350];
+
 const counter = setInterval(function(){
     const today = new Date();
     var options = { timeStyle: 'short' };
@@ -37,21 +39,21 @@ document.onmousemove = (e) => {
     if (windowsDrag && INFO && isDragging) {
         console.log(`${e.pageX}, ${e.pageY}`);
         window_INFO.style.top = `${e.pageY}px`;
-        window_INFO.style.left = `${e.pageX - 250}px`;
+        window_INFO.style.left = `${e.pageX - pagesize[0]}px`;
         window_INFO.style.transform = `translate(-50%, -5%)`
     }
 
     if (windowsDrag && IMAGE && isDragging) {
         console.log(`${e.pageX}, ${e.pageY}`);
         window_IMAGE.style.top = `${e.pageY}px`;
-        window_IMAGE.style.left = `${e.pageX - 250}px`;
+        window_IMAGE.style.left = `${e.pageX - pagesize[0]}px`;
         window_IMAGE.style.transform = `translate(-50%, -5%)`
     }
 
     if (windowsDrag && ERROR && isDragging) {
         console.log(`${e.pageX}, ${e.pageY}`);
         window_ERROR.style.top = `${e.pageY}px`;
-        window_ERROR.style.left = `${e.pageX - 350}px`;
+        window_ERROR.style.left = `${e.pageX - pagesize[1]}px`;
         window_ERROR.style.transform = `translate(-50%, -5%)`
     }
 
@@ -151,4 +153,13 @@ function killscreen(){
 
 function ERROR_Disable(){
     ERRORA.classList.add('ALARMHIDDEN');
+}
+
+function removepiler(){
+    piler = false;
+    pagesize = [0 , 0];
+    document.querySelector('.fbl').remove();
+    document.querySelector('.fbr').remove();
+    document.querySelector('.effect').remove();
+    document.querySelector('.screen').style.width = '100%';
 }
