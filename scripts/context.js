@@ -2,9 +2,10 @@
 const context = document.getElementById("context");
 const scope = document.querySelector("body");
 const fstoggle = document.getElementById("fstoggle");
-const returnDOS = document.getElementById("returnDOS");
+const audioCM = document.getElementById("audioCM")
 
 scope.addEventListener("contextmenu", (e) => {
+    audioCM.play();
     if (e.target.id != 'hintdisable') {
         e.preventDefault();
 
