@@ -2,20 +2,24 @@
     overflow: hidden;
 }
 
-div.cursor-default {
+.cursor-default {
     animation: bad 0.01s infinite;
 }
 
-div.cursor-pointer {
+.cursor-pointer {
     animation: bap 0.01s infinite;
 }
 
-div.cursor-text {
-    cursor: url(../cursor/Beam.cur) 2 2, default;
+.cursor-text {
+    cursor: url(../cursor/Beam.cur) 2 2, text;
 }
 
-div.cursor-wait {
-    cursor: url(../cursor/Cursor_3.cur) 2 2, default;
+.cursor-wait {
+    cursor: url(../cursor/Cursor_3.cur) 2 2, wait;
+}
+
+.cursor-err {
+    cursor: url(../cursor/Cursor_11.cur) 2 2, not-allowed;
 }
 
 @keyframes bad {

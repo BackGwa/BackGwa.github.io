@@ -123,6 +123,13 @@
     animation: bap 0.01s infinite;
 }
 
+.NEXIT {
+    font-family: 'Gulim';
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0;
+}
+
 .RESIZE {
     background: #c0c0c0;
     position: relative;
