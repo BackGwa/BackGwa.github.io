@@ -88,6 +88,8 @@
     top: 165px;
     transform: translate(-50%, -50%);
     background: linear-gradient(0.25turn, #00299c, #0073de, #00299c);
+    background-size: 200% 200%;
+    animation: marqani 5s ease-out infinite;
 }
 
 .user {
@@ -152,10 +154,24 @@
 }
 
 input:focus {
-    outline:none;
+    outline: none;
 }
 
 input::selection {
     background-color: #08246b;
     color: #FFF;
+}
+
+@keyframes marqani {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: -100% 0%;
+    }
 }

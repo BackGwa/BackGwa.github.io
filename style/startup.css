@@ -48,7 +48,7 @@
     margin-right: 12px;
     font-family: 'Gulim';
     font-size: 14px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .marq {
@@ -56,9 +56,11 @@
     height: 12px;
     position: absolute;
     left: 50%;
-    bottom: 6.75%;
+    bottom: 7%;
     transform: translate(-50%, -50%);
     background: linear-gradient(0.25turn, #00299c, #0073de, #00299c);
+    background-size: 200% 200%;
+    animation: marqani 3s ease-out infinite;
 }
 
 progress {
@@ -100,4 +102,18 @@ progress::-webkit-progress-bar {
     transform: translate(-20%, -50%);
     width: 19vh;
     z-index: 1;
+}
+
+@keyframes marqani {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: -100% 0%;
+    }
 }
