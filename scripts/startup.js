@@ -8,14 +8,14 @@ let pgvalue = 100;
 
 const itv = setInterval(() => {
     setTimeout(function(){
-        pgvalue -= 1;
+        pgvalue -= 5;
         pgbar.value = `${pgvalue}`;
-    }, randint(1500));
+    }, randint(3000));
     if(pgvalue <= 0){
         clearInterval(itv);
         start();
     }
-}, 150);
+}, 250);
 
 function start(){
     document.querySelector('.bootscreen').remove();
