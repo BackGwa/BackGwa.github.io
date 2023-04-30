@@ -17,7 +17,6 @@
     border-left: ridge 6px #ffffff;
     border-bottom: ridge 6px #000000;
     border-right: ridge 6px #000000;
-
 }
 
 .WINDOW.INFO {
@@ -32,6 +31,23 @@
     z-index: 3;
 }
 
+.HIDDEN {
+    display: none;
+}
+
+.WAIT {
+    width: 500px;
+    height: 200px;
+    z-index: 3;
+}
+
+.WINDOW.WAIT {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+
 .TITLE {
     color: #FFF;
     font-family: 'Gulim';
@@ -39,7 +55,7 @@
     padding: 2px;
 }
 
-.INFO .TITLE {
+.TITLE {
     background: linear-gradient(0.25turn, #00003f, #a6c6f7);
 }
 
@@ -151,6 +167,11 @@
 
 .logonimg {
     width: 100%;
+}
+
+.texthint {
+    margin-left: 4px;
+    margin-top: 4px;
 }
 
 input:focus {

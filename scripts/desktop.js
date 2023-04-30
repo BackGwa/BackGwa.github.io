@@ -28,6 +28,7 @@ let ERROR = false;
 
 let pagesize = [250, 350];
 
+
 const counter = setInterval(function(){
     const today = new Date();
     var options = { timeStyle: 'short' };
@@ -76,11 +77,13 @@ document.onmousemove = (e) => {
 
 }
 
+
 title_INFO.onmousedown = () => {
     windowsDrag = true;
     INFO = true;
     INFO_over()
 }
+
 
 title_IMAGE.onmousedown = () => {
     windowsDrag = true;
@@ -88,11 +91,13 @@ title_IMAGE.onmousedown = () => {
     IMAGE_over();
 }
 
+
 title_ERROR.onmousedown = () => {
     windowsDrag = true;
     ERROR = true;
     ERROR_over();
 }
+
 
 document.onmousedown = (e) => {
     isDragging = true;

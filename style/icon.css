@@ -1,0 +1,25 @@
+
+
+.iconlist {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    z-index: 1;
+}
+
+.iconimg {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 3px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icontext {
+    font-family: Gulim;
+    font-size: 13px;
+    color: #FFF;
+    margin-bottom: 24px;
+}
