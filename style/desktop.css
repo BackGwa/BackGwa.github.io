@@ -208,6 +208,16 @@ body {
     overflow: hidden;
 }
 
+.dosscreen {
+    background-color: #222;
+    width: 66.7%;
+    height: 0;
+    padding-bottom: 100vh;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+}
+
 #sounddisplay {
     margin-top: 4px;
     margin-left: 8px;
