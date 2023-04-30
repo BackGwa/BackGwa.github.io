@@ -154,3 +154,8 @@
 input:focus {
     outline:none;
 }
+
+input::selection {
+    background-color: #08246b;
+    color: #FFF;
+}
