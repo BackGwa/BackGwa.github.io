@@ -22,15 +22,19 @@
 
 @keyframes ereft {
     0% {
+        top: 0%;
         width: 100%;
         height: 100%;
         font-size: 52px;
         color: #e6892a;
+
     }
     100% {
+        top: 60%;
         width: 225%;
         height: 25%;
         font-size: 100px;
         color: #512b05;
+        transform: scale(1.7) perspective(64px) translateZ(8);
     }
 }
