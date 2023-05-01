@@ -33,7 +33,7 @@ let minecraft = false;
 let pagesize = [250, 350];
 
 
-const counter = setInterval(function(){
+const counter = setInterval(function () {
     const today = new Date();
     var options = { timeStyle: 'short' };
     time.innerHTML = today.toLocaleTimeString("ko-kr", options);
@@ -75,7 +75,7 @@ document.onmousemove = (e) => {
         box.style.transform = `translate(${translateX}, ${translateY})`;
         box.style.width = Math.abs(distanceX) + 'px';
         box.style.height = Math.abs(distanceY) + 'px';
-    } else if(isDragging) {
+    } else if (isDragging) {
         box.style.opacity = '0.0';
     }
 
@@ -112,12 +112,12 @@ document.onmousedown = (e) => {
 document.onclick = (e) => {
     console.log(e.target.classList);
     console.log((e.target.classList[0] == 'iconimg'));
-    if(!(e.target.classList[0] == 'iconimg' || e.target.classList[0] == 'icontext' || e.target.classList[0] == 'icon')){
+    if (!(e.target.classList[0] == 'iconimg' || e.target.classList[0] == 'icontext' || e.target.classList[0] == 'icon')) {
         minecraft = false;
         internet = false;
         dummy = false;
         iconunselect();
-    } else if (dummy ^ minecraft ^ internet){
+    } else if (dummy ^ (minecraft ^ internet)) {
         minecraft = false;
         internet = false;
         dummy = false;
@@ -129,21 +129,21 @@ document.onclick = (e) => {
 document.onmouseup = (e) => {
     isDragging = false;
     windowsDrag = false;
-    if(INFO){
+    if (INFO) {
         INFO = false;
         hint_INFO.style.visibility = 'collapse';
         window_INFO.style.top = `${e.pageY}px`;
         window_INFO.style.left = `${e.pageX - pagesize[0]}px`;
         window_INFO.style.transform = `translate(-50%, -5%)`
     }
-    else if(IMAGE){
+    else if (IMAGE) {
         IMAGE = false;
         hint_IMAGE.style.visibility = 'collapse';
         window_IMAGE.style.top = `${e.pageY}px`;
         window_IMAGE.style.left = `${e.pageX - pagesize[0]}px`;
         window_IMAGE.style.transform = `translate(-50%, -5%)`
     }
-    else if(ERROR){
+    else if (ERROR) {
         ERROR = false;
         hint_ERROR.style.visibility = 'collapse';
         window_ERROR.style.top = `${e.pageY}px`;
@@ -156,7 +156,7 @@ document.onmouseup = (e) => {
 }
 
 
-function INFO_over(){
+function INFO_over() {
     window_INFO.style.zIndex = '4';
     window_IMAGE.style.zIndex = '3';
     window_ERROR.style.zIndex = '3';
@@ -172,7 +172,7 @@ function INFO_over(){
 }
 
 
-function IMAGE_over(){
+function IMAGE_over() {
     window_IMAGE.style.zIndex = '4';
     window_INFO.style.zIndex = '3';
     window_ERROR.style.zIndex = '3';
@@ -187,7 +187,7 @@ function IMAGE_over(){
     document.getElementById("mypc").classList.remove('taskover');
 }
 
-function ERROR_over(){
+function ERROR_over() {
     window_ERROR.style.zIndex = '4';
     window_INFO.style.zIndex = '3';
     window_IMAGE.style.zIndex = '3'
@@ -200,31 +200,31 @@ function ERROR_over(){
     }
 }
 
-function killscreen(){
+function killscreen() {
     audio1.play();
 }
 
-function ERROR_Disable(){
+function ERROR_Disable() {
     ERRORA.classList.add('ALARMHIDDEN');
 }
 
-function removepiler(){
+function removepiler() {
     fbremove.remove();
     piler = false;
-    pagesize = [0 , 0];
+    pagesize = [0, 0];
     document.querySelector('.fbl').remove();
     document.querySelector('.fbr').remove();
     document.querySelector('.effect').remove();
     document.querySelector('.screen').style.width = '100%';
 }
 
-function imgviewrm(){
+function imgviewrm() {
     window_IMAGE.remove();
     document.getElementById('imgviewer').style.display = 'none';
     killscreen();
 }
 
-function inform(){
+function inform() {
     window_INFO.remove();
     document.getElementById('mypc').style.display = 'none';
     killscreen();
@@ -232,30 +232,30 @@ function inform(){
 
 
 document.getElementById('minecraft').onclick = () => {
+
+    if (minecraft) {
+        alert('재밌눈 마인크래프트~');
+    }
+    minecraft = true;
+    dummy = true;
+
     document.getElementById('minecraft').classList.add('iconbackground');
     audio1.play();
-
-    if(minecraft){
-        alert('재밌눈 마인크래프트~');
-    } else {
-        minecraft = true;
-        dummy = true;
-    }
 }
 
 document.getElementById('internet').onclick = () => {
+
+    if (internet) {
+        alert('인터넷 오버도즈~');
+    }
+    internet = true;
+    dummy = true;
+
     document.getElementById('internet').classList.add('iconbackground');
     audio1.play();
-
-    if(internet){
-        alert('인터넷 오버도즈~');
-    } else {
-        internet = true;
-        dummy = true;
-    }
 }
 
-function iconunselect(){
+function iconunselect() {
     document.getElementById('minecraft').classList.remove('iconbackground');
     document.getElementById('internet').classList.remove('iconbackground');
 }
