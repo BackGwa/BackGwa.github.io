@@ -9,27 +9,29 @@
 }
 
 .iconimg {
-    width: 42px;
-    height: 42px;
-    margin-bottom: 3px;
+    width: 45px;
+    height: 45px;
+    margin-top: 1px;
+    margin-bottom: 2px;
 }
 
 .icon {
-    margin: 1px;
-    padding: 2px;
+    margin: 0px;
+    padding: 1px;
     text-align: center;
     width: 75px;
+    border: #FFFFFF00 dashed 1px;
 }
 
 .icontext {
     font-family: Gulim;
     font-size: 13px;
     color: #FFF;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .iconbackground {
-    background: #08246b;
-    border: #FFFFFFAA dashed 1px;
+    background: #08246bDD;
+    border: #FFFFFFA0 dashed 1px;
     mix-blend-mode: difference;
 }
