@@ -15,10 +15,10 @@ function start(){
     }, 2000);
     setTimeout(() => {
         WAIT.remove();
-    }, 6000);
+    }, 6500);
     setTimeout(() => {
         location.href = './desktop.html';
-    }, 7500);
+    }, 7300);
 }
 
 document.getElementById("ATAG").disabled = true;

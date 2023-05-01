@@ -19,3 +19,18 @@
     color: #e6892a;
     cursor: none;
 }
+
+@keyframes ereft {
+    0% {
+        width: 100%;
+        height: 100%;
+        font-size: 52px;
+        color: #e6892a;
+    }
+    100% {
+        width: 225%;
+        height: 25%;
+        font-size: 100px;
+        color: #512b05;
+    }
+}
