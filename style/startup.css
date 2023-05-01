@@ -71,7 +71,7 @@
     background: #222;
     opacity: 1;
     z-index: 3;
-    animation: zi 1s forwards steps(8, end);
+    animation: zi 0.5s forwards steps(24, end);
 }
 
 .ALARMHIDDEN {
