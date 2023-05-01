@@ -109,22 +109,6 @@ document.onmousedown = (e) => {
     box.style.opacity = '1.0';
 }
 
-document.onclick = (e) => {
-    console.log(e.target.classList);
-    console.log((e.target.classList[0] == 'iconimg'));
-    if (!(e.target.classList[0] == 'iconimg' || e.target.classList[0] == 'icontext' || e.target.classList[0] == 'icon')) {
-        minecraft = false;
-        internet = false;
-        dummy = false;
-        iconunselect();
-    } else if (dummy ^ (minecraft ^ internet)) {
-        minecraft = false;
-        internet = false;
-        dummy = false;
-        iconunselect();
-    }
-}
-
 
 document.onmouseup = (e) => {
     isDragging = false;
@@ -233,11 +217,17 @@ function inform() {
 
 document.getElementById('minecraft').onclick = () => {
 
-    if (minecraft) {
+    if(minecraft){
         alert('재밌눈 마인크래프트~');
     }
+
+    if(internet){
+        document.getElementById('ie-text').classList.remove('iconbackground');
+        document.querySelector('.ie').classList.remove('iconenable');
+        internet = false;
+    }
+
     minecraft = true;
-    dummy = true;
 
     document.getElementById('mc-text').classList.add('iconbackground');
     document.querySelector('.mc').classList.add('iconenable');
@@ -246,22 +236,21 @@ document.getElementById('minecraft').onclick = () => {
 
 document.getElementById('internet').onclick = () => {
 
-    if (internet) {
+    if(internet){
         alert('인터넷 오버도즈~');
     }
+
+    if(minecraft){
+        document.getElementById('mc-text').classList.remove('iconbackground');
+        document.querySelector('.mc').classList.remove('iconenable');
+        minecraft = false;
+    }
+
     internet = true;
-    dummy = true;
 
     document.getElementById('ie-text').classList.add('iconbackground');
     document.querySelector('.ie').classList.add('iconenable');
     audio1.play();
-}
-
-function iconunselect() {
-    document.getElementById('mc-text').classList.remove('iconbackground');
-    document.getElementById('ie-text').classList.remove('iconbackground');
-    document.querySelector('.mc').classList.remove('iconenable');
-    document.querySelector('.ie').classList.remove('iconenable');
 }
 
 document.getElementById('mypc').onclick = () => {
