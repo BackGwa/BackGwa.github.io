@@ -367,6 +367,10 @@ body {
     margin-left: 4px;
     margin-top: 3px;
     animation: taskfirst 1.3s forwards steps(1, end);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .taskimg {
