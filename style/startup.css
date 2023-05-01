@@ -65,13 +65,13 @@
 
 .fulls {
     position: absolute;
-    top: 0;
+    bottom: 0;
     width: 100%;
     height: 0%;
     background: #222;
     opacity: 1;
     z-index: 3;
-    animation: zi 1s reverse steps(8, end);
+    animation: zi 1s forwards steps(8, end);
 }
 
 .ALARMHIDDEN {
@@ -80,10 +80,10 @@
 
 @keyframes zi {
     0%{
-        height: 0%;
+        height: 100%;
     }
     100%{
-        height: 100%;
+        height: 0%;
     }
 }
 
