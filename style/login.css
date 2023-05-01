@@ -17,7 +17,7 @@
     background: #000000;
     opacity: 0.25;
     z-index: 3;
-    animation: zi 4.5s forwards steps(32, end);;
+    animation: zi 1.5s forwards steps(32, end);;
 }
 
 .fulls2 {
@@ -28,7 +28,7 @@
     background: #000000;
     opacity: 0.25;
     z-index: 3;
-    animation: zi 7s forwards steps(64, end);;
+    animation: zi 2s forwards steps(64, end);;
 }
 
 @keyframes zi {
