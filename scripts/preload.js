@@ -39,6 +39,13 @@ function passchk(){
     }
 }
 
+document.addEventListener("keyup", function (e) {
+    if (e.keyCode === 13) {
+        if(document.getElementById("passbox").value != ''){
+            passchk();
+        }
+    }
+  });
 
 function AAable(){
     document.getElementById('ERROR').classList.remove('ALARMHIDDEN');
