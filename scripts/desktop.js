@@ -239,7 +239,7 @@ document.getElementById('minecraft').onclick = () => {
     minecraft = true;
     dummy = true;
 
-    document.getElementById('minecraft').classList.add('iconbackground');
+    document.getElementById('mc-text').classList.add('iconbackground');
     audio1.play();
 }
 
@@ -251,13 +251,13 @@ document.getElementById('internet').onclick = () => {
     internet = true;
     dummy = true;
 
-    document.getElementById('internet').classList.add('iconbackground');
+    document.getElementById('ie-text').classList.add('iconbackground');
     audio1.play();
 }
 
 function iconunselect() {
-    document.getElementById('minecraft').classList.remove('iconbackground');
-    document.getElementById('internet').classList.remove('iconbackground');
+    document.getElementById('mc-text').classList.remove('iconbackground');
+    document.getElementById('ie-text').classList.remove('iconbackground');
 }
 
 document.getElementById('mypc').onclick = () => {
