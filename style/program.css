@@ -47,7 +47,7 @@
 
 .windowhint {
     position: absolute;
-    border: #FFF solid 3px;
+    border: #f2de94 solid 4px;
     mix-blend-mode: difference;
     z-index: 4;
 }
