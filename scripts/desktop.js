@@ -39,6 +39,22 @@ const counter = setInterval(function () {
     time.innerHTML = today.toLocaleTimeString("ko-kr", options);
 }, 500);
 
+document.onclick = (e) => {
+    console.log(e.target.classList);
+    console.log((e.target.classList[0] == 'iconimg'));
+    if (!(e.target.classList[0] == 'iconimg' || e.target.classList[0] == 'icontext' || e.target.classList[0] == 'icon')) {
+        minecraft = false;
+        internet = false;
+        iconunselect();
+    }
+}
+
+function iconunselect() {
+    document.getElementById('mc-text').classList.remove('iconbackground');
+    document.getElementById('ie-text').classList.remove('iconbackground');
+    document.querySelector('.mc').classList.remove('iconenable');
+    document.querySelector('.ie').classList.remove('iconenable');
+}
 
 document.onmousemove = (e) => {
     box.style.left = e.pageX + 'px';
