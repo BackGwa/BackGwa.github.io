@@ -33,3 +33,7 @@
 .iconbackground {
     background: #08246bDD;
 }
+
+.iconenable {
+    filter: opacity(0.75) drop-shadow(0px 0px 0px #0048ff) saturate(110%);
+}
