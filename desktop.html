@@ -45,22 +45,6 @@
         <!-- Desktop area -->
         <div class="desktop cursor-default" id="desktop">
 
-            <!-- Icon area -->
-            <div class="iconlist">
-                <div class="icon minecraft">
-                    <img src="./image/icon/internet.png" class="iconimg">
-                    <div class="icontext">
-                        Internet
-                    </div>
-                </div>
-                <div class="icon minecraft">
-                    <img src="./image/icon/minecraft.png" class="iconimg">
-                    <div class="icontext">
-                        Minecraft
-                    </div>
-                </div>
-            </div>
-
             <!-- Taskbar area -->
             <div class="taskbar cursor-default">
 
@@ -95,6 +79,23 @@
         <!-- Program Windows -->
         <div class="program dragnull">
 
+            <!-- Icon area -->
+            <div class="iconlist">
+                <div class="icon internet" id="internet">
+                    <img src="./image/icon/internet.png" class="iconimg">
+                    <div class="icontext">
+                        Internet
+                    </div>
+                </div>
+                <div class="icon minecraft" id="minecraft">
+                    <img src="./image/icon/minecraft.png" class="iconimg">
+                    <div class="icontext">
+                        Minecraft
+                    </div>
+                </div>
+            </div>
+
+
             <!-- ERROR Windows -->
             <div class="ERRORPROGRAM" id="hintdisable">
                 <div class="WINDOW ERROR ALARMHIDDEN" id="ERROR">
@@ -128,8 +129,7 @@
                     <div class="TITLE" id="INFOTITLE">
                         <div class="TEXT">내 WINDOS 정보</div>
                         <div class="BUTTON">
-                            <button class="BORDER EXIT" id="EXITINFO"
-                                onclick="inform();">Χ</button>
+                            <button class="BORDER EXIT" id="EXITINFO" onclick="inform();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
@@ -155,8 +155,7 @@
                     <div class="TITLE" id="IMAGETITLE">
                         <div class="TEXT">사진 뷰어 : Setup.jpg</div>
                         <div class="BUTTON">
-                            <button class="BORDER EXIT" id="EXITIMAGE"
-                                onclick="imgviewrm();">Χ</button>
+                            <button class="BORDER EXIT" id="EXITIMAGE" onclick="imgviewrm();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">

@@ -26,6 +26,10 @@ let INFO = false;
 let IMAGE = false;
 let ERROR = false;
 
+let dummy = true;
+let internet = false;
+let minecraft = false;
+
 let pagesize = [250, 350];
 
 
@@ -105,6 +109,22 @@ document.onmousedown = (e) => {
     box.style.opacity = '1.0';
 }
 
+document.onclick = (e) => {
+    console.log(e.target.classList);
+    console.log((e.target.classList[0] == 'iconimg'));
+    if(!(e.target.classList[0] == 'iconimg' || e.target.classList[0] == 'icontext' || e.target.classList[0] == 'icon')){
+        minecraft = false;
+        internet = false;
+        dummy = false;
+        iconunselect();
+    } else if (dummy ^ minecraft ^ internet){
+        minecraft = false;
+        internet = false;
+        dummy = false;
+        iconunselect();
+    }
+}
+
 
 document.onmouseup = (e) => {
     isDragging = false;
@@ -137,9 +157,9 @@ document.onmouseup = (e) => {
 
 
 function INFO_over(){
-    window_INFO.style.zIndex = '3';
-    window_IMAGE.style.zIndex = '2';
-    window_ERROR.style.zIndex = '2';
+    window_INFO.style.zIndex = '4';
+    window_IMAGE.style.zIndex = '3';
+    window_ERROR.style.zIndex = '3';
     try {
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
         document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
@@ -153,9 +173,9 @@ function INFO_over(){
 
 
 function IMAGE_over(){
-    window_IMAGE.style.zIndex = '3';
-    window_INFO.style.zIndex = '2';
-    window_ERROR.style.zIndex = '2';
+    window_IMAGE.style.zIndex = '4';
+    window_INFO.style.zIndex = '3';
+    window_ERROR.style.zIndex = '3';
     try {
         document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
@@ -168,9 +188,9 @@ function IMAGE_over(){
 }
 
 function ERROR_over(){
-    window_ERROR.style.zIndex = '3';
-    window_INFO.style.zIndex = '2';
-    window_IMAGE.style.zIndex = '2'
+    window_ERROR.style.zIndex = '4';
+    window_INFO.style.zIndex = '3';
+    window_IMAGE.style.zIndex = '3'
     try {
         document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
@@ -208,4 +228,34 @@ function inform(){
     window_INFO.remove();
     document.getElementById('mypc').style.display = 'none';
     killscreen();
+}
+
+
+document.getElementById('minecraft').onclick = () => {
+    document.getElementById('minecraft').classList.add('iconbackground');
+    audio1.play();
+
+    if(minecraft){
+        alert('재밌눈 마인크래프트~');
+    } else {
+        minecraft = true;
+        dummy = true;
+    }
+}
+
+document.getElementById('internet').onclick = () => {
+    document.getElementById('internet').classList.add('iconbackground');
+    audio1.play();
+
+    if(internet){
+        alert('인터넷 오버도즈~');
+    } else {
+        internet = true;
+        dummy = true;
+    }
+}
+
+function iconunselect(){
+    document.getElementById('minecraft').classList.remove('iconbackground');
+    document.getElementById('internet').classList.remove('iconbackground');
 }

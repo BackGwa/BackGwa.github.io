@@ -4,7 +4,7 @@
     position: absolute;
     top: 3%;
     left: 3%;
-    z-index: 1;
+    z-index: 2;
     animation: taskfirst 2.1s forwards steps(1, end);
 }
 
@@ -15,7 +15,10 @@
 }
 
 .icon {
+    margin: 1px;
+    padding: 2px;
     text-align: center;
+    width: 75px;
 }
 
 .icontext {
@@ -23,4 +26,10 @@
     font-size: 13px;
     color: #FFF;
     margin-bottom: 24px;
+}
+
+.iconbackground {
+    background: #08246b;
+    border: #FFFFFFAA dashed 1px;
+    mix-blend-mode: difference;
 }

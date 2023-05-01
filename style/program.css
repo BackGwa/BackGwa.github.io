@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     z-index: 1;
-
     animation: window 3s forwards steps(1, end);
 }
 
@@ -43,14 +42,14 @@
 .INFO {
     width: 450px;
     height: 325px;
-    z-index: 3;
+    z-index: 4;
 }
 
 .windowhint {
     position: absolute;
     border: #FFF solid 3px;
     mix-blend-mode: difference;
-    z-index: 3;
+    z-index: 4;
 }
 
 #infohint {
@@ -94,13 +93,13 @@
 .IMAGE {
     width: 250px;
     height: 250px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .ERROR {
     width: 350px;
     height: 125px;
-    z-index: 2;  
+    z-index: 3;  
 }
 
 .TITLE {
