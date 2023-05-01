@@ -40,8 +40,8 @@
 }
 
 .INFO {
-    width: 450px;
-    height: 350px;
+    width: 500px;
+    height: 375px;
     z-index: 4;
 }
 
@@ -54,8 +54,8 @@
 
 #infohint {
     visibility: collapse;
-    width: 450px;
-    height: 350px;
+    width: 500px;
+    height: 375px;
 }
 
 #imagehint {
