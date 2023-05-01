@@ -259,3 +259,11 @@ function iconunselect() {
     document.getElementById('minecraft').classList.remove('iconbackground');
     document.getElementById('internet').classList.remove('iconbackground');
 }
+
+document.getElementById('mypc').onclick = () => {
+    INFO_over();
+}
+
+document.getElementById('imgviewer').onclick = () => {
+    IMAGE_over();
+}
