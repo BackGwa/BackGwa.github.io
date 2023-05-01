@@ -8,7 +8,7 @@
     padding: 0;
     z-index: 1;
 
-    animation: window 2s forwards steps(1, end);
+    animation: window 3s forwards steps(1, end);
 }
 
 .WINDOW {
@@ -24,12 +24,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-90%, -70%);
+    animation: window 3.2s forwards steps(1, end);
 }
 
 .WINDOW.IMAGE {
     top: 50%;
     left: 50%;
     transform: translate(-10%, -30%);
+    animation: window 3.5s forwards steps(1, end);
 }
 
 .WINDOW.ERROR {
@@ -46,7 +48,7 @@
 
 .windowhint {
     position: absolute;
-    border: #FFF dashed 1px;
+    border: #FFF solid 3px;
     mix-blend-mode: difference;
     z-index: 3;
 }

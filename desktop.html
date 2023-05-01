@@ -72,6 +72,17 @@
 
                 <div class="diver"></div>
 
+                <div class="applist">
+                    <div class="task dragnull cursor-pointer taskover" id="mypc">
+                        <img class="taskimg" src="./image/icon/mypc.png">
+                        <div class="taskname">내 WINDOS 정보</div>
+                    </div>
+                    <div class="task dragnull cursor-pointer" id="imgviewer">
+                        <img class="taskimg" src="./image/icon/imgviewer.png">
+                        <div class="taskname">사진 뷰어</div>
+                    </div>
+                </div>
+
                 <!-- Notifications -->
                 <div class="notifications dragnull cursor-pointer">
                     <img src="./image/Sound.png" id="sounddisplay">
@@ -118,7 +129,7 @@
                         <div class="TEXT">내 WINDOS 정보</div>
                         <div class="BUTTON">
                             <button class="BORDER EXIT" id="EXITINFO"
-                                onclick="window_INFO.remove();killscreen();">Χ</button>
+                                onclick="inform();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
@@ -126,7 +137,7 @@
                         <div class="infotext">
                             <b>Windos 2023 Amateur Editon <small>(Built on JS Technology)</small></b><br><br>
                             제작자 : BACKGWA (강찬영)<br>
-                            빌드 정보 : 230430.0336.1<br>
+                            빌드 정보 : 230501.0414.0<br>
                             <hr>
                             <div class="client"></div>
                             <script>
@@ -145,13 +156,12 @@
                         <div class="TEXT">사진 뷰어 : Setup.jpg</div>
                         <div class="BUTTON">
                             <button class="BORDER EXIT" id="EXITIMAGE"
-                                onclick="window_IMAGE.remove();killscreen();">Χ</button>
+                                onclick="imgviewrm();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
                         <img src="./image/Setup.jpg" width="100%" height="100%">
                     </div>
-                    <div class="RESIZE RFT">◿</div>
                 </div>
                 <div class="windowhint" id="imagehint"></div>
             </div>

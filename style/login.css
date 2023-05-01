@@ -9,6 +9,37 @@
     z-index: 1;
 }
 
+.fulls {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background: #000000;
+    opacity: 0.25;
+    z-index: 3;
+    animation: zi 4.5s forwards steps(32, end);;
+}
+
+.fulls2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background: #000000;
+    opacity: 0.25;
+    z-index: 3;
+    animation: zi 7s forwards steps(64, end);;
+}
+
+@keyframes zi {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
 .WINDOW {
     position: absolute;
 
@@ -29,6 +60,18 @@
     width: 500px;
     height: 320px;
     z-index: 3;
+}
+
+.ERROR {
+    width: 410px;
+    height: 110px;
+    z-index: 4;
+}
+
+.WINDOW.ERROR {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .HIDDEN {
@@ -87,6 +130,7 @@
     border-right: ridge 3px #000000;
 }
 
+
 .ALARM button:focus {
     background: #aaaaaa;
     border-top: ridge 3px #000000;
@@ -135,6 +179,12 @@
     font-size: 13px;
 }
 
+p {
+    position: absolute;
+    margin-left: 7px;
+    margin-top: 11px;
+}
+
 .namebox {
     font-family: 'Gulim';
     font-size: 15px;
@@ -151,9 +201,15 @@
     display: flex;
 }
 
+.ALARM #CTAG {
+    margin-left: 290px;
+    margin-top: 45px;
+    margin-right: 12px;
+}
+
 .ALARM #ATAG {
     margin-left: 255px;
-    margin-top: 95px;
+    margin-top: 110px;
     margin-right: 2px;
 }
 

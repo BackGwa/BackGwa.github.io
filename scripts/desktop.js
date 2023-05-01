@@ -147,6 +147,8 @@ function INFO_over(){
     } catch {
 
     }
+    document.getElementById("mypc").classList.add('taskover');
+    document.getElementById("imgviewer").classList.remove('taskover');
 }
 
 
@@ -161,6 +163,8 @@ function IMAGE_over(){
     } catch {
 
     }
+    document.getElementById("imgviewer").classList.add('taskover');
+    document.getElementById("mypc").classList.remove('taskover');
 }
 
 function ERROR_over(){
@@ -192,4 +196,16 @@ function removepiler(){
     document.querySelector('.fbr').remove();
     document.querySelector('.effect').remove();
     document.querySelector('.screen').style.width = '100%';
+}
+
+function imgviewrm(){
+    window_IMAGE.remove();
+    document.getElementById('imgviewer').style.display = 'none';
+    killscreen();
+}
+
+function inform(){
+    window_INFO.remove();
+    document.getElementById('mypc').style.display = 'none';
+    killscreen();
 }

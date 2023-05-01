@@ -1,4 +1,5 @@
 const WAIT = document.getElementById('WAIT');
+const audioER = document.getElementById("audioER");
 
 function start(){
     document.querySelector(".screen").classList.remove("cursor-default");
@@ -18,4 +19,35 @@ function start(){
     setTimeout(() => {
         location.href = './desktop.html';
     }, 7500);
+}
+
+document.getElementById("ATAG").disabled = true;
+document.getElementById("passbox").oninput = (e) => {
+    if(document.getElementById("passbox").value == ''){
+        document.getElementById("ATAG").disabled = true;
+    } else {
+        document.getElementById("ATAG").disabled = false;
+    }
+}
+
+function passchk(){
+    if(document.getElementById("passbox").value == 'helloworld'){
+        start();
+    } else {
+        AAable();
+        audioER.play();
+    }
+}
+
+
+function AAable(){
+    document.getElementById('ERROR').classList.remove('ALARMHIDDEN');
+    document.querySelector('.fulls').classList.remove('ALARMHIDDEN');
+    document.querySelector('.fulls2').classList.remove('ALARMHIDDEN');
+}
+
+function DDisable(){
+    document.getElementById('ERROR').classList.add('ALARMHIDDEN');
+    document.querySelector('.fulls').classList.add('ALARMHIDDEN');
+    document.querySelector('.fulls2').classList.add('ALARMHIDDEN');
 }

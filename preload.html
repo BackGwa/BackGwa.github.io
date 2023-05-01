@@ -18,6 +18,7 @@
 <body class="desktop-color curnone crt">
 
     <audio src="./sounds/Logon.wav" id="audioON"></audio>
+    <audio src="./sounds/Error.mp3" id="audioER"></audio>
 
     <!-- Pillarbox -->
     <div class="fbl"></div>
@@ -34,6 +35,7 @@
         <div class="digital digital2 dragnull"></div>
 
         <div class="program">
+
             <div class="WINDOW cursor-default INFO" id="INFO">
                 <div class="TITLE dragnull">
                     <div class="TEXT">Windos 2023 Amateur Editon 로그온</div>
@@ -47,11 +49,32 @@
                     </div>
                     <div class="pass dragnull">
                         <div class="passbox">암호(P) : </div>
-                        <input type="password" class="textbox" value="0000">
+                        <input type="password" class="textbox" value="" id="passbox">
                     </div>
                     <div class="ALARM">
-                        <button id="ATAG" onclick="start();" class="cursor-pointer">확인</button>
+                        <button id="ATAG" disabled onclick="passchk();" class="cursor-pointer">확인</button>
                         <button id="BTAG" disabled class="cursor-err">취소</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fulls ALARMHIDDEN"></div>
+            <div class="fulls2 ALARMHIDDEN"></div>
+
+            <!-- ERROR Windows -->
+            <div class="WINDOW ERROR ALARMHIDDEN" id="ERROR">
+                <div class="TITLE" id="ERRORTITLE">
+                    <div class="TEXT dragnull">사용자 암호가 올바르지 않음</div>
+                </div>
+                <div class="DETAIL">
+                    <div class="ALARM dragnull">
+                        <p>
+                            사용자 암호가 유효하지 않아 로그온 할 수 없습니다.
+                        </p>
+                        <div class="rbtn">
+                            <button id="CTAG" class="cursor-pointer dragnull"
+                                onclick="DDisable();killscreen();">확인</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,6 +90,6 @@
                 </div>
             </div>
         </div>
-    <script src="./scripts/preload.js"></script>
+        <script src="./scripts/preload.js"></script>
 
 </html>

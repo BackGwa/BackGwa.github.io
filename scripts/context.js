@@ -100,12 +100,15 @@ sysreboot.addEventListener("click", function () {
         removeall();
     }, 1000)
     setTimeout(function(){
-        document.querySelector('.taskbar').remove();
-    }, 2000)
+        document.querySelector('.iconlist').remove();
+    }, 1750)
     setTimeout(function(){
         audioLO.play();
         document.querySelector('.CRTON').style.animation = "ONEFFECT 5s reverse ease-out";
-    }, 2500);
+    }, 2000);
+    setTimeout(function(){
+        document.querySelector('.taskbar').remove();
+    }, 2750)
     setTimeout(function(){
         location.href = './startup.html';
     }, 7000);

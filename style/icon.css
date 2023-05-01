@@ -5,6 +5,7 @@
     top: 3%;
     left: 3%;
     z-index: 1;
+    animation: taskfirst 2.1s forwards steps(1, end);
 }
 
 .iconimg {
