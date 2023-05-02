@@ -3,6 +3,7 @@ const scope = document.querySelector("body");
 const sysreboot = document.getElementById("sysreboot");
 const fstoggle = document.getElementById("fstoggle");
 const fbremove = document.getElementById("fbremove");
+const openinfo = document.getElementById("openinfo");
 const audioCM = document.getElementById("audioCM")
 const audioER = document.getElementById("audioER")
 const audioLO = document.getElementById("audioLO")
@@ -112,4 +113,10 @@ sysreboot.addEventListener("click", function () {
     setTimeout(function(){
         location.href = './startup.html';
     }, 7000);
+})
+
+openinfo.addEventListener("click", function () {
+    context.classList.remove("visible");
+    window_INFO.classList.remove("ALARMHIDDEN");
+    document.getElementById('mypc').classList.remove("ALARMHIDDEN");
 })

@@ -219,14 +219,14 @@ function removepiler() {
 }
 
 function imgviewrm() {
-    window_IMAGE.remove();
-    document.getElementById('imgviewer').style.display = 'none';
+    window_IMAGE.classList.add("ALARMHIDDEN");
+    document.getElementById('imgviewer').classList.add("ALARMHIDDEN");
     killscreen();
 }
 
 function inform() {
-    window_INFO.remove();
-    document.getElementById('mypc').style.display = 'none';
+    window_INFO.classList.add("ALARMHIDDEN");
+    document.getElementById('mypc').classList.add("ALARMHIDDEN");
     killscreen();
 }
 
