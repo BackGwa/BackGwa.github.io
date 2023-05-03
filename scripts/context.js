@@ -7,6 +7,7 @@ const openinfo = document.getElementById("openinfo");
 const audioCM = document.getElementById("audioCM")
 const audioER = document.getElementById("audioER")
 const audioLO = document.getElementById("audioLO")
+const audioLA = document.getElementById("audioLA")
 const ERRORA = document.getElementById("ERROR");
 
 scope.addEventListener("contextmenu", (e) => {
@@ -116,7 +117,13 @@ sysreboot.addEventListener("click", function () {
 })
 
 openinfo.addEventListener("click", function () {
-    context.classList.remove("visible");
-    window_INFO.classList.remove("ALARMHIDDEN");
-    document.getElementById('mypc').classList.remove("ALARMHIDDEN");
+    if(document.getElementById('mypc').classList.contains("ALARMHIDDEN")){
+        audioLA.playbackRate = 1.5;
+        audioLA.play();
+        context.classList.remove("visible");
+        window_INFO.classList.remove("ALARMHIDDEN");
+        document.getElementById('mypc').classList.remove("ALARMHIDDEN");
+    } else {
+        context.classList.remove("visible");
+    }
 })
