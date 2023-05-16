@@ -171,14 +171,20 @@
             <div class="MCPROGRAM" id="hintdisable">
                 <div class="WINDOW cursor-default MC ALARMHIDDEN" id="MC">
                     <div class="TITLE" id="MCTITLE">
-                        <div class="TEXT">Web Minecraft</div>
+                        <div class="TEXT">Minecraft</div>
                         <div class="BUTTON">
                             <button class="BORDER EXIT" id="EXITMC" onclick="mcrm();">Χ</button>
                         </div>
                     </div>
                     <div class="DETAIL">
-                        <iframe class="ifm" src="https://emupedia.net/emupedia-game-minecraft-classic/" onload="this.focus();this.contentWindow.focus();" allowtransparency="true" allow="autoplay; fullscreen; accelerometer; gyroscope; geolocation; microphone; camera; midi; encrypted-media; clipboard-read; clipboard-write" sandbox="allow-forms allow-downloads allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0"></iframe>
-                        </div>
+                        <iframe class="ifm" src="https://emupedia.net/emupedia-game-minecraft-classic/"
+                                onload="this.focus();this.contentWindow.focus();"
+                                allowtransparency="true"
+                                allow="autoplay; fullscreen; accelerometer; gyroscope; geolocation; microphone; camera; midi; encrypted-media; clipboard-read; clipboard-write"
+                                sandbox="allow-forms allow-downloads allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                                frameborder="0">
+                        </iframe>
+                    </div>
                 </div>
                 <div class="windowhint" id="mchint"></div>
             </div>
@@ -188,7 +194,7 @@
     </div>
 
     <!-- Context Menu -->
-    <div id="context" class="dragnull">
+    <div id="context" class="dragnull cursor-pointer">
         <div class="item" id="sysreboot">시스템 재시동</div>
         <div class="cthr">
             <hr>
