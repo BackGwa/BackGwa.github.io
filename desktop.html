@@ -136,7 +136,8 @@
                     <div class="DETAIL">
                         <img src="./image/logon.jpg" class="logonimg">
                         <div class="infotext">
-                            <b>Windos 2023 Amateur Editon <small><small>(Built on JS Technology)</small></small></b><br><br>
+                            <b>Windos 2023 Amateur Editon <small><small>(Built on JS
+                                        Technology)</small></small></b><br><br>
                             제작자 : BACKGWA (강찬영)<br>
                             빌드 정보 : 230501.0752.1<br>
                             <hr>
@@ -166,22 +167,40 @@
                 <div class="windowhint" id="imagehint"></div>
             </div>
 
+            <!-- Minecraft Windows -->
+            <div class="MCPROGRAM" id="hintdisable">
+                <div class="WINDOW cursor-default MC ALARMHIDDEN" id="MC">
+                    <div class="TITLE" id="MCTITLE">
+                        <div class="TEXT">Web Minecraft</div>
+                        <div class="BUTTON">
+                            <button class="BORDER EXIT" id="EXITMC" onclick="mcrm();">Χ</button>
+                        </div>
+                    </div>
+                    <div class="DETAIL">
+                        <iframe class="ifm" src="https://www.naver.com/" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="windowhint" id="mchint"></div>
+            </div>
+
         </div>
 
-        <!-- Context Menu -->
-        <div id="context" class="dragnull">
-            <div class="item" id="sysreboot">시스템 재시동</div>
-            <div class="cthr">
-                <hr>
-            </div>
-            <div class="item" id="openinfo">WINDOS 정보</div>
-            <div class="item" id="_">작업 관리자</div>
-            <div class="cthr">
-                <hr>
-            </div>
-            <div class="item" id="fstoggle">꽉 찬 화면</div>
-            <div class="item" id="fbremove">수직 비율 상자 제거</div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="context" class="dragnull">
+        <div class="item" id="sysreboot">시스템 재시동</div>
+        <div class="cthr">
+            <hr>
         </div>
+        <div class="item" id="openinfo">WINDOS 정보</div>
+        <div class="item" id="_">작업 관리자</div>
+        <div class="cthr">
+            <hr>
+        </div>
+        <div class="item" id="fstoggle">꽉 찬 화면</div>
+        <div class="item" id="fbremove">수직 비율 상자 제거</div>
+    </div>
 
     </div>
 

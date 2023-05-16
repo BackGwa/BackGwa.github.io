@@ -14,6 +14,10 @@ const window_ERROR = document.getElementById("ERROR");
 const hint_ERROR = document.getElementById("errorhint");
 const title_ERROR = document.getElementById("ERRORTITLE");
 
+const window_MC = document.getElementById("MC");
+const hint_MC = document.getElementById("mchint");
+const title_MC = document.getElementById("MCTITLE");
+
 const INFOEXIT = document.getElementById("INFOEXIT");
 
 const audio1 = document.getElementById("audio1")
@@ -25,12 +29,13 @@ let windowsDrag = false;
 let INFO = false;
 let IMAGE = false;
 let ERROR = false;
+let MC = false;
 
 let dummy = true;
 let internet = false;
 let minecraft = false;
 
-let pagesize = [250, 350];
+let pagesize = [250, 350, 320];
 
 
 const counter = setInterval(function () {
@@ -81,6 +86,13 @@ document.onmousemove = (e) => {
         hint_ERROR.style.transform = `translate(-50%, -5%)`
     }
 
+    if (windowsDrag && MC && isDragging) {
+        hint_MC.style.visibility = 'visible';
+        hint_MC.style.top = `${e.pageY}px`;
+        hint_MC.style.left = `${e.pageX - pagesize[2]}px`;
+        hint_MC.style.transform = `translate(-50%, -5%)`
+    }
+
     if (isDragging && e.target.id != 'hintdisable' && !windowsDrag) {
         let distanceX = e.pageX - startPosition[0];
         let distanceY = e.pageY - startPosition[1];
@@ -102,6 +114,12 @@ title_INFO.onmousedown = () => {
     windowsDrag = true;
     INFO = true;
     INFO_over()
+}
+
+title_MC.onmousedown = () => {
+    windowsDrag = true;
+    MC = true;
+    MC_over();
 }
 
 
@@ -150,6 +168,13 @@ document.onmouseup = (e) => {
         window_ERROR.style.left = `${e.pageX - pagesize[1]}px`;
         window_ERROR.style.transform = `translate(-50%, -5%)`
     }
+    else if (MC){
+        MC = false;
+        hint_MC.style.visibility = 'collapse';
+        window_MC.style.top = `${e.pageY}px`;
+        window_MC.style.left = `${e.pageX - pagesize[2]}px`;
+        window_MC.style.transform = `translate(-50%, -5%)`
+    }
     box.style.width = '0px';
     box.style.height = '0px';
     box.style.opacity = '0.0';
@@ -160,8 +185,10 @@ function INFO_over() {
     window_INFO.style.zIndex = '4';
     window_IMAGE.style.zIndex = '3';
     window_ERROR.style.zIndex = '3';
+    window_MC.style.zIndex = '3';
     try {
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
+        document.querySelector(".MC .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
         document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
         document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
     } catch {
@@ -176,8 +203,10 @@ function IMAGE_over() {
     window_IMAGE.style.zIndex = '4';
     window_INFO.style.zIndex = '3';
     window_ERROR.style.zIndex = '3';
+    window_MC.style.zIndex = '3';
     try {
         document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
+        document.querySelector(".MC .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
         document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
     } catch {
@@ -191,10 +220,28 @@ function ERROR_over() {
     window_ERROR.style.zIndex = '4';
     window_INFO.style.zIndex = '3';
     window_IMAGE.style.zIndex = '3'
+    window_MC.style.zIndex = '3';
     try {
         document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
         document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
         document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+        document.querySelector(".MC .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+    } catch {
+
+    }
+}
+
+
+function MC_over() {
+    window_MC.style.zIndex = '4';
+    window_INFO.style.zIndex = '3';
+    window_IMAGE.style.zIndex = '3';
+    window_ERROR.style.zIndex = '3'
+    try {
+        document.querySelector(".MC .TITLE").style.background = 'linear-gradient(0.25turn, #00003f, #a6c6f7)';
+        document.querySelector(".INFO .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+        document.querySelector(".IMAGE .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
+        document.querySelector(".ERROR .TITLE").style.background = 'linear-gradient(0.25turn, #808080, #c3c2bf)';
     } catch {
 
     }
@@ -230,11 +277,16 @@ function inform() {
     killscreen();
 }
 
+function mcrm() {
+    window_MC.classList.add("ALARMHIDDEN");
+    killscreen();
+}
+
 
 document.getElementById('minecraft').onclick = () => {
 
     if(minecraft){
-        alert('재밌눈 마인크래프트~');
+        window_MC.classList.remove("ALARMHIDDEN");
     }
 
     if(internet){
