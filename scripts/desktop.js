@@ -35,7 +35,7 @@ let dummy = true;
 let internet = false;
 let minecraft = false;
 
-let pagesize = [250, 350, 320];
+let pagesize = [250, 350, 400];
 
 
 const counter = setInterval(function () {
@@ -258,7 +258,7 @@ function ERROR_Disable() {
 function removepiler() {
     fbremove.remove();
     piler = false;
-    pagesize = [0, 0];
+    pagesize = [0, 0, 0];
     document.querySelector('.fbl').remove();
     document.querySelector('.fbr').remove();
     document.querySelector('.effect').remove();
