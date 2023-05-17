@@ -10,14 +10,6 @@
     animation: window 3s forwards steps(1, end);
 }
 
-.ifm {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 565px;
-    border: none;
-}
-
 .WINDOW {
     position: absolute;
     background: #c0c0c0;
@@ -291,8 +283,4 @@
         cursor: url(../cursor/arrow.cur) 2 2, default;
         opacity: 1.0;
     }
-}
-
-@keyframes inlaod {
-    
 }

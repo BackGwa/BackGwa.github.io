@@ -22,6 +22,8 @@ const INFOEXIT = document.getElementById("INFOEXIT");
 
 const audio1 = document.getElementById("audio1")
 
+const GAME = `<iframe id="GAMERM" loading="lazy" class="dragnull" src="https://emupedia.net/emupedia-game-minecraft-classic/" onload="this.focus();this.contentWindow.focus();" allowtransparency="true" allow="autoplay; fullscreen; accelerometer; gyroscope; geolocation; microphone; camera; midi; encrypted-media; clipboard-read; clipboard-write" sandbox="allow-forms allow-downloads allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0"></iframe>`
+
 let startPosition;
 let isDragging;
 
@@ -279,6 +281,7 @@ function inform() {
 
 function mcrm() {
     window_MC.classList.add("ALARMHIDDEN");
+    document.getElementById("GAMERM").remove;
     killscreen();
 }
 
@@ -286,6 +289,7 @@ function mcrm() {
 document.getElementById('minecraft').onclick = () => {
 
     if(minecraft){
+        document.getElementById("GAME").innerHTML = GAME;
         window_MC.classList.remove("ALARMHIDDEN");
     }
 
@@ -328,3 +332,4 @@ document.getElementById('mypc').onclick = () => {
 document.getElementById('imgviewer').onclick = () => {
     IMAGE_over();
 }
+
