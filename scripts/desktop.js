@@ -22,7 +22,7 @@ const INFOEXIT = document.getElementById("INFOEXIT");
 
 const audio1 = document.getElementById("audio1")
 
-const GAME = `<iframe id="GAMERM" loading="lazy" class="dragnull" src="https://emupedia.net/emupedia-game-minecraft-classic/" onload="this.focus();this.contentWindow.focus();" allowtransparency="true" allow="autoplay; fullscreen; accelerometer; gyroscope; geolocation; microphone; camera; midi; encrypted-media; clipboard-read; clipboard-write" sandbox="allow-forms allow-downloads allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0"></iframe>`
+const GAME = `<iframe id="GAMERM" src="https://backgwa.github.io/Minefork/" onload="this.focus();this.contentWindow.focus();" allowtransparency="true" allow="autoplay; fullscreen; accelerometer; gyroscope; geolocation; microphone; camera; midi; encrypted-media; clipboard-read; clipboard-write" sandbox="allow-forms allow-downloads allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0"></iframe>`
 
 let startPosition;
 let isDragging;
