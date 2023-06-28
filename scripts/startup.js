@@ -10,12 +10,12 @@ const itv = setInterval(() => {
     setTimeout(function(){
         pgvalue -= 5;
         pgbar.value = `${pgvalue}`;
-    }, randint(3500));
+    }, randint(1500));
     if(pgvalue <= 0){
         clearInterval(itv);
         start();
     }
-}, 500);
+}, 350);
 
 function start(){
     document.querySelector('.bootscreen').remove();
@@ -23,5 +23,5 @@ function start(){
     document.querySelector('.logoimg').remove();
     setTimeout(function(){
         location.href = './preload.html';
-    }, 1000);
+    }, 500);
 }

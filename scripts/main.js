@@ -4,11 +4,10 @@ document.onclick = (e) => {
     setTimeout(() => {
         document.querySelector(".message").remove();
     }, 150);
-    document.getElementById("boot").play();
     setTimeout(() => {
         document.getElementById("beep").play();
-    }, 4000);
+    }, 1000);
     setTimeout(() => {
         location.href = './startup.html';
-    }, 9000);
+    }, 2000);
 }

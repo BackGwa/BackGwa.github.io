@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/crt.css">
     <link rel="stylesheet" href="./style/desktop.css">
     <link rel="stylesheet" href="./style/font.css">
@@ -18,17 +18,13 @@
 
 <body class="console-color">
 
-    <audio src="./sounds/Boot.mp3" id="boot" preload="auto"></audio>
     <audio src="./sounds/beep.mp3" id="beep" preload="auto"></audio>
 
-    <!-- Pillarbox -->
     <div class="fbl"></div>
     <div class="fbr"></div>
 
-    <!-- CRT Screen Image 1 -->
     <div class="effect dragnull"><img src="./image/CRTRound.png" class="crtbox"></div>
 
-    <!-- Desktop Screen -->
     <div class="dosscreen">
         <div class="digital digital1 dragnull"></div>
         <div class="digital digital2 dragnull"></div>
@@ -42,7 +38,7 @@
     <script src="./scripts/main.js"></script>
 
     <script>
-        document.querySelector('.CRTON').style.animation = "ONEFFECT 10s ease-out";
+        document.querySelector('.CRTON').style.animation = "ONEFFECT 5s ease-out";
     </script>
 
 </body>

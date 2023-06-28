@@ -7,7 +7,12 @@
     margin: 0;
     padding: 0;
     z-index: 1;
-    animation: window 3s forwards steps(1, end);
+    animation: window 0.7s forwards steps(1, end);
+}
+
+.PROGRAMICON {
+    width: 16px;
+    height: 16px;
 }
 
 .WINDOW {
@@ -17,20 +22,42 @@
     border-left: ridge 6px #ffffff;
     border-bottom: ridge 6px #000000;
     border-right: ridge 6px #000000;
+
+    filter: drop-shadow(4px 4px 4px #0000002f);
+}
+
+.WINDOW_SORI {
+    position: absolute;
+    background: #c0c0c0;
+    border-top: ridge 10px #ffffff;
+    border-left: ridge 10px #ffffff;
+    border-bottom: ridge 10px #000000;
+    border-right: ridge 10px #000000;
+
+    border-radius: 18px;
+
+    filter: drop-shadow(4px 4px 4px #0000002f);
 }
 
 .WINDOW.INFO {
     top: 50%;
     left: 50%;
     transform: translate(-90%, -70%);
-    animation: window 3.2s forwards steps(1, end);
+    animation: window 1.4s forwards steps(1, end);
 }
 
 .WINDOW.IMAGE {
     top: 50%;
     left: 50%;
     transform: translate(-10%, -30%);
-    animation: window 3.5s forwards steps(1, end);
+    animation: window 1.7s forwards steps(1, end);
+}
+
+.WINDOW_SORI.SORI {
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -30%);
+    animation: window 0.7s forwards steps(1, end);
 }
 
 .WINDOW.MC {
@@ -38,6 +65,15 @@
     left: 50%;
     transform: translate(-40%, -70%);
     animation: window 1.0s forwards steps(1, end);
+}
+
+
+.WINDOW.HITEL {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: window 7.0s forwards steps(1, end);
+    overflow: visible;
 }
 
 .WINDOW.ERROR {
@@ -48,7 +84,7 @@
 
 .INFO {
     width: 500px;
-    height: 375px;
+    height: 400px;
     z-index: 4;
 }
 
@@ -62,13 +98,19 @@
 #infohint {
     visibility: collapse;
     width: 500px;
-    height: 375px;
+    height: 400px;
 }
 
 #imagehint {
     visibility: collapse;
     width: 350px;
     height: 310px;
+}
+
+#sorihint {
+    visibility: collapse;
+    width: 340px;
+    height: 340px;
 }
 
 #errorhint {
@@ -81,6 +123,12 @@
     visibility: collapse;
     width: 800px;
     height: 600px;
+}
+
+#hitelhint {
+    visibility: collapse;
+    width: 810px;
+    height: 810px;
 }
 
 .logonimg {
@@ -109,9 +157,21 @@
     z-index: 3;
 }
 
+.SORI {
+    width: 320px;
+    height: 320px;
+    z-index: 3;
+}
+
 .MC {
     width: 800px;
     height: 600px;
+    z-index: 3;
+}
+
+.HITEL {
+    width: 810px;
+    height: 810px;
     z-index: 3;
 }
 
@@ -140,10 +200,21 @@
     background: linear-gradient(0.25turn, #808080, #c3c2bf);
 }
 
+.HITEL .TITLE {
+    background: linear-gradient(0.25turn, #808080, #c3c2bf);
+}
+
 .ERROR .TITLE {
     background: linear-gradient(0.25turn, #808080, #c3c2bf);
 }
 
+.TITLE .XICON {
+    position: relative;
+    top: 3px;
+    left: 2px;
+    margin-right: 5px;
+    float: left;
+}
 
 .TITLE .TEXT {
     position: relative;
@@ -283,4 +354,308 @@
         cursor: url(../cursor/arrow.cur) 2 2, default;
         opacity: 1.0;
     }
+}
+
+.hitelframe {
+    position: absolute;
+    margin: 0;
+    width: calc(100% - 10px);
+    height: calc(100% - 36px);
+}
+
+.HITELBOX {
+    position: absolute;
+
+    background: #c0c0c0;
+    border-top: ridge 3px #ffffff;
+    border-left: ridge 3px #ffffff;
+    border-bottom: ridge 3px #000000;
+    border-right: ridge 3px #000000;
+
+    filter: drop-shadow(4px 4px 1px #000000AF);
+    -webkit-filter: drop-shadow(4px 4px 1px #000000AF);
+
+    width: 72px;
+    height: 266px;
+
+    margin-left: -90px;
+}
+
+.HTMINIBOX {
+    background: #c0c0c0;
+    border-top: ridge 4px #ffffff;
+    border-left: ridge 4px #ffffff;
+    border-bottom: ridge 4px #000000;
+    border-right: ridge 4px #000000;
+
+    margin-top: 2px;
+
+    width: 64px;
+    height: 20px;
+
+    font-family: 'Gulim';
+    font-size: 17px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.HTBIGBOX {
+    background: #c0c0c0;
+    border-top: ridge 4px #ffffff;
+    border-left: ridge 4px #ffffff;
+    border-bottom: ridge 4px #000000;
+    border-right: ridge 4px #000000;
+
+    margin-top: 6px;
+
+    width: 64px;
+    height: 64px;
+
+    position: relative;
+}
+
+.HTBIGBOX:hover {
+    background: #aaaaaa;
+    border-top: ridge 4px #000000;
+    border-left: ridge 4px #000000;
+    border-bottom: ridge 4px #ffffff;
+    border-right: ridge 4px #ffffff;
+}
+
+.INNERTXT {
+    position: absolute;
+
+    font-family: 'Gulim';
+    font-size: 14px;
+
+    margin-top: 42px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+}
+
+
+.INNERIMAGE {
+    position: absolute;
+
+    width: 36px;
+    height: 36px;
+
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.SORITITLE {
+    width: 100%;
+    height: 48px;
+}
+
+.padotitle {
+    width: calc(100% - 24px);
+    margin-left: 12px;
+    margin-right: 12px;
+
+    margin-top: 6px;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+.BGX {
+    position: absolute;
+    background-image: url("../image/TILE-MA.BMP");
+    background-repeat: repeat;
+
+    width: calc(100% - 35px);
+    margin-left: 11px;
+    margin-right: 24px;
+
+    height: 228px;
+
+    border-top: ridge 5px #000000;
+    border-left: ridge 5px #000000;
+    border-bottom: ridge 5px #FFFFFF;
+    border-right: ridge 5px #FFFFFF;
+
+    overflow: visible;
+}
+
+.CPSR {
+    position: absolute;
+
+    background: #576675;
+
+    width: 100%;
+    height: 28px;
+
+    bottom: 0;
+    overflow: visible;
+
+}
+
+.playsbtn {
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+
+    right: 0;
+    margin-right: 120px;
+
+    margin-top: 5px;
+
+    overflow: visible;
+}
+
+.bakbtn {
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+
+    right: 0;
+    margin-right: 150px;
+
+    margin-top: 5px;
+
+    overflow: visible;
+}
+
+.forbtn {
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+
+    right: 0;
+    margin-right: 90px;
+
+    margin-top: 5px;
+
+    overflow: visible;
+}
+
+.exitbtn {
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+
+    right: 0;
+    margin-right: 6px;
+
+    margin-top: 5px;
+
+    overflow: visible;
+}
+
+  
+.tooltip-text {
+    position: absolute;
+    max-width: auto;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    padding: 5px;
+
+    font-family: 'Gulim';
+    font-size: 0.8em;
+
+    color: #000;
+    background: #ffffe2;
+
+    transform: translate(-70px, 24px);
+
+    border: 1px black solid;
+    white-space: nowrap;
+    overflow: visible;
+
+    opacity: 0.0;
+
+    transition: 0.1s steps(2, end);
+}
+
+.exitbtn:hover .tooltip-text {
+    transform: translate(-50px, 24px);
+    opacity: 1.0;
+}
+
+.playsbtn:hover .tooltip-text {
+    transform: translate(-30px, 24px);
+    opacity: 1.0;
+}
+
+.forbtn:hover .tooltip-text {
+    transform: translate(-30px, 24px);
+    opacity: 1.0;
+}
+
+.bakbtn:hover .tooltip-text {
+    transform: translate(-30px, 24px);
+    opacity: 1.0;
+}
+
+.EQ {
+    position: absolute;
+
+    margin-top: 80px;
+    width: calc(100% - 12px);
+    height: 110px;
+
+    margin-left: 6px;
+    margin-right: 6px;
+
+    opacity: 0.9;
+
+    transition: 0.25s ease-in-out;
+
+    background: linear-gradient(0turn, #31ffff, #31ffff, #FFFFFF, #1feaff, #1f42df, #1f42df, #1f42dfCF, #1f42dfA2, #1f42df4F);
+}
+
+.EQ.eqmove {
+    background: linear-gradient(0turn, #FFFFFF, #1feaff, #1f42df, #1f42df, #1f42df, #1f42dfCF, #1f42dfA2, #1f42df4F, #1f42df2F);
+}
+
+.EQ.eqmove1 {
+    background: linear-gradient(0turn, #31ffff, #FFFFFF, #1feaff,#1f42df, #1f42df, #1f42df, #1f42dfCF, #1f42dfA2, #1f42df4F);
+}
+
+.EQ.eqmove2 {
+    background: linear-gradient(0turn, #31ffff, #31ffff, #31ffff, #31ffff, #FFFFFF, #1feaff,#1f42df, #1f42dfCF, #1f42dfA2, #1f42df4F);
+}
+
+.EQ.eqmove3 {
+    background: linear-gradient(0turn, #31ffff, #31ffff, #FFFFFF, #1feaff,#1f42df, #1f42df, #1f42df, #1f42dfCF, #1f42dfA2, #1f42df4F);
+}
+
+.textfor {
+    position: absolute;
+
+    font-family: 'Gulim';
+    font-size: 16px;
+
+    color: #FFF;
+    outline: #000 2px;
+
+    margin-top: 30px;
+    margin-left: 12px;
+}
+
+.textfor2 {
+    position: absolute;
+
+    font-family: 'Gulim';
+    font-size: 14px;
+
+    color: #FFF;
+    outline: #000 2px;
+
+    margin-top: 52px;
+    margin-left: 12px;
 }
