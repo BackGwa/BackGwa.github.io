@@ -1,0 +1,169 @@
+
+.boot-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 10;
+    pointer-events: all;
+    animation: boot-screen-close 3s ease-out forwards;
+}
+
+.boot-logo {
+    position: absolute;
+    width: 6.5rem;
+    height: 6.5rem;
+    top: 43%;
+    left: 50%;
+    background-image: url(../res/images/logo.png);
+    background-size: cover;
+    transform: translate(-50%, -50%);
+}
+
+.boot-progress-bar {
+    position: absolute;
+    width: 18rem;
+    height: 0.4rem;
+    background: #FFFFFF30;
+    border-radius: 0.2rem;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    overflow: hidden;
+}
+
+.boot-progress {
+    width: 0%;
+    height: 100%;
+    background: #FFFFFF;
+    animation: progress-in 2.5s ease-in forwards;
+}
+
+@keyframes progress-in {
+    0% {
+        width: 0%;
+    }
+    
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes boot-screen-close {
+    0% {
+        opacity: 1.0;
+    }
+
+    85% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.0;
+        pointer-events: none;
+    }
+}
+
+.disk-selector {
+    position: absolute;
+    width: auto;
+    height: 18rem;
+    top: 50%;
+    left: 50%;
+    padding: 0.1rem;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.disk-item {
+    position: relative;
+    width: 17rem;
+    height: 18rem;
+}
+
+.background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.disk-icon {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: 11rem 11rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    transition: 0.1s ease-out;
+}
+
+.disk-image1 {
+    background-image: url("../res/images/disk.png");
+}
+
+.disk-image2 {
+    background-image: url("../res/images/removable_disk.png");
+}
+
+.disk-image3 {
+    background-image: url("../res/images/timemachine_disk.png");
+}
+
+.disk-label {
+    position: absolute;
+    bottom: 3.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFFFFF;
+    font-size: 1.05rem;
+    font-weight: 300;
+    opacity: 0.85;
+    transition: 0.1s ease-out;
+}
+
+.disk-select-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.1rem;
+    height: 3.1rem;
+    background-image: url("../res/images/disk_select_icon.svg");
+    background-size: cover;
+    opacity: 0.0;
+    transition: 0.1s ease-out;
+}
+
+.disk-focus .disk-select-icon,
+.disk-focus .disk-label {
+    opacity: 1.0;
+}
+
+.disk-focus .disk-icon {
+    background-color: #828282;
+    border: 1px solid #FFFFFF20;
+}
+
+.bottom-label {
+    font-size: 0.75rem;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.tooltip-label {
+    font-weight: 500;
+    bottom: 4rem;
+    color: #FFFFFF70;
+}
+
+.update-label {
+    font-weight: 300;
+    bottom: 2rem;
+    color: #FFFFFF50;
+}

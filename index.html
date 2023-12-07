@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO - 디스크 선택</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./res/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./res/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./res/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="./res/favicons/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style/root.css">
+    <link rel="stylesheet" href="./style/index.css">
+
+    <script src="./scripts/AudioEngine.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/root.js"></script>
+</head>
+
+<body>
+    <audio></audio>
+
+    <div class="main-container drag-block">
+
+        <!-- 부트 화면 -->
+        <div class="boot-screen">
+            <div class="boot-logo background-image"></div>
+            <div class="boot-progress-bar">
+                <div class="boot-progress"></div>
+            </div>
+        </div>
+
+        <!-- 드라이브 선택 인터페이스 -->
+        <div class="disk-selector">
+            
+            <div class="disk-item">
+                <div class="disk-icon background-image disk-image1"></div>
+                <div class="disk-label">내 프로필</div>
+                <div class="disk-select-icon background-image"></div>
+            </div>
+
+            <div class="disk-item">
+                <div class="disk-icon background-image disk-image1"></div>
+                <div class="disk-label">경력 사항</div>
+                <div class="disk-select-icon background-image"></div>
+            </div>
+
+            <div class="disk-item">
+                <div class="disk-icon background-image disk-image3"></div>
+                <div class="disk-label">대표 프로젝트</div>
+                <div class="disk-select-icon background-image"></div>
+            </div>
+
+            <div class="disk-item">
+                <div class="disk-icon background-image disk-image2"></div>
+                <div class="disk-label">동아리 활동</div>
+                <div class="disk-select-icon background-image"></div>
+            </div>
+
+        </div>
+
+        <!-- 하단 조작 팁 라벨 -->
+        <div class="bottom-label tooltip-label">
+            좌/우 방향키나 마우스를 사용하여 드라이브를 선택 할 수 있습니다.<br>
+            선택 된 드라이브로 부트하기 위해서는 ENTER 혹은 좌클릭을 해주세요.
+        </div>
+
+        <!-- 포트폴리오 정보 -->
+        <div class="bottom-label update-label">
+            2023. 12. 08에 업데이트 되었습니다!
+        </div>
+    </div>
+
+</body>
+
+</html>
