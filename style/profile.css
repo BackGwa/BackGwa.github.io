@@ -1,0 +1,22 @@
+/* 어두운 테마 시 CSS 변수 설정 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-image: url("../res/images/sonoma_dark.jpg");
+    }
+}
+
+/* 밝은 테마 시 CSS 변수 설정 */
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-image: url("../res/images/sonoma_light.jpg");
+    }
+}
+
+.gui-env {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image);
+    background-size: cover;
+    overflow: hidden;
+}
