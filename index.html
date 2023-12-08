@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="./res/favicons/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="./style/root.css">
+    <link rel="stylesheet" href="./style/boot.css">
     <link rel="stylesheet" href="./style/index.css">
 
     <script src="./scripts/AudioEngine.js"></script>
@@ -24,11 +25,26 @@
 
     <div class="main-container drag-block">
 
+        <!-- 모바일 환경 지원 불가 메세지 -->
+        <div class="kernel-panic">
+            <div class="panic-icon background-image"></div>
+            <div class="panic-label">
+                해당 포트폴리오 사이트는 컴퓨터 환경에 최적화 되어있습니다.<br>
+                컴퓨터 환경으로 접속하시거나, 큰 화면의 디바이스로 접속해주세요.<br>
+                <br>
+                This portfolio site is optimized for your computer environment.<br>
+                Please connect to the computer environment or to the device on the large screen.<br>
+                <br>
+                そのポートフォリオ サイトは、コンピュータ環境に最適化されています。<br>
+                コンピュータ環境に接続するか、大画面のデバイスに接続してください。
+            </div>
+        </div>
+        
         <!-- 부트 화면 -->
-        <div class="boot-screen">
+        <div class="boot-screen boot-screen-close-2500ms">
             <div class="boot-logo background-image"></div>
             <div class="boot-progress-bar">
-                <div class="boot-progress"></div>
+                <div class="boot-progress progress-in-2000ms"></div>
             </div>
         </div>
 
@@ -69,7 +85,7 @@
 
         <!-- 포트폴리오 정보 -->
         <div class="bottom-label update-label">
-            2023. 12. 08에 업데이트 되었습니다!
+            2023. 12. 08에 업데이트 되었습니다
         </div>
     </div>
 

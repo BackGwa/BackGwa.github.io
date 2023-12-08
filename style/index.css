@@ -1,66 +1,40 @@
 
-.boot-screen {
+.kernel-panic {
     position: absolute;
+    display: none;
     width: 100%;
     height: 100%;
-    background: #000000;
-    z-index: 10;
-    pointer-events: all;
-    animation: boot-screen-close 3s ease-out forwards;
+    background: #222222;
+    z-index: 5;
 }
 
-.boot-logo {
+.panic-icon {
     position: absolute;
-    width: 6.5rem;
-    height: 6.5rem;
-    top: 43%;
+    width: 32vw;
+    height: 32vw;
+    top: 50%;
     left: 50%;
-    background-image: url(../res/images/logo.png);
+    background-image: url("../res/images/kernel_panic_icon.png");
     background-size: cover;
+    opacity: 0.25;
     transform: translate(-50%, -50%);
 }
 
-.boot-progress-bar {
+.panic-label {
     position: absolute;
-    width: 18rem;
-    height: 0.4rem;
-    background: #FFFFFF30;
-    border-radius: 0.2rem;
-    top: 57%;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 2vmin;
+    font-weight: 300;
+    white-space: nowrap;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-    overflow: hidden;
+    transform: translate(-50%, -50%);
 }
 
-.boot-progress {
-    width: 0%;
-    height: 100%;
-    background: #FFFFFF;
-    animation: progress-in 2.5s ease-in forwards;
-}
-
-@keyframes progress-in {
-    0% {
-        width: 0%;
-    }
-    
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes boot-screen-close {
-    0% {
-        opacity: 1.0;
-    }
-
-    85% {
-        opacity: 1.0;
-    }
-
-    100% {
-        opacity: 0.0;
-        pointer-events: none;
+@media screen and (max-width: 960px) {
+    .kernel-panic {
+        display: block;
     }
 }
 
@@ -81,11 +55,6 @@
     position: relative;
     width: 17rem;
     height: 18rem;
-}
-
-.background-image {
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .disk-icon {
