@@ -1,0 +1,78 @@
+.boot-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 10;
+    pointer-events: all;
+}
+
+.boot-screen-close-2500ms {
+    animation: boot-screen-close 2.5s ease-out forwards;
+}
+
+.boot-screen-close-1500ms {
+    animation: boot-screen-close 1.5s ease-out forwards;
+}
+
+.boot-logo {
+    position: absolute;
+    width: 6.5rem;
+    height: 6.5rem;
+    top: 43%;
+    left: 50%;
+    background-image: url(../res/images/logo.png);
+    background-size: cover;
+    transform: translate(-50%, -50%);
+}
+
+.boot-progress-bar {
+    position: absolute;
+    width: 18rem;
+    height: 0.4rem;
+    background: #FFFFFF30;
+    border-radius: 0.2rem;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    overflow: hidden;
+}
+
+.boot-progress {
+    width: 0%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.progress-in-2000ms {
+    animation: progress-in 2s ease-out forwards;
+}
+
+.progress-in-1250ms {
+    animation: progress-in 1.25s ease-out forwards;
+}
+
+@keyframes progress-in {
+    0% {
+        width: 0%;
+    }
+    
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes boot-screen-close {
+    0% {
+        opacity: 1.0;
+    }
+
+    85% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.0;
+        pointer-events: none;
+    }
+}
