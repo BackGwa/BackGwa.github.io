@@ -17,6 +17,11 @@ body {
     overflow: hidden;
 }
 
+.background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .drag-block {
     user-select: none;
     -webkit-user-drag: none;
