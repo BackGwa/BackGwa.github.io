@@ -2,6 +2,8 @@
 let dock;
 let time_label;
 let dock_item;
+let program;
+let program_window;
 let select_index = 0;
 
 // 페이지 초기화 작업
@@ -10,6 +12,8 @@ function page_init() {
     append_dock();
     dock_item = document.querySelectorAll(".dock-item");
     time_label = document.querySelector(".time-label");
+    program = document.querySelectorAll(".app-window");
+    program_window = document.querySelectorAll(".window-area");
     event_register();
 }
 
@@ -25,8 +29,48 @@ function event_register() {
         i.addEventListener("mouseout", dock_item_unfocus);
     });
 
+    program_window.forEach((i, index) => {
+        i.addEventListener("mousedown", () => {
+            zIndex_reset();
+            program[index].classList.add("window-focus");
+            program[index].style.zIndex = 3;
+        });
+
+        window.addEventListener("mouseup", () => {
+            program[index].classList.remove("window-focus");
+        });
+
+        window.addEventListener("mousemove", (e) => {
+            if (program[index].classList.contains("window-focus")) {
+                console.log(e);
+                program[index].style.left = `${e.clientX - e.clientX / 4}px`;
+                program[index].style.top = `${e.clientY - 24}px`;
+            }
+        });
+    });
+
     time_update();
     setInterval(() => time_update, 1000);
+}
+
+// 앱 열기 / 닫기
+function open_app(name) {
+    const app = document.querySelector(`.${name}-app`);
+    console.log(name);
+    if (app.classList.contains("hidden-app")) {
+        app.classList.remove("hidden-app");
+    } else {
+        app.classList.add("hidden-app");
+        zIndex_reset();
+        app.style.zIndex = 3;
+    }
+}
+
+// zIndex 초기화
+function zIndex_reset() {
+    program.forEach(i => {
+        i.style.zIndex = 2;
+    });
 }
 
 // 포커싱 비주얼 이펙트 적용

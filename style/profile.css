@@ -6,6 +6,8 @@
         --dock-color: #191c1cA1;
         --dock-outline: #ffffff10;
         --dock-label-color: #FFFFFF;
+        --app-background: #202327;
+        --app-background-alpha: #202327DF;
     }
 }
 
@@ -43,6 +45,7 @@
     flex-direction: row;
     justify-content: center;
     border-radius: 1.6rem;
+    z-index: 5;
 }
 
 .dock-item {
@@ -123,6 +126,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 5;
 }
 
 .left-panel,
@@ -183,4 +187,68 @@
 
 .menu-icon:hover {
     background-color: #aaaaaa3a;
+}
+
+.program-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.app-window {
+    position: absolute;
+    background: var(--app-background-alpha);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: solid 2px #FFFFFF10;
+    border-radius: 0.65rem;
+    filter: drop-shadow(0 0 24px #000000CF);
+    -webkit-filter: drop-shadow(0 0 24px #000000CF);
+    transition: 0.05s;
+}
+
+.window-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--dock-label-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 0.55rem;
+    opacity: 0.8;
+}
+
+.window-area {
+    width: 100%;
+    height: 2.5rem;
+    border-top-left-radius: 0.65rem;
+    border-top-right-radius: 0.65rem;
+}
+
+.window-non-alpha {
+    background: var(--app-background);
+}
+
+.hidden-app {
+    opacity: 0.0;
+    pointer-events: none;
+    left: 50%;
+    transform: translate(-50%) translateY(200%) scale(0%);
+    transition: 0.25s ease-in-out;
+}
+
+.profile-app {
+    width: 36rem;
+    height: 24rem;
+    top: 120px;
+    left: 120px;
+}
+
+.lang-stack-app {
+    width: 56rem;
+    height: 48rem;
+    top: 60px;
+    left: 560px;
 }
