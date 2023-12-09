@@ -1,7 +1,10 @@
+
 /* 어두운 테마 시 CSS 변수 설정 */
 @media (prefers-color-scheme: dark) {
     :root {
         --background-image: url("../res/images/sonoma_dark.jpg");
+        --dock-color: #191c1cA1;
+        --dock-outline: #ffffff10;
     }
 }
 
@@ -19,4 +22,46 @@
     background-image: var(--background-image);
     background-size: cover;
     overflow: hidden;
+}
+
+.bottom-dock {
+    position: absolute;
+    width: auto;
+    height: 4.6rem;
+    left: 50%;
+    bottom: 0.5rem;
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    transform: translateX(-50%);
+    background: var(--dock-color);
+    border: solid 2px var(--dock-outline);
+    filter: drop-shadow(0 0 24px #0000003F);
+    backdrop-filter: blur(48px);
+    -webkit-backdrop-filter: blur(48px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 1.6rem;
+}
+
+.dock-item {
+    width: 3.7rem;
+    height: 3.7rem;
+    background: red;
+    margin: 0.5rem 0.3rem 0.25rem 0.3rem;
+    border-radius: 1rem;
+    transition: 0.25s;
+}
+
+.dock-item-focus {
+    width: 5rem;
+    height: 5rem;
+    transform: scale(150%) translateY(-35%);
+    margin: 0.5rem 2rem 0.25rem 2rem;
+}
+
+.dock-item-focus-fade1 {
+    width: 5rem;
+    height: 5rem;
+    transform: scale(110%) translateY(-30%);
+    margin: 0.5rem 0.8rem 0.25rem 0.8rem;
 }
