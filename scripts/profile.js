@@ -1,9 +1,12 @@
 
+let dock;
 let dock_item;
 let select_index = 0;
 
 // 페이지 초기화 작업
 function page_init() {
+    dock = document.querySelector(".bottom-dock");
+    append_dock();
     dock_item = document.querySelectorAll(".dock-item");
     event_register();
 }
