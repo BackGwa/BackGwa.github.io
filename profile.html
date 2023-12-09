@@ -132,7 +132,14 @@
                                 <img src="./res/images/stretch.svg">
                             </div>
                         </div>
-                        <div class="window-title">내 프로필</div>
+                        <div class="tab-switcher">
+                            <div class="tab-item tab-item-focus" onclick="tab_switch(0)">프로필</div>
+                            <div class="tab-item" onclick="tab_switch(1)">성격 유형 검사</div>
+                            <div class="tab-item" onclick="tab_switch(2)">크레딧</div>
+                        </div>
+                    </div>
+                    <div class="program">
+                        <iframe src="./apps/profile/profile.html" id="profile-frame"></iframe>
                     </div>
                 </div>
 

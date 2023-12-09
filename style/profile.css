@@ -298,7 +298,7 @@
 }
 
 .profile-app {
-    width: 36rem;
+    width: 38rem;
     height: 24rem;
     top: 120px;
     left: 120px;
@@ -353,6 +353,9 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
+    background: transparent;
+    opacity: 1.0;
+    transition: 0.1s;
 }
 
 .window-control {
@@ -417,4 +420,43 @@ iframe {
     pointer-events: none;
     background-color: #b6b6b7;
     border: solid 1px #89898a;
+}
+
+.tab-switcher {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-top: 0.25rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #15161c50;
+    border: 1px solid #FFFFFF15;
+    border-radius: 0.5rem;
+}
+
+.tab-item {
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    height: 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #FFFFFFCF;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    background: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+}
+
+.tab-item-focus {
+    color: #FFFFFF;
+    font-weight: 400;
+    background: #15161c;
+    border: 1px solid #FFFFFF15;
+}
+
+.fade {
+    opacity: 0.0;
 }

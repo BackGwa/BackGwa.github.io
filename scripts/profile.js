@@ -4,6 +4,8 @@ let time_label;
 let dock_item;
 let program;
 let program_window;
+let tab_item;
+let profile_frame;
 let select_index = 0;
 
 // 페이지 초기화 작업
@@ -14,6 +16,8 @@ function page_init() {
     time_label = document.querySelector(".time-label");
     program = document.querySelectorAll(".app-window");
     program_window = document.querySelectorAll(".window-area");
+    tab_item = document.querySelectorAll(".tab-item");
+    profile_frame = document.querySelector("#profile-frame");
     event_register();
     refresh_app_stat();
     refresh_profile();
@@ -159,7 +163,7 @@ function time_update() {
     time_label.innerHTML = `${month}월 ${date}일 (${week[week_index]}) ${hours}:${minutes}`;
 }
 
-// 전체호면 스크린샷
+// 전체화면 스크린샷
 function fullpage_screenshot() {
     html2canvas(document.querySelector('.gui-env')).then(function (canvas) {
         const imageDataURL = canvas.toDataURL('image/png');
@@ -173,7 +177,7 @@ function fullpage_screenshot() {
 // 특정 창 스크린샷
 function screenshot() {
     let active_window;
-
+    
     program.forEach(i => {
         if (!i.classList.contains("hidden-app")) {
             if (i.style.zIndex == 3) {
@@ -181,7 +185,7 @@ function screenshot() {
             }
         }
     });
-
+    
     if (active_window) {
         html2canvas(document.querySelector(`.${active_window}`), {
             backgroundColor: null
@@ -191,7 +195,7 @@ function screenshot() {
             link.href = imageDataURL;
             link.download = `${active_window}.png`;
             link.click();
-          });
+        });
     }
 }
 
@@ -208,4 +212,37 @@ function fullscreen() {
           fullscreen_label.innerText = "전체화면으로 보기";
         }
       }
+}
+
+function tab_unfocus() {
+    tab_item.forEach(i => {
+        i.classList.remove("tab-item-focus");
+    });
+}
+
+// 탭 변경
+function tab_switch(index) {
+    tab_unfocus();
+    tab_item[index].classList.add("tab-item-focus");
+
+    profile_frame.classList.add("fade");
+    
+    setTimeout(() => {
+        switch (index) {
+            case 0:
+                profile_frame.src = "./apps/profile/profile.html";
+                break;
+            case 1:
+                profile_frame.src = "./apps/profile/mbti.html";
+                break;
+            case 2:
+                profile_frame.src = "./apps/profile/credit.html";
+                break;
+        }
+    }, 100);
+
+
+    setTimeout(() => {
+        profile_frame.classList.remove("fade");
+    }, 200)
 }
