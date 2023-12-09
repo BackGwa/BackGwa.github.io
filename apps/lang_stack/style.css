@@ -17,6 +17,24 @@ html, body {
     background: #2a2c2f;
     border-right: 1px solid #000000;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.side-bar-item {
+    width: 4rem;
+    height: 4rem;
+    background-size: 2.4rem;
+    opacity: 0.5;
+}
+
+.icon-file {
+    background-image: url("./res/File.png");
+}
+
+.icon-search {
+    background-image: url("./res/Search.png");
 }
 
 .bottom-bar {
@@ -148,10 +166,20 @@ html, body {
 }
 
 .lang {
-    margin-right: 1rem;
-    margin-top: 0.4rem;
     font-size: 0.9rem;
     font-weight: 300;
     color: #FFFFFFCF;
-    pointer-events: none;
+    padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+}
+
+.l-1rem {
+    margin-left: 1rem;
+}
+
+.r-1rem {
+    margin-right: 1rem;
+}
+
+.lang:hover {
+    background: #FFFFFF10;
 }
