@@ -15,6 +15,8 @@ function page_init() {
     program = document.querySelectorAll(".app-window");
     program_window = document.querySelectorAll(".window-area");
     event_register();
+    refresh_app_stat();
+    refresh_profile();
 }
 
 // 페이지 이벤트 등록
@@ -62,6 +64,7 @@ function open_app(name) {
         app.classList.add("hidden-app");
         zIndex_reset();
     }
+    refresh_profile();
     refresh_app_stat();
 }
 
@@ -74,6 +77,17 @@ function refresh_app_stat() {
             target.classList.add("has-focus");
         }
     });
+}
+
+function refresh_profile() {
+    profile_text = document.querySelector("#profile-toggle");
+    profile = document.querySelector(".profile-app");
+
+    if (profile.classList.contains("hidden-app")) {
+        profile_text.innerText = "페이지에서 표시하기";
+    } else {
+        profile_text.innerText = "페이지에서 숨기기";
+    }
 }
 
 // zIndex 초기화
@@ -117,17 +131,19 @@ function time_update() {
     time_label.innerHTML = `${month}월 ${day}일 (${week[week_index]}) ${hours}:${minutes}`;
 }
 
+// 전체호면 스크린샷
 function fullpage_screenshot() {
     html2canvas(document.querySelector('.gui-env')).then(function (canvas) {
         var imageDataURL = canvas.toDataURL('image/png');
     
         var link = document.createElement('a');
         link.href = imageDataURL;
-        link.download = '내 프로필.png';
+        link.download = 'screenshot.png';
         link.click();
       });
 }
 
+// 특정 창 스크린샷
 function screenshot() {
     let active_window;
 
@@ -151,4 +167,19 @@ function screenshot() {
             link.click();
           });
     }
+}
+
+// 전체화면 모드 전환
+function fullscreen() {
+    fullscreen_label = document.querySelector("#fullscreen-label");
+
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+        fullscreen_label.innerText = "전체화면 종료하기";
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+          fullscreen_label.innerText = "전체화면으로 보기";
+        }
+      }
 }

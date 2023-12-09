@@ -43,12 +43,16 @@
                 <div class="left-panel">
                     <div class="menu-icon background-image">
                         <div class="sub-menu">
-                            <div class="menu-button">이 페이지에 관하여</div>
+                            <div class="menu-button">이 포트폴리오에 관하여</div>
                             <div class="menu-split"></div>
                             <div class="menu-button">환경 설정</div>
                             <div class="menu-split"></div>
-                            <div class="menu-button" onclick="location.href = './index.html'">시스템 재시동</div>
-                            <div class="menu-button" onclick="window.close()">시스템 종료</div>
+                            <div class="menu-button menu-disabled">강제 종료</div>
+                            <div class="menu-button menu-disabled">잠자기</div>
+                            <div class="menu-button" onclick="location.href = './profile.html'">시스템 재시동...</div>
+                            <div class="menu-button" onclick="location.href = './index.html'">시스템 종료...</div>
+                            <div class="menu-button menu-disabled">잠그기</div>
+                            <div class="menu-button menu-disabled">로그아웃...</div>
                         </div>
                     </div>
                     <div class="menu-label label-bold">
@@ -56,28 +60,50 @@
                         <div class="sub-menu">
                             <div class="menu-button">내 프로필에 관하여</div>
                             <div class="menu-split"></div>
-                            <div class="menu-button">페이지에서 숨기기</div>
+                            <div class="menu-button" id="profile-toggle" onclick="open_app('profile')">페이지에서 숨기기</div>
+                            <div class="menu-button menu-disabled">모두 표시</div>
                         </div>
                     </div>
 
                     <div class="menu-label">
                         파일
                         <div class="sub-menu">
-                            <div class="menu-button" onclick="fullpage_screenshot()">전체 화면 스크린샷 후 저장</div>
+                            <div class="menu-button menu-disabled">새로운 프로필</div>
+                            <div class="menu-button menu-disabled">연락처 추가</div>
                             <div class="menu-split"></div>
+                            <div class="menu-button" onclick="fullpage_screenshot()">전체 화면 스크린샷 후 저장</div>
                             <div class="menu-button" onclick="screenshot()">활성된 창 스크린샷 후 저장</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button menu-disabled">열기</div>
+                            <div class="menu-button menu-disabled">..으로 열기</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button menu-disabled">압축</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button menu-disabled">복제</div>
+                            <div class="menu-button menu-disabled">휴지통으로 이동</div>
+                            <div class="menu-button menu-disabled">추출..</div>
+                            <div class="menu-button menu-disabled">찾기</div>
                         </div>
                     </div>
                     <div class="menu-label">
                         보기
                         <div class="sub-menu">
-                            
+                            <div class="menu-button menu-disabled">아이콘으로 보기</div>
+                            <div class="menu-button menu-disabled">리스트로 보기</div>
+                            <div class="menu-button menu-disabled">갤러리로 보기</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button menu-disabled">작업 메뉴 사용자화...</div>
+                            <div class="menu-button menu-disabled">보기 옵션 표시</div>
+                            <div class="menu-button menu-disabled">미리보기 옵션 표시</div>
+                            <div class="menu-button" onclick="fullscreen()" id="fullscreen-label">전체화면으로 보기</div>
                         </div>
                     </div>
                     <div class="menu-label">
                         도움말
                         <div class="sub-menu">
-                            
+                            <div class="menu-button" onclick="window.open('https://github.com/BackGwa/BackGwa.github.io/pulls')">피드백 전송</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button">내 프로필 도움말</div>
                         </div>
                     </div>
                 </div>
@@ -88,9 +114,9 @@
 
             <div class="program-area">
                 <!-- 프로필 앱 -->
-                <div class="app-window profile-app hidden-app">
+                <div class="app-window profile-app">
                     <div class="window-area">
-                        <div class="window-title">프로필 정보</div>
+                        <div class="window-title">내 프로필</div>
                     </div>
                 </div>
 
