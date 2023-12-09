@@ -118,3 +118,39 @@ function time_update() {
 
     time_label.innerHTML = `${month}월 ${day}일 (${week[week_index]}) ${hours}:${minutes}`;
 }
+
+function fullpage_screenshot() {
+    html2canvas(document.querySelector('.gui-env')).then(function (canvas) {
+        var imageDataURL = canvas.toDataURL('image/png');
+    
+        var link = document.createElement('a');
+        link.href = imageDataURL;
+        link.download = '내 프로필.png';
+        link.click();
+      });
+}
+
+function screenshot() {
+    let active_window;
+
+    program.forEach(i => {
+        if (!i.classList.contains("hidden-app")) {
+            if (i.style.zIndex == 3) {
+                active_window = i.classList[1];
+            }
+        }
+    });
+
+    if (active_window) {
+        html2canvas(document.querySelector(`.${active_window}`), {
+            backgroundColor: null
+        }).then(function (canvas) {
+            var imageDataURL = canvas.toDataURL('image/png');
+        
+            var link = document.createElement('a');
+            link.href = imageDataURL;
+            link.download = `${active_window}.png`;
+            link.click();
+          });
+    }
+}
