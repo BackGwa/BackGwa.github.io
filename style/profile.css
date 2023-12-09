@@ -77,7 +77,7 @@
     height: 1rem;
     padding: 0.3rem 0.55rem;
     left: 50%;
-    top: -50%;
+    top: -35%;
     color: var(--dock-label-color);
     filter: drop-shadow(0 0 8px #0000005F);
     -webkit-filter: drop-shadow(0 0 8px #0000005F);
@@ -133,13 +133,28 @@
     font-weight: 500;
     opacity: 0.9;
     margin-right: 1rem;
-    margin-top: 0.3rem;
+    padding: 0.3rem 0.5rem 0rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.menu-label {
+    color: var(--dock-label-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+    padding: 0.3rem 1rem 0rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.time-label:hover,
+.menu-label:hover {
+    background-color: #aaaaaa3a;
 }
 
 .menu-icon {
     width: 1.7rem;
     height: 1.7rem;
-    margin-left: 1rem;
+    margin: 0 1rem 0 1rem;
     margin-top: 0.05rem;
     background-image: url("../res/images/logo.png");
     background-size: 1.1rem;
