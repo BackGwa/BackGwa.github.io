@@ -64,6 +64,18 @@ function open_app(name) {
         zIndex_reset();
         app.style.zIndex = 3;
     }
+    refresh_app_stat();
+}
+
+function refresh_app_stat() {
+    program.forEach((i, index) => {
+        target = document.querySelector(`#app-index-${index}`)
+        if (i.classList.contains("hidden-app")) {
+            target.classList.remove("has-focus");
+        } else {
+            target.classList.add("has-focus");
+        }
+    });
 }
 
 // zIndex 초기화
