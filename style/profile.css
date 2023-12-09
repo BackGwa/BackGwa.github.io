@@ -4,7 +4,9 @@
     :root {
         --background-image: url("../res/images/sonoma_dark.jpg");
         --dock-color: #191c1cA1;
+        --menu-color: #191c1c81;
         --dock-outline: #ffffff10;
+        --menu-outline: #ffffff20;
         --dock-label-color: #FFFFFF;
         --app-background: #202327;
         --app-background-alpha: #202327DF;
@@ -122,7 +124,7 @@
     height: 1.8rem;
     backdrop-filter: blur(32px);
     -webkit-backdrop-filter: blur(32px);
-    background: var(--dock-color);
+    background: var(--menu-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -166,6 +168,47 @@
     padding: 0.3rem 1rem 0rem 1rem;
     border-radius: 0.5rem;
     white-space: nowrap;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 12.5rem;
+    height: auto;
+    padding: 0.75rem 0.5rem;
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    background: var(--menu-color);
+    border: solid 1px var(--menu-outline);
+    filter: drop-shadow(0 0 24px #0000005F);
+    -webkit-filter: drop-shadow(0 0 24px #0000005F);
+    opacity: 0.0;
+    pointer-events: none;
+    margin-top: 0.5rem;
+    margin-left: -1rem;
+    border-radius: 0.5rem;
+    transition: 0.05s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: scale(75%);
+}
+
+.menu-icon:hover .sub-menu {
+    margin-top: 1.75rem;
+    opacity: 1.0;
+    pointer-events: all;
+    transform: scale(100%);
+}
+
+.menu-label:hover .sub-menu,
+.sub-menu:hover {
+    opacity: 1.0;
+    pointer-events: all;
+    transform: scale(100%);
+}
+
+.label-bold {
+    font-weight: 700;
 }
 
 .time-label:hover,
