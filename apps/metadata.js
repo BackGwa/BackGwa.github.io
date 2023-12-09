@@ -1,7 +1,7 @@
 const app_list = {
     "apps" : {
         "0" : {
-            "name" : "프로필",
+            "name" : "내 프로필",
             "path" : "profile"
         },
 
@@ -21,7 +21,7 @@ const app_list = {
         },
 
         "4" : {
-            "name" : "설정",
+            "name" : "환경 설정",
             "path" : "setting"
         },
     },
