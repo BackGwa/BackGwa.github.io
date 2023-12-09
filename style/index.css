@@ -66,7 +66,7 @@
     background-size: 11rem 11rem;
     border: 1px solid transparent;
     border-radius: 0.5rem;
-    transition: 0.1s ease-out;
+    transition: 0.05s ease-out;
 }
 
 .disk-image1 {
@@ -90,7 +90,7 @@
     font-size: 1.05rem;
     font-weight: 300;
     opacity: 0.85;
-    transition: 0.1s ease-out;
+    transition: 0.05s ease-out;
 }
 
 .disk-select-icon {
@@ -103,7 +103,7 @@
     background-image: url("../res/images/disk_select_icon.svg");
     background-size: cover;
     opacity: 0.0;
-    transition: 0.1s ease-out;
+    transition: 0.05s ease-out;
 }
 
 .disk-focus .disk-select-icon,
