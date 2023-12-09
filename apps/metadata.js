@@ -32,7 +32,7 @@ const app_list = {
 function append_dock() {
     for (let i = 0; i <= app_list.index; i++) {
         dock.innerHTML += `
-        <div class="dock-item" style="background-image: url('./apps/${app_list.apps[i].path}/icon.png')">
+        <div class="dock-item" onclick="open_app('${app_list.apps[i].path.replace("_", "-")}')" style="background-image: url('./apps/${app_list.apps[i].path}/icon.png')">
             <div class="dock-label">
                 ${app_list.apps[i].name}
             </div>
