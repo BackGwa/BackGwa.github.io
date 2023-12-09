@@ -5,6 +5,7 @@
         --background-image: url("../res/images/sonoma_dark.jpg");
         --dock-color: #191c1cA1;
         --dock-outline: #ffffff10;
+        --dock-label-color: #FFFFFF;
     }
 }
 
@@ -44,6 +45,7 @@
 }
 
 .dock-item {
+    position: relative;
     width: 3.7rem;
     height: 3.7rem;
     background: red;
@@ -64,4 +66,30 @@
     height: 5rem;
     transform: scale(110%) translateY(-30%);
     margin: 0.5rem 0.8rem 0.25rem 0.8rem;
+}
+
+.dock-label {
+    position: absolute;
+    background: var(--dock-color);
+    border: solid 1px var(--dock-outline);
+    width: auto;
+    height: 1rem;
+    padding: 0.3rem 0.55rem;
+    left: 50%;
+    top: -50%;
+    color: var(--dock-label-color);
+    filter: drop-shadow(0 0 8px #0000005F);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    font-weight: 300;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    opacity: 0.0;
+    transition: 0.1s ease-in-out;
+    border-radius: 0.35rem;
+}
+
+.dock-item-focus .dock-label {
+    opacity: 1.0;
 }
