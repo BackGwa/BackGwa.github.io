@@ -41,6 +41,7 @@
             <!-- 상단 메뉴막대 -->
             <div class="top-nav">
                 <div class="left-panel">
+
                     <div class="menu-icon background-image">
                         <div class="sub-menu">
                             <div class="menu-button">이 포트폴리오에 관하여</div>
@@ -55,6 +56,7 @@
                             <div class="menu-button menu-disabled">로그아웃...</div>
                         </div>
                     </div>
+
                     <div class="menu-label label-bold">
                         내 프로필
                         <div class="sub-menu">
@@ -85,6 +87,7 @@
                             <div class="menu-button menu-disabled">찾기</div>
                         </div>
                     </div>
+
                     <div class="menu-label">
                         보기
                         <div class="sub-menu">
@@ -98,6 +101,7 @@
                             <div class="menu-button" onclick="fullscreen()" id="fullscreen-label">전체화면으로 보기</div>
                         </div>
                     </div>
+
                     <div class="menu-label">
                         도움말
                         <div class="sub-menu">
@@ -106,6 +110,7 @@
                             <div class="menu-button">내 프로필 도움말</div>
                         </div>
                     </div>
+
                 </div>
                 <div class="right-panel">
                     <div class="time-label"></div>
@@ -121,9 +126,23 @@
                 </div>
 
                 <!-- 언어 스택 앱 -->
-                <div class="app-window lang-stack-app window-non-alpha hidden-app">
+                <div class="app-window lang-stack-app lang-stack-app-window hidden-app">
                     <div class="window-area">
-                        <div class="window-title">언어 스택</div>
+                        <div class="window-control">
+                            <div class="control-button close-color" onclick="open_app('lang-stack')">
+                                <img src="./res/images/close.svg">
+                            </div>
+                            <div class="control-button minimize-color" onclick="open_app('lang-stack')">
+                                <img src="./res/images/minimize.svg">
+                            </div>
+                            <div class="control-button stretch-color" onclick="stretch_app('lang-stack')">
+                                <img src="./res/images/stretch.svg">
+                            </div>
+                        </div>
+                        <div class="window-title">언어 스택 - Visual Studio Code</div>
+                    </div>
+                    <div class="program">
+                        <iframe src="./apps/lang_stack/index.html"></iframe>
                     </div>
                 </div>
             </div>

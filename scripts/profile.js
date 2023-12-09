@@ -36,6 +36,7 @@ function event_register() {
             zIndex_reset();
             program[index].classList.add("window-focus");
             program[index].style.zIndex = 3;
+            refresh_focus();
         });
 
         window.addEventListener("mouseup", () => {
@@ -43,7 +44,8 @@ function event_register() {
         });
 
         window.addEventListener("mousemove", (e) => {
-            if (program[index].classList.contains("window-focus")) {
+            if (program[index].classList.contains("window-focus") &&
+                !program[index].classList.contains("stretch-app")) {
                 program[index].style.left = `${e.clientX - e.clientX / 4}px`;
                 program[index].style.top = `${e.clientY - 24}px`;
             }
@@ -68,6 +70,31 @@ function open_app(name) {
     refresh_app_stat();
 }
 
+function stretch_app(name) {
+    const app = document.querySelector(`.${name}-app`);
+    if (app.classList.contains("stretch-app")) {
+        app.classList.remove("stretch-app");
+        app.style.zIndex = 3;
+    } else {
+        app.classList.add("stretch-app");
+        app.style.top = '1.8rem';
+        app.style.left = '0px';
+        app.style.zIndex = 3;
+    }
+}
+
+// 앱 활성 상태 반영
+function refresh_focus() {
+    program.forEach(i => {
+        if (i.style.zIndex == 3) {
+            i.classList.remove("non-focus");
+        } else {
+            i.classList.add("non-focus");
+        }
+    });
+}
+
+// 앱 켜짐 상태 반영
 function refresh_app_stat() {
     program.forEach((i, index) => {
         target = document.querySelector(`#app-index-${index}`)
@@ -79,6 +106,7 @@ function refresh_app_stat() {
     });
 }
 
+// 프로필 라벨 상태 반영
 function refresh_profile() {
     profile_text = document.querySelector("#profile-toggle");
     profile = document.querySelector(".profile-app");
