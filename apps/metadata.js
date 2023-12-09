@@ -36,6 +36,7 @@ function append_dock() {
             <div class="dock-label">
                 ${app_list.apps[i].name}
             </div>
+            <div id="app-index-${i}"></div>
         </div>
         `;
     }
