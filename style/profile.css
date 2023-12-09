@@ -5,6 +5,7 @@
         --background-image: url("../res/images/sonoma_dark.jpg");
         --dock-color: #191c1cA1;
         --menu-color: #191c1c81;
+        --menu-label-color: #FFFFFFCF;
         --dock-outline: #ffffff10;
         --menu-outline: #ffffff20;
         --dock-label-color: #FFFFFF;
@@ -164,7 +165,7 @@
     color: var(--dock-label-color);
     font-size: 0.9rem;
     font-weight: 500;
-    opacity: 0.9;
+    opacity: 1.0;
     padding: 0.3rem 1rem 0rem 1rem;
     border-radius: 0.5rem;
     white-space: nowrap;
@@ -177,13 +178,11 @@
     padding: 0.75rem 0.5rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--dock-label-color);
+    color: var(--menu-label-color);
     background: var(--menu-color);
     border: solid 1px var(--menu-outline);
     filter: drop-shadow(0 0 24px #0000005F);
     -webkit-filter: drop-shadow(0 0 24px #0000005F);
-    backdrop-filter: blur(32px);
-    -webkit-backdrop-filter: blur(32px);
     opacity: 0.0;
     pointer-events: none;
     margin-top: 0.5rem;
@@ -194,6 +193,8 @@
     flex-direction: column;
     justify-content: flex-start;
     transform: scale(75%);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
 }
 
 .menu-icon:hover .sub-menu {
