@@ -162,9 +162,8 @@ function time_update() {
 // 전체호면 스크린샷
 function fullpage_screenshot() {
     html2canvas(document.querySelector('.gui-env')).then(function (canvas) {
-        var imageDataURL = canvas.toDataURL('image/png');
-    
-        var link = document.createElement('a');
+        const imageDataURL = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
         link.href = imageDataURL;
         link.download = 'screenshot.png';
         link.click();
@@ -187,9 +186,8 @@ function screenshot() {
         html2canvas(document.querySelector(`.${active_window}`), {
             backgroundColor: null
         }).then(function (canvas) {
-            var imageDataURL = canvas.toDataURL('image/png');
-        
-            var link = document.createElement('a');
+            const imageDataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
             link.href = imageDataURL;
             link.download = `${active_window}.png`;
             link.click();
