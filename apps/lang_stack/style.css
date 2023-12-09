@@ -7,6 +7,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: #1f1f24;
 }
 
 .side-bar {
@@ -15,6 +16,7 @@ html, body {
     height: 100%;
     background: #2a2c2f;
     border-right: 1px solid #000000;
+    z-index: 2;
 }
 
 .bottom-bar {
@@ -27,6 +29,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    z-index: 3;
 }
 
 .bottom-left,
@@ -45,4 +48,109 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.top-menu {
+    position: absolute;
+    width: calc(100% - 4rem);
+    height: 2.6rem;
+    background: #26282b;
+    right: 0;
+    z-index: 1;
+}
+
+.content-area {
+    position: absolute;
+    width: calc(100% - 4rem);
+    height: calc(100% - 2.6rem - 2.1rem);
+    margin-top: 2.6rem;
+    right: 0;
+    overflow: scroll;
+}
+
+.document-area {
+    position: absolute;
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    color: #FFFFFF;
+    display: flex;   
+    flex-direction: column;
+}
+
+.menu-tab {
+    position: absolute;
+    width: auto;
+    padding: 0 1rem 0 1rem;
+    height: 100%;
+    left: 0;
+    background: #1f1f24;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tab-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 0.6rem;
+    background-image: url("./Markdown.png");
+    background-size: cover;
+}
+
+.tab-text {
+    color: #FFFFFF;
+    margin-top: 0.68rem;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-right: 0.5rem;
+    opacity: 0.9;
+}
+
+.document-header {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.document-text {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.75;
+}
+
+.split {
+    margin: 0.5rem 0;
+}
+
+.newline {
+    margin: 0.1rem 0;
+}
+
+.document-hr {
+    width: 100%;
+    height: 0.2rem;
+    background: #FFFFFF10;
+    margin: 1rem 0;
+    border-radius: 0.1rem;
+}
+
+.row-table {
+    display: flex;
+    flex-direction: row;
+}
+
+.badge {
+    margin-right: 0.25rem;
+    height: 1.7rem;
+}
+
+.lang {
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #FFFFFFCF;
 }
