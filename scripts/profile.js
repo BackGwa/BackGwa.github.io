@@ -1,5 +1,6 @@
 
 let dock;
+let time_label;
 let dock_item;
 let select_index = 0;
 
@@ -8,6 +9,7 @@ function page_init() {
     dock = document.querySelector(".bottom-dock");
     append_dock();
     dock_item = document.querySelectorAll(".dock-item");
+    time_label = document.querySelector(".time-label");
     event_register();
 }
 
@@ -22,6 +24,9 @@ function event_register() {
 
         i.addEventListener("mouseout", dock_item_unfocus);
     });
+
+    time_update();
+    setInterval(() => time_update, 1000);
 }
 
 // 포커싱 비주얼 이펙트 적용
@@ -42,4 +47,18 @@ function dock_item_unfocus() {
         i.classList.remove("dock-item-focus");
         i.classList.remove("dock-item-focus-fade1");
     });
+}
+
+// 시간 업데이트
+function time_update() {
+    const week = ['일', '월', '화', '수', '목', '금', '토'];
+    const today = new Date();
+    const month = String(today.getMonth()).padStart(2, '0');
+    const day = String(today.getDay()).padStart(2, '0');
+    const week_index = today.getDay();
+
+    hours = String(today.getHours()).padStart(2, '0');
+    minutes = String(today.getMinutes()).padStart(2, '0');
+
+    time_label.innerHTML = `${month}월 ${day}일 (${week[week_index]}) ${hours}:${minutes}`;
 }
