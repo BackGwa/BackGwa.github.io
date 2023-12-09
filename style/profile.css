@@ -412,3 +412,9 @@ iframe {
     background-color: #b6b6b7;
     border: solid 1px #89898a;
 }
+
+.disable-control {
+    pointer-events: none;
+    background-color: #b6b6b7;
+    border: solid 1px #89898a;
+}
