@@ -88,6 +88,7 @@
     opacity: 0.0;
     transition: 0.1s ease-in-out;
     border-radius: 0.35rem;
+    pointer-events: none;
 }
 
 .dock-item-focus .dock-label {
