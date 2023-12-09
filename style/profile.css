@@ -178,12 +178,12 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--dock-label-color);
-    backdrop-filter: blur(32px);
-    -webkit-backdrop-filter: blur(32px);
     background: var(--menu-color);
     border: solid 1px var(--menu-outline);
     filter: drop-shadow(0 0 24px #0000005F);
     -webkit-filter: drop-shadow(0 0 24px #0000005F);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
     opacity: 0.0;
     pointer-events: none;
     margin-top: 0.5rem;

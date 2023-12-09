@@ -42,7 +42,6 @@ function event_register() {
 
         window.addEventListener("mousemove", (e) => {
             if (program[index].classList.contains("window-focus")) {
-                console.log(e);
                 program[index].style.left = `${e.clientX - e.clientX / 4}px`;
                 program[index].style.top = `${e.clientY - 24}px`;
             }
@@ -56,13 +55,12 @@ function event_register() {
 // 앱 열기 / 닫기
 function open_app(name) {
     const app = document.querySelector(`.${name}-app`);
-    console.log(name);
     if (app.classList.contains("hidden-app")) {
         app.classList.remove("hidden-app");
+        app.style.zIndex = 3;
     } else {
         app.classList.add("hidden-app");
         zIndex_reset();
-        app.style.zIndex = 3;
     }
     refresh_app_stat();
 }
