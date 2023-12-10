@@ -6,7 +6,7 @@ let select_index = 0;
 function page_init() {
     disk_item = document.querySelectorAll(".disk-item");
 
-    play("../res/sounds/MacStartup.mp3");
+    play("../res/sounds/macOS_Startup.mp3");
     event_register();
     disk_item_focus();
 }

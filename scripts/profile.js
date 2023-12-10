@@ -172,6 +172,7 @@ function time_update() {
 
 // 전체화면 스크린샷
 function fullpage_screenshot() {
+    play("../res/sounds/macOS_ScreenCapture.mp3");
     html2canvas(document.querySelector('.gui-env')).then(function (canvas) {
         const imageDataURL = canvas.toDataURL('image/png');
         const link = document.createElement('a');
@@ -194,6 +195,7 @@ function screenshot() {
     });
     
     if (active_window) {
+        play("../res/sounds/macOS_ScreenCapture.mp3");
         html2canvas(document.querySelector(`.${active_window}`), {
             backgroundColor: null
         }).then(function (canvas) {
