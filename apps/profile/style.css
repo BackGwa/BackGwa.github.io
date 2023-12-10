@@ -145,10 +145,126 @@ a:hover {
 .mbti-graph-area {
     position: absolute;
     width: 100%;
-    height: 13rem;
+    height: 12.5rem;
     z-index: 2;
     bottom: 0;
     background: #202327DF;
     backdrop-filter: blur(32px);
     -webkit-backdrop-filter: blur(32px);
+}
+
+.mbti-area {
+    position: absolute;
+    width: 92%;
+    height: 7rem;
+    bottom: 4.2rem;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left-text-panel,
+.right-text-panel {
+    width: 7rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-text-panel {
+    color: #ffffff80;
+    text-align: right;
+    font-weight: 300;
+}
+
+.right-text-panel {
+    text-align: left;
+    font-weight: 600;
+}
+
+.percent-panel {
+    width: calc(100% - 8rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-label {
+    font-size: 1.05rem;
+}
+
+.right-text-panel .mbti-i {
+    color: #4298B4;
+}
+
+.right-text-panel .mbti-n {
+    color: #E4AE3A;
+}
+
+.right-text-panel .mbti-f {
+    color: #33A474;
+}
+
+.right-text-panel .mbti-p {
+    color: #88619A;
+}
+
+.percent-bar:nth-child(1) {
+    filter: drop-shadow(-4px 0 32px #4298B47F);
+}
+
+.percent-bar:nth-child(2) {
+    filter: drop-shadow(-4px 0 32px #E4AE3A7F);
+}
+
+.percent-bar:nth-child(3) {
+    filter: drop-shadow(-4px 0 32px #33A4747F);
+}
+
+.percent-bar:nth-child(4) {
+    filter: drop-shadow(-4px 0 32px #88619A7F);
+}
+
+.percent-bar .mbti-i {
+    width: 70%;
+    background: #4298B4;
+}
+
+.percent-bar .mbti-n {
+    width: 64%;
+    background:#E4AE3A;
+}
+
+.percent-bar .mbti-f {
+    width: 78%;
+    background: #33A474;
+}
+
+.percent-bar .mbti-p {
+    width: 82%;
+    background: #88619A;
+}
+
+.percent-bar {
+    width: calc(100% - 3rem);
+    height: 0.9rem;
+    margin: 0.2rem 1.5rem 0 1.5rem;
+    border-radius: 0.5rem;
+    background: #0000002F;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.percent-box {
+    height: calc(100% - 3px);
+    border: 1.5px solid #0000003b;
+    border-top-right-radius: 0.45rem;
+    border-bottom-right-radius: 0.45rem;
 }
