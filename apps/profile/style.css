@@ -89,6 +89,7 @@ html, body {
     border: 1px solid #FFFFFF10;
     border-radius: 0.5rem;
     filter: drop-shadow(0 6px 8px #00000040);
+    cursor: pointer;
 }
 
 .profile-button {

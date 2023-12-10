@@ -59,6 +59,7 @@
     border-radius: 1rem;
     transition: 0.2s ease-out;
     background-size: cover;
+    cursor: pointer;
 }
 
 .dock-item-focus {
@@ -169,6 +170,7 @@
     padding: 0.3rem 1rem 0rem 1rem;
     border-radius: 0.5rem;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .sub-menu {
@@ -214,6 +216,7 @@
 .menu-disabled {
     pointer-events: none;
     opacity: 0.4;
+    cursor: default;
 }
 
 .label-bold {
@@ -235,6 +238,7 @@
     background-color: transparent;
     border-radius: 0.4rem;
     transition: 0.15s ease-out;
+    cursor: pointer;
 }
 
 .menu-icon:hover {
@@ -449,6 +453,7 @@ iframe {
     background: transparent;
     border-radius: 0.5rem;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .tab-item:hover {
@@ -461,6 +466,7 @@ iframe {
     font-weight: 500;
     background: #15161c;
     border: 1px solid #FFFFFF15;
+    cursor: default;
 }
 
 .tab-item-focus:hover {
