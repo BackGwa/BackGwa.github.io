@@ -129,6 +129,7 @@ a:hover {
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
+    cursor: help;
 }
 
 .mbti-graph-blur {
