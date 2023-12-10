@@ -6,6 +6,7 @@ let program;
 let program_window;
 let tab_item;
 let profile_frame;
+let tab_index = 0;
 let select_index = 0;
 
 // 페이지 초기화 작업
@@ -61,15 +62,21 @@ function event_register() {
 }
 
 // 앱 열기 / 닫기
-function open_app(name) {
+function open_app(name, dock = false) {
     const app = document.querySelector(`.${name}-app`);
     if (app.classList.contains("hidden-app")) {
         app.classList.remove("hidden-app");
         app.style.zIndex = 3;
     } else {
-        app.classList.add("hidden-app");
-        zIndex_reset();
+        if (dock) {
+            zIndex_reset();
+            app.style.zIndex = 3;
+        } else {
+            zIndex_reset();
+            app.classList.add("hidden-app");
+        }
     }
+    refresh_focus();
     refresh_profile();
     refresh_app_stat();
 }
@@ -222,27 +229,30 @@ function tab_unfocus() {
 
 // 탭 변경
 function tab_switch(index) {
-    tab_unfocus();
-    tab_item[index].classList.add("tab-item-focus");
-
-    profile_frame.classList.add("fade");
+    if (index != tab_index) {
+        tab_index = index;
+        tab_unfocus();
+        tab_item[index].classList.add("tab-item-focus");
     
-    setTimeout(() => {
-        switch (index) {
-            case 0:
-                profile_frame.src = "./apps/profile/profile.html";
-                break;
-            case 1:
-                profile_frame.src = "./apps/profile/mbti.html";
-                break;
-            case 2:
-                profile_frame.src = "./apps/profile/credit.html";
-                break;
-        }
-    }, 100);
-
-
-    setTimeout(() => {
-        profile_frame.classList.remove("fade");
-    }, 200)
+        profile_frame.classList.add("fade");
+        
+        setTimeout(() => {
+            switch (index) {
+                case 0:
+                    profile_frame.src = "./apps/profile/profile.html";
+                    break;
+                case 1:
+                    profile_frame.src = "./apps/profile/mbti.html";
+                    break;
+                case 2:
+                    profile_frame.src = "./apps/profile/credit.html";
+                    break;
+            }
+        }, 100);
+    
+    
+        setTimeout(() => {
+            profile_frame.classList.remove("fade");
+        }, 200)
+    }
 }
