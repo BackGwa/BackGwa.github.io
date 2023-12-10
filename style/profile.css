@@ -435,6 +435,7 @@ iframe {
     background: #15161c50;
     border: 1px solid #FFFFFF15;
     border-radius: 0.5rem;
+    pointer-events: all;
 }
 
 .tab-item {
@@ -450,11 +451,21 @@ iframe {
     border: 1px solid transparent;
 }
 
+.tab-item:hover {
+    color: #FFFFFFDF;
+    font-weight: 400;
+}
+
 .tab-item-focus {
     color: #FFFFFF;
-    font-weight: 400;
+    font-weight: 500;
     background: #15161c;
     border: 1px solid #FFFFFF15;
+}
+
+.tab-item-focus:hover {
+    color: #FFFFFF;
+    font-weight: 500;
 }
 
 .fade {
