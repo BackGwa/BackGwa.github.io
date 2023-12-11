@@ -72,9 +72,13 @@ html, body {
     position: absolute;
     left: 50%;
     font-size: 0.7rem;
-    bottom: 2.7rem;
+    bottom: 3rem;
     transform: translateX(-50%);
     color: #FFFFFF4F;
+}
+
+.credit-tab {
+    bottom: 8rem;
 }
 
 .profile-button,
@@ -185,7 +189,7 @@ a:hover {
 
 .right-text-panel {
     text-align: left;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .percent-panel {
@@ -233,22 +237,22 @@ a:hover {
 }
 
 .percent-bar .mbti-i {
-    width: 70%;
+    width: calc(70% / 1.5);
     background: #4298B4;
 }
 
 .percent-bar .mbti-n {
-    width: 64%;
+    width: calc(64% / 1.5);
     background:#E4AE3A;
 }
 
 .percent-bar .mbti-f {
-    width: 78%;
+    width: calc(78% / 1.5);
     background: #33A474;
 }
 
 .percent-bar .mbti-p {
-    width: 82%;
+    width: calc(82% / 1.5);
     background: #88619A;
 }
 
@@ -269,4 +273,12 @@ a:hover {
     border: 1.5px solid #0000003b;
     border-top-right-radius: 0.45rem;
     border-bottom-right-radius: 0.45rem;
+}
+
+.credit-image {
+    position: absolute;
+    width: 20rem;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
