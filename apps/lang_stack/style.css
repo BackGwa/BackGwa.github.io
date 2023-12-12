@@ -183,3 +183,16 @@ html, body {
 .lang:hover {
     background: #FFFFFF10;
 }
+
+.content-area::-webkit-scrollbar {
+    width: 16px;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+    background: #ffffff10;
+}
+
+.content-area::-webkit-scrollbar-track {
+    background: #1f1f24;
+    border-left: 1px solid #ffffff10;
+}
