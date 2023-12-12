@@ -3,14 +3,6 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background-image: url("../res/images/sonoma_dark.jpg");
-        --dock-color: #191c1cA1;
-        --menu-color: #191c1c81;
-        --menu-label-color: #FFFFFFCF;
-        --dock-outline: #ffffff10;
-        --menu-outline: #ffffff20;
-        --dock-label-color: #FFFFFF;
-        --app-background: #202327;
-        --app-background-alpha: #202327DF;
     }
 }
 
@@ -19,6 +11,17 @@
     :root {
         --background-image: url("../res/images/sonoma_light.jpg");
     }
+}
+
+:root {
+    --dock-color: #191c1cA1;
+    --menu-color: #191c1c81;
+    --menu-label-color: #FFFFFFCF;
+    --dock-outline: #ffffff10;
+    --menu-outline: #ffffff20;
+    --dock-label-color: #FFFFFF;
+    --app-background: #202327;
+    --app-background-alpha: #202327DF;
 }
 
 .gui-env {
@@ -315,6 +318,13 @@
     left: 560px;
 }
 
+.tech-stack-app {
+    width: 64rem;
+    height: 42rem;
+    top: 200px;
+    left: 240px;
+}
+
 .stretch-app {
     width: 100%;
     height: calc(100% - 1.8rem - 5.5rem);
@@ -322,6 +332,10 @@
 
 .lang-stack-app-window {
     background: #383a3d;
+}
+
+.tech-stack-app-window {
+    background: #1E1E1E;
 }
 
 .program {
@@ -332,6 +346,10 @@
 
 .lang-stack-app .program {
     background: #1f1f24;
+}
+
+.tech-stack-app .program {
+    background: #1E1E1E;
 }
 
 .menu-button {
