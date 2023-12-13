@@ -382,7 +382,7 @@ iframe {
 
 .window-control {
     position: absolute;
-    width: 4.8rem;
+    width: 4.1rem;
     height: 100%;
     left: 0.4rem;
     display: flex;
@@ -392,8 +392,8 @@ iframe {
 
 .control-button {
     position: relative;
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 0.7rem;
+    height: 0.7rem;
     margin-top: 0.6rem;
     background: white;
     border-radius: 50%;
@@ -401,8 +401,8 @@ iframe {
 
 .control-button img {
     position: absolute;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.5rem;
+    height: 0.5rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -494,4 +494,53 @@ iframe {
 
 .fade {
     opacity: 0.0;
+}
+
+.window-tab-figma {
+    width: 7rem;
+    height: 100%;
+    margin-left: 5.7rem;
+    background: #2C2C2C;
+}
+
+.tab-figma-image {
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 0.2rem;
+    background: url("../res/images/figma_tab_image.png");
+    background-size: cover;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.tab-figma-text {
+    position: absolute;
+    color: #FFFFFFCF;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-top: 0.45rem;
+    margin-left: 2rem;
+}
+
+.window-right-button {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -2.5rem;
+    right: 0;
+    border-left: 0.5px solid #444444;
+}
+
+.window-right-button:hover {
+    background: #2C2C2C;
+}
+
+.dot-img {
+    position: absolute;
+    width: 1rem;
+    top: 50%;
+    left: 50%;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
 }
