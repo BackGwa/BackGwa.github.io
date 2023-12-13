@@ -356,7 +356,7 @@
     background: transparent;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
     font-weight: 500;
-    transition: 0.1s ease-out;
+    transition: 0.025s ease-out;
     border-radius: 0.4rem;
 }
 
