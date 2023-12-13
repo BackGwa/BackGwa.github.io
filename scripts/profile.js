@@ -51,7 +51,7 @@ function event_register() {
         window.addEventListener("mousemove", (e) => {
             if (program[index].classList.contains("window-focus") &&
                 !program[index].classList.contains("stretch-app")) {
-                program[index].style.left = `${e.clientX - e.clientX / 4}px`;
+                program[index].style.left = `${e.clientX - e.clientX / 2}px`;
                 program[index].style.top = `${e.clientY - 24}px`;
             }
         });
