@@ -221,19 +221,19 @@ a:hover {
 }
 
 .percent-bar:nth-child(1) {
-    filter: drop-shadow(-4px 0 32px #4298B47F);
+    filter: drop-shadow(-4px 0 28px #4298B48A);
 }
 
 .percent-bar:nth-child(2) {
-    filter: drop-shadow(-4px 0 32px #E4AE3A7F);
+    filter: drop-shadow(-4px 0 28px #E4AE3A8A);
 }
 
 .percent-bar:nth-child(3) {
-    filter: drop-shadow(-4px 0 32px #33A4747F);
+    filter: drop-shadow(-4px 0 28px #33A4748A);
 }
 
 .percent-bar:nth-child(4) {
-    filter: drop-shadow(-4px 0 32px #88619A7F);
+    filter: drop-shadow(-4px 0 28px #88619A8A);
 }
 
 .percent-bar .mbti-i {
