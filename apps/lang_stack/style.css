@@ -206,7 +206,7 @@ table {
 
 th {
     background: #1f1f24;
-    padding: 10px 8px 10px 8px;
+    padding: 10px 10px 10px 10px;
     font-size: 1.1rem;
     font-weight: 600;
     border-bottom: 0.5px solid #ffffffCF;
@@ -258,4 +258,8 @@ td {
 
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }
