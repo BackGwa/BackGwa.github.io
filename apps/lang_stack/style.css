@@ -176,7 +176,7 @@ html, body {
     margin-left: 1rem;
 }
 
-.r-1rem {
+.r-1rem { 
     margin-right: 1rem;
 }
 
@@ -195,4 +195,67 @@ html, body {
 .content-area::-webkit-scrollbar-track {
     background: #1f1f24;
     border-left: 1px solid #ffffff10;
+}
+
+table {
+    width: 100%;
+    border-radius: 6px;
+    padding: 3px;
+    margin: none;
+}
+
+th {
+    background: #1f1f24;
+    padding: 10px 8px 10px 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 0.5px solid #ffffffCF;
+}
+
+tr {
+    padding: none;
+    margin: none;
+}
+
+td {
+    padding: 6px 10px 3px 10px;
+    margin: none;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.table-10 {
+    width: 10%;
+}
+
+.table-20 {
+    width: 20%;
+}
+
+.table-30 {
+    width: 30%;
+}
+
+.table-40 {
+    width: 40%;
+}
+
+.table-50 {
+    width: 50%;
+}
+
+.table-60 {
+    width: 60%;
+}
+
+.table-70 {
+    width: 80%;
+}
+
+.table-80 {
+    width: 80%;
+}
+
+.text-center {
+    text-align: center;
 }
