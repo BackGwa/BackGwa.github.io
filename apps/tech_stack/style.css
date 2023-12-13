@@ -66,8 +66,21 @@ html, body {
 .move-layout {
     position: absolute;
     width: calc(100% - 14rem);
-    height: calc(100% - 3rem);
+    height: calc(100% - 3rem - 2rem);
     margin-top: 3rem;
     margin-left: 14rem;
     overflow: scroll;
+}
+
+.move-scale {
+    width: 75rem;
+    height: 50rem;
+}
+
+.test-img {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    left: 25rem;
+    top: 15rem;
 }
