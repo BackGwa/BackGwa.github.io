@@ -13,10 +13,14 @@ window.onload = () => {
 
             if (e.deltaY > 0 && scale > 0.1) {
                 scale = scale - 0.1;
-            } else if (e.deltaY < 0 && scale > 0.1) {
+            } else if (e.deltaY < 0) {
                 scale = scale + 0.1;
             } else {
                 document.querySelector(".move-layout").style.overflow = "scroll";
+            }
+
+            if (scale < 0.1) {
+                scale = 0.1;
             }
             move_scale.style.transform = `scale(${scale})`;
         } else {
