@@ -106,6 +106,28 @@ html, body {
     overflow: scroll;
 }
 
+.move-layout::-webkit-scrollbar {
+    width: 12px;
+}
+
+.move-layout::-webkit-scrollbar-button {
+    display: none;
+}
+
+.move-layout::-webkit-scrollbar-corner {
+    display: none;
+}
+
+.move-layout::-webkit-scrollbar-thumb {
+    background: #00000070;
+    border: 1px solid #FFFFFF40;
+    border-radius: 6px;
+}
+
+.move-layout::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 .move-scale {
     width: 75rem;
     height: 50rem;
