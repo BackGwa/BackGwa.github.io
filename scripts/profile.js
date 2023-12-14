@@ -66,13 +66,13 @@ function open_app(name, dock = false) {
     const app = document.querySelector(`.${name}-app`);
     if (app.classList.contains("hidden-app")) {
         app.classList.remove("hidden-app");
+        zIndex_reset();
         app.style.zIndex = 3;
     } else {
+        zIndex_reset();
         if (dock) {
-            zIndex_reset();
             app.style.zIndex = 3;
         } else {
-            zIndex_reset();
             app.classList.add("hidden-app");
         }
     }
