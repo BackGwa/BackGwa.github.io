@@ -26,5 +26,13 @@ window.onload = () => {
         } else {
             document.querySelector(".move-layout").style.overflow = "scroll";
         }
+
+        document.querySelector(".scale-label").innerText = parseInt(scale * 100) + "%";
     });
+}
+
+function scale_reset() {
+    scale = 1.0;
+    move_scale.style.transform = `scale(${scale})`;
+    document.querySelector(".scale-label").innerText = parseInt(scale * 100) + "%";
 }

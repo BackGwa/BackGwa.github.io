@@ -140,10 +140,34 @@ html, body {
     font-size: 1rem;
     font-weight: 400;
     white-space: nowrap;
-    color: #FFF;
+    color: #FFFFFF;
     display: flex;
     flex-direction: row;
     margin-top: 0.85rem;
+}
+
+.scale-button {
+    position: absolute;
+    width: 3.5rem;
+    height: 3rem;
+    right: 0;
+    font-size: 0.8rem;
+    font-weight: 300;
+    white-space: nowrap;
+    color: #FFFFFFCF;
+    display: flex;
+    flex-direction: row;
+}
+
+.scale-button:hover {
+    background: #111111;
+}
+
+.scale-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .draft-inner {
