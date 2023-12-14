@@ -54,13 +54,47 @@ html, body {
 .side-bar {
     position: absolute;
     width: 14rem;
-    height: 100%;
+    height: calc(100% - 3rem);
     background: #2C2C2C;
     border-right: 1px solid #444444;
     z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    bottom: 0;
+}
+
+.tab-canvas {
+    position: relative;
+    width: calc(100% - 0.6px);
+    height: 2.3rem;
+    border: 0.3px solid transparent;
+    margin-top: 1px;
+}
+
+.canvas-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%); 
+    width: 0.9rem;
+    height: 0.9rem;
+    background-image: url("./res/grid.png");
+    background-size: cover; 
+}
+
+.canvas-label {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 400;
+    top: 50%;
+    left: 2.2rem;
+    transform: translateY(-50%);
+}
+
+.tab-canvas:hover {
+    border: 0.3px solid #0C8CE9;
 }
 
 .move-layout {
@@ -101,8 +135,6 @@ html, body {
 
 .content-meta {
     position: absolute;
-    left: 25rem;
-    top: 15rem;
     width: fit-content;
     height: fit-content;
     border: 0.5px solid transparent;
@@ -124,4 +156,26 @@ html, body {
 .content-meta:hover .meta-tag {
     color: #0C8CE9;
     opacity: 1.0;
+}
+
+.text-src-01 {
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.text-src-02 {
+    color: #FFFFFFA0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.text-01 {
+    left: 5rem;
+    top: 5rem;
+}
+
+.text-02 {
+    left: 5rem;
+    top: 10rem;
 }
