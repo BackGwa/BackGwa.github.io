@@ -58,7 +58,7 @@ function event_register() {
     });
 
     time_update();
-    setInterval(() => time_update, 100);
+    setInterval(time_update, 100);
 }
 
 // 앱 열기 / 닫기
