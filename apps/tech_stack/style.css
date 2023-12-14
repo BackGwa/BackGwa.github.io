@@ -77,10 +77,52 @@ html, body {
     height: 50rem;
 }
 
-.test-img {
+.draft-title {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.85rem;
+}
+
+.draft-inner {
+    opacity: 0.5;
+    margin-right: 0.5rem;
+}
+
+.test-img {
     width: 15rem;
     height: 15rem;
+}
+
+.content-meta {
+    position: absolute;
     left: 25rem;
     top: 15rem;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid transparent;
+}
+
+.content-meta:hover {
+    border: 1px solid #0C8CE9;
+}
+
+.meta-tag {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 0.5rem;
+    font-weight: 300;
+    margin-top: -0.7rem;
+    opacity: 0.2;
+}
+
+.content-meta:hover .meta-tag {
+    color: #0C8CE9;
+    opacity: 1.0;
 }
