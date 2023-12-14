@@ -58,7 +58,7 @@ function event_register() {
     });
 
     time_update();
-    setInterval(() => time_update, 1000);
+    setInterval(() => time_update, 100);
 }
 
 // 앱 열기 / 닫기
@@ -160,7 +160,7 @@ function dock_item_unfocus() {
 function time_update() {
     const week = ['일', '월', '화', '수', '목', '금', '토'];
     const today = new Date();
-    const month = String(today.getMonth()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
     const date = String(today.getDate()).padStart(2, '0');
     const week_index = today.getDay();
 
