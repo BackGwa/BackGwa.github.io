@@ -62,6 +62,23 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.side-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.bottom-margin {
+    height: 4rem;
+}
+
+.scroll-area {
+    width: 100%;
+    height: 100%;
 }
 
 .tab-canvas {
@@ -79,8 +96,26 @@ html, body {
     transform: translateY(-50%); 
     width: 0.9rem;
     height: 0.9rem;
-    background-image: url("./res/grid.png");
     background-size: cover; 
+}
+
+.icon-grid {
+    background-image: url("./res/grid.png");
+}
+
+.icon-rec {
+    background-image: url("./res/Rectangle.png");
+    opacity: 0.4;
+}
+
+.icon-text {
+    background-image: url("./res/Text.png");
+    opacity: 0.4;
+}
+
+.icon-image {
+    background-image: url("./res/image.png");
+    opacity: 0.4;
 }
 
 .canvas-label {
@@ -129,8 +164,8 @@ html, body {
 }
 
 .move-scale {
-    width: 75rem;
-    height: 50rem;
+    width: 125rem;
+    height: 100rem;
 }
 
 .draft-title {
@@ -175,19 +210,20 @@ html, body {
     margin-right: 0.5rem;
 }
 
-.test-img {
-    width: 15rem;
-}
-
 .content-meta {
     position: absolute;
     width: fit-content;
     height: fit-content;
-    border: 0.5px solid transparent;
+    border: 0.1px solid transparent;
+}
+
+.meta-rel {
+    position: relative;
+    margin-top: 1rem;
 }
 
 .content-meta:hover {
-    border: 0.5px solid #0C8CE9;
+    border: 0.1px solid #0b7ac9;
 }
 
 .meta-tag {
@@ -224,4 +260,126 @@ html, body {
 .text-02 {
     left: 5rem;
     top: 10rem;
+}
+
+.alert {
+    position: absolute;
+    width: calc(100% - 14rem - 1px);
+    height: 2.5rem;
+    margin-top: calc(3rem + 1px);
+    right: 0;
+    background: #0C8CE9;
+    z-index: 1;
+}
+
+.alert-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.alert-close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.4rem;
+    background: #FFCD2A;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.Rectangle-01 {
+    left: 5rem;
+    top: 14rem;
+}
+
+.text-03 {
+    left: 13rem;
+    top: 14.65rem;
+}
+
+.Rectangle-02 {
+    left: 25.5rem;
+    top: 14rem;
+}
+
+.text-04 {
+    left: 33rem;
+    top: 14.65rem;
+}
+
+.text-src-03 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.Rectangle-src-01 {
+    width: 20rem;
+    height: 2.5rem;
+    background: #0C8CE9;
+    border-radius: 0.5rem;
+}
+
+.Rectangle-src-02 {
+    width: 20rem;
+    height: 9.5rem;
+    background-size: cover;
+    border-radius: 0.5rem;
+}
+
+.item-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 5rem;
+    top: 18rem;
+}
+
+.sw-list {
+    left: 25.5rem;
+}
+
+.rasp-img {
+    background-image: url("./res/raspberrypi.png");
+}
+
+.arduino-img {
+    background-image: url("./res/arduino.png");
+}
+
+.latte-img {
+    background-image: url("./res/latte.png");
+}
+
+.plc1-img {
+    background-image: url("./res/plc1.png");
+}
+
+.plc2-img {
+    background-image: url("./res/plc2.png");
+}
+
+.plc3-img {
+    background-image: url("./res/plc3.png");
+}
+
+.git-img {
+    background-image: url("./res/git.png");
+}
+
+.figma-img {
+    background-image: url("./res/figma.png");
 }

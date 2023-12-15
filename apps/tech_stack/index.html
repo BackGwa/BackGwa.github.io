@@ -31,35 +31,217 @@
                 <img src="./res/icon5.png">
             </div>
 
-            <div class="draft-title"><div class="draft-inner">draft / </div>기술 스택</div>
+            <div class="draft-title"><div class="draft-inner">Drafts / </div>기술 스택</div>
             <div class="scale-button" onclick="scale_reset()">
                 <div class="scale-label">100%</div>
+            </div>
+
+            <div class="alert">
+                <div class="alert-label">'Control + 마우스' 휠 조합을 사용하여, 문서를 확대 및 축소할 수 있습니다.</div>
+                <div class="alert-close drag-block" onclick="alert_close()">닫기</div>
             </div>
         </div>
 
         <div class="side-bar">
-            <div class="tab-canvas">
-                <div class="canvas-icon background-image"></div>
-                <div class="canvas-label drag-block">메인 헤더 텍스트</div>
-            </div>
-            <div class="tab-canvas">
-                <div class="canvas-icon background-image"></div>
-                <div class="canvas-label drag-block">서브 헤더 텍스트</div>
+            <div class="scroll-area">
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-grid background-image"></div>
+                    <div class="canvas-label drag-block">메인 헤더 텍스트</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-grid background-image"></div>
+                    <div class="canvas-label drag-block">서브 헤더 텍스트</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-rec background-image"></div>
+                    <div class="canvas-label drag-block">Rectangle 1</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-rec background-image"></div>
+                    <div class="canvas-label drag-block">Rectangle 2</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-text background-image"></div>
+                    <div class="canvas-label drag-block">하드웨어</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-text background-image"></div>
+                    <div class="canvas-label drag-block">소프트웨어</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">라떼판다 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">라즈베리파이 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">아두이노 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">지멘스 PLC 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">미쓰비씨 PLC 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">LS산전 PLC 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">Git/Github 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">Figma 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">Illustrator 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">TIA Portal v18 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">GXworks 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">XG5000 카드 이미지</div>
+                </div>
+    
+                <div class="tab-canvas">
+                    <div class="canvas-icon icon-image background-image"></div>
+                    <div class="canvas-label drag-block">OpenPLC 카드 이미지</div>
+                </div>
+
+                <div class="bottom-margin"></div>
             </div>
         </div>
 
         <div class="move-layout">
             <div class="move-scale" style="transform: scale(100%)">
+                
                 <div class="content-meta text-01">
                     <div class="meta-tag">메인 헤더 텍스트</div>
                     <div class="text-src-01">기술 스택</div>
-                    <!-- <img src="../../res/images/sonoma_light.jpg" class="test-img"> -->
                 </div>
+
                 <div class="content-meta text-02">
                     <div class="meta-tag">서브 헤더 텍스트</div>
-                    <div class="text-src-02">이 곳에서 제가 다룰 수 있는 기술들을 볼 수 있어요!</div>
-                    <!-- <img src="../../res/images/sonoma_light.jpg" class="test-img"> -->
+                    <div class="text-src-02">
+                        반가워요!<br>
+                        이 곳에선 제가 다룰 수 있는 하드웨어나 소프트웨어들을 볼 수 있어요!
+                    </div>
                 </div>
+
+                <div class="content-meta Rectangle-01">
+                    <div class="Rectangle-src-01">
+                        <div class="text-src-03">하드웨어</div>
+                    </div>
+                </div>
+
+                <div class="content-meta Rectangle-02">
+                    <div class="Rectangle-src-01">
+                        <div class="text-src-03">소프트웨어</div>
+                    </div>
+                </div>
+
+                <div class="item-list">
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">라떼판다 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image latte-img"></div>
+                    </div>
+    
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">라즈베리파이 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image rasp-img"></div>
+                    </div>
+    
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">아두이노 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image arduino-img"></div>
+                    </div>
+    
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">지멘스 PLC 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc1-img"></div>
+                    </div>
+    
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">미쓰비씨 PLC 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc2-img"></div>
+                    </div>
+    
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">LS산전 PLC 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc3-img"></div>
+                    </div>
+                </div>
+
+
+                <div class="item-list sw-list">
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">Git/GitHub 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image git-img"></div>
+                    </div>
+
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">Figma 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image figma-img"></div>
+                    </div>
+
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">Illustrator 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc3-img"></div>
+                    </div>
+
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">TIA Portal v18 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc3-img"></div>
+                    </div>
+
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">GXWorks 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc3-img"></div>
+                    </div>
+
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">XG5000 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc3-img"></div>
+                    </div>
+
+                    <div class="content-meta meta-rel">
+                        <div class="meta-tag">OpenPLC 카드 이미지</div>
+                        <div class="Rectangle-src-02 background-image plc3-img"></div>
+                    </div>
+                    
+                </div>
+
             </div>
         </div>
     </div>

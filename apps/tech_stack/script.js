@@ -1,5 +1,6 @@
 
 let move_scale;
+let scale = 1;
 
 window.onload = () => {
     move_scale = document.querySelector(".move-scale");
@@ -35,4 +36,8 @@ function scale_reset() {
     scale = 1.0;
     move_scale.style.transform = `scale(${scale})`;
     document.querySelector(".scale-label").innerText = parseInt(scale * 100) + "%";
+}
+
+function alert_close() {
+    document.querySelector(".alert").style.display = "none";
 }
