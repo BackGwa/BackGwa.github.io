@@ -311,6 +311,16 @@ html, body {
     top: 14rem;
 }
 
+.Rectangle-03 {
+    left: 46rem;
+    top: 14rem;
+}
+
+.Rectangle-04 {
+    left: 66.5rem;
+    top: 14rem;
+}
+
 .text-04 {
     left: 33rem;
     top: 14.65rem;
@@ -352,6 +362,14 @@ html, body {
     left: 25.5rem;
 }
 
+.ide-list {
+    left: 46rem;
+}
+
+.os-list {
+    left: 66.5rem;
+}
+
 .rasp-img {
     background-image: url("./res/raspberrypi.png");
 }
@@ -382,4 +400,8 @@ html, body {
 
 .figma-img {
     background-image: url("./res/figma.png");
+}
+
+.openplc-img {
+    background-image: url("./res/openplc.png");
 }
