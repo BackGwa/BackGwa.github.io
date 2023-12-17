@@ -325,6 +325,13 @@
     left: 240px;
 }
 
+.contact-app {
+    width: 44rem;
+    height: 27rem;
+    top: 200px;
+    left: 240px;
+}
+
 .stretch-app {
     width: 100%;
     height: calc(100% - 1.8rem - 5.5rem);
