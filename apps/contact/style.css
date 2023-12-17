@@ -19,6 +19,8 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background: #24242460;
+    border-right: 0.5px solid #FFFFFF08;
 }
 
 .contact-area {

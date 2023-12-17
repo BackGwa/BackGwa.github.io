@@ -395,6 +395,7 @@ iframe {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    z-index: 1;
 }
 
 .control-button {
@@ -550,4 +551,13 @@ iframe {
     left: 50%;
     opacity: 0.8;
     transform: translate(-50%, -50%);
+}
+
+.contact-window {
+    position: absolute;
+    width: 14rem;
+    height: 100%;
+    background: #24242460;
+    z-index: 0;
+    border-right: 0.5px solid #FFFFFF08;
 }
