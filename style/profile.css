@@ -286,6 +286,7 @@
     height: 2.2rem;
     border-top-left-radius: 0.65rem;
     border-top-right-radius: 0.65rem;
+    overflow: hidden;
 }
 
 .window-focus .program {
@@ -326,8 +327,8 @@
 }
 
 .contact-app {
-    width: 44rem;
-    height: 27rem;
+    width: 38rem;
+    height: 22rem;
     top: 180px;
     left: 280px;
 }
@@ -390,7 +391,7 @@ iframe {
 .window-control {
     position: absolute;
     width: 4.1rem;
-    height: 100%;
+    height: 2.2rem;
     left: 0.4rem;
     display: flex;
     flex-direction: row;
@@ -555,9 +556,9 @@ iframe {
 
 .contact-window {
     position: absolute;
-    width: 14rem;
-    height: 100%;
-    background: #24242460;
+    width: 13rem;
+    height: 2.2rem;
+    background: #2424246F;
     z-index: 0;
     border-right: 0.5px solid #FFFFFF08;
 }
