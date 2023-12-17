@@ -1,7 +1,7 @@
 
 const pre_img = [
     "img0.jpg",
-    "img1.jpg",
+    "img0.jpg",
     "img0.jpg",
     "img1.jpg"
 ]
