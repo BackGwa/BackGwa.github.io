@@ -405,3 +405,43 @@ html, body {
 .openplc-img {
     background-image: url("./res/openplc.png");
 }
+
+.tia-img {
+    background-image: url("./res/tia.png");
+}
+
+.windows-img {
+    background-image: url("./res/windows.png");
+}
+
+.macos-img {
+    background-image: url("./res/macos.png");
+}
+
+.linux-img {
+    background-image: url("./res/linux.png");
+}
+
+.gx-img {
+    background-image: url("./res/gx.png");
+}
+
+.xg-img {
+    background-image: url("./res/xg.png");
+}
+
+.vs-img {
+    background-image: url("./res/vs.png");
+}
+
+.vsc-img {
+    background-image: url("./res/vsc.png");
+}
+
+.xcode-img {
+    background-image: url("./res/xcode.png");
+}
+
+.pycharm-img {
+    background-image: url("./res/pycharm.png");
+}
