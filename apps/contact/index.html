@@ -8,11 +8,24 @@
 
     <link rel="stylesheet" href="../../style/root.css">
     <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js"></script>
 </head>
 
 <body>
     <div class="app">
+        <div class="side-bar drag-block">
+            <div class="window-name"">연락처</div>
+            <div class="side-content" onclick="tab_switch(0)">전화번호</div>
+            <div class="side-content" onclick="tab_switch(1)">이메일</div>
 
+            <div class="window-name">플랫폼</div>
+            <div class="side-content" onclick="tab_switch(2)">GitHub</div>
+
+            <div class="window-name">소셜 미디어</div>
+            <div class="side-content" onclick="tab_switch(3)">인스타그램</div>
+        </div>
+        <div class="contact-area"></div>
     </div>
 </body>
 
