@@ -88,6 +88,7 @@ function disk_boot() {
             location.href = "./profile.html";
             break;
         case 1:
+            location.href = "./career.html";
             break;
         case 2:
             location.href = "./club.html";
