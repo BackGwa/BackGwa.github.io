@@ -22,8 +22,32 @@
                 <div class="content-text">시동 디스크</div>
             </div>
         </div>
-        <div class="contact-area">
+        <div class="content-area">
+            <div class="inner-content">
+                <div class="inner-top-text">포트폴리오를 시동할 때 사용할 페이지를 선택하십시오.</div>
+                <div class="inner-split1"></div>
 
+                <div class="inner-selector">
+                    <div class="disk-item item-focus" onclick="disk_select(0)">
+                        <div class="disk-icon background-image disk-image1"></div>
+                        <div class="disk-label">내 프로필</div>
+                    </div>
+        
+                    <div class="disk-item" onclick="disk_select(1)">
+                        <div class="disk-icon background-image disk-image3"></div>
+                        <div class="disk-label">경력 사항</div>
+                    </div>
+        
+                    <div class="disk-item" onclick="disk_select(2)">
+                        <div class="disk-icon background-image disk-image2"></div>
+                        <div class="disk-label">동아리 활동</div>
+                    </div>
+                </div>
+
+                <div class="inner-split2"></div>
+                <div class="inner-bottom-text">"내 프로필" 디스크를 선택했습니다.</div>
+                <div class="inner-button drag-block" onclick="disk_boot()">재시동...</div>
+            </div>
         </div>
     </div>
 </body>
