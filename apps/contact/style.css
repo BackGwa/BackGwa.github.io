@@ -25,7 +25,7 @@ html, body {
 
 .contact-area {
     position: absolute;
-    width: calc(100% - 14rem);
+    width: calc(100% - 13rem);
     height: 100%;
     right: 0;
     z-index: 1;
