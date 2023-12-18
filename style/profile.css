@@ -585,7 +585,7 @@ iframe {
     transform: translateX(-50%);
     color: var(--dock-label-color);
     font-size: 0.97rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 0.9rem;
     opacity: 0.8;
     pointer-events: none;
