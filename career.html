@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>PORTFOLIO - 동아리 활동</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./res/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./res/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./res/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="./res/favicons/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style/root.css">
+    <link rel="stylesheet" href="./style/boot.css">
+    <link rel="stylesheet" href="./style/menu.css">
+    <link rel="stylesheet" href="./style/career.css">
+
+    <script src="./scripts/AudioEngine.js"></script>
+    <script src="./scripts/TimeEngine.js"></script>
+    <script src="./scripts/career.js"></script>
+    <script src="./scripts/root.js"></script>
+</head>
+
+<body>
+    <audio></audio>
+
+    <div class="main-container drag-block">
+        <!-- 부트 화면 -->
+        <div class="boot-screen boot-screen-close-1500ms">
+            <div class="boot-logo background-image"></div>
+            <div class="boot-progress-bar">
+                <div class="boot-progress progress-in-1250ms"></div>
+            </div>
+        </div>
+
+        <div class="gui-env">
+            <!-- 상단 메뉴막대 -->
+            <div class="top-nav">
+                <div class="left-panel">
+
+                    <div class="menu-icon background-image">
+                        <div class="sub-menu">
+                            <div class="menu-button menu-disabled">이 포트폴리오에 관하여</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button" onclick="location.href = './profile.html'">시스템 재시동...</div>
+                            <div class="menu-button" onclick="location.href = './index.html'">시스템 종료...</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-label label-bold">
+                        경력 사항
+                        <div class="sub-menu">
+                            <div class="menu-button menu-disabled">경력 사항에 관하여</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button menu-disabled">모두 표시</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-label">
+                        도움말
+                        <div class="sub-menu">
+                            <div class="menu-button" onclick="window.open('https://github.com/BackGwa/BackGwa.github.io/pulls')">피드백 전송</div>
+                            <div class="menu-split"></div>
+                            <div class="menu-button menu-disabled">경력 사항 도움말</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-panel">
+                    <div class="time-label"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
