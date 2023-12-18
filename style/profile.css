@@ -567,5 +567,26 @@ iframe {
     height: 2.2rem;
     background: #2424246F;
     z-index: 0;
-    border-right: 0.5px solid #FFFFFF08;
+    border-right: 0.5px solid #00000038;
+}
+
+.setting-window {
+    position: absolute;
+    width: 12rem;
+    height: 2.2rem;
+    background: #2424246F;
+    z-index: 0;
+    border-right: 0.5px solid #00000038;
+}
+
+.setting-title {
+    position: absolute;
+    left: 43%;
+    transform: translateX(-50%);
+    color: var(--dock-label-color);
+    font-size: 0.97rem;
+    font-weight: 400;
+    margin-top: 0.9rem;
+    opacity: 0.8;
+    pointer-events: none;
 }

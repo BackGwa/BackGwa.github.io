@@ -20,7 +20,7 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     background: #2424246F;
-    border-right: 0.5px solid #FFFFFF08;
+    border-right: 0.5px solid #00000038;
 }
 
 .contact-area {
@@ -29,4 +29,46 @@ html, body {
     height: 100%;
     right: 0;
     z-index: 1;
+}
+
+.side-content {
+    padding: 5px 8px 5px 8px;
+    margin: 0 6px 4px 6px;
+    font-size: 0.84rem;
+    color: #FFFFFFCF;
+    border-radius: 0.4rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+}
+
+.search {
+    height: 0.92rem;
+    padding: 5px 8px 5px 8px;
+    margin: 4px 6px 8px 6px;
+    font-size: 0.84rem;
+    border: 1px solid #FFFFFF12;
+    border-radius: 0.4rem;
+    outline: none;
+    color: #FFFFFF;
+    background: #FFFFFF10;
+}
+
+.search:focus {
+    border: 1px solid #0c6dcf;
+}
+
+.focus {
+    background: #0c6dcf;
+}
+
+.content-img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.05rem;
+}
+
+.content-text {
+    margin-left: 0.4rem;
+    margin-top: 0.15rem;
 }
