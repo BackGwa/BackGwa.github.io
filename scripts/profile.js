@@ -1,6 +1,5 @@
 
 let dock;
-let time_label;
 let dock_item;
 let program;
 let program_window;
@@ -22,6 +21,8 @@ function page_init() {
     event_register();
     refresh_app_stat();
     refresh_profile();
+    time_update();
+    register_time();
 }
 
 // 페이지 이벤트 등록
@@ -56,9 +57,6 @@ function event_register() {
             }
         });
     });
-
-    time_update();
-    setInterval(time_update, 100);
 }
 
 // 앱 열기 / 닫기
@@ -154,20 +152,6 @@ function dock_item_unfocus() {
         i.classList.remove("dock-item-focus");
         i.classList.remove("dock-item-focus-fade1");
     });
-}
-
-// 시간 업데이트
-function time_update() {
-    const week = ['일', '월', '화', '수', '목', '금', '토'];
-    const today = new Date();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const date = String(today.getDate()).padStart(2, '0');
-    const week_index = today.getDay();
-
-    hours = String(today.getHours()).padStart(2, '0');
-    minutes = String(today.getMinutes()).padStart(2, '0');
-
-    time_label.innerHTML = `${month}월 ${date}일 (${week[week_index]}) ${hours}:${minutes}`;
 }
 
 // 전체화면 스크린샷

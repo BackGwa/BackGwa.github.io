@@ -10,6 +10,17 @@ body {
     touch-action: pan-x pan-y;
 }
 
+:root {
+    --dock-color: #191c1cA1;
+    --menu-color: #191c1c81;
+    --menu-label-color: #FFFFFFCF;
+    --dock-outline: #ffffff10;
+    --menu-outline: #ffffff20;
+    --dock-label-color: #FFFFFF;
+    --app-background: #202327;
+    --app-background-alpha: #202327DF;
+}
+
 .main-container {
     position: absolute;
     width: 100%;
