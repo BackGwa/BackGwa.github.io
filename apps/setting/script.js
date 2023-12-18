@@ -32,6 +32,7 @@ function disk_boot() {
         case 1:
             break;
         case 2:
+            parent.location.href = "../../club.html";
             break;
     }
 }
