@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    background: transparent;
+}
+
+.app {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+.side-bar {
+    position: absolute;
+    width: 12rem;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #2424246F;
+    border-right: 0.5px solid #FFFFFF08;
+}
+
+.contact-area {
+    position: absolute;
+    width: calc(100% - 12rem);
+    height: 100%;
+    right: 0;
+    z-index: 1;
+}

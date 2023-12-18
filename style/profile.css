@@ -333,6 +333,13 @@
     left: 280px;
 }
 
+.setting-app {
+    width: 36rem;
+    height: 32rem;
+    top: 100px;
+    left: 480px;
+}
+
 .stretch-app {
     width: 100%;
     height: calc(100% - 1.8rem - 5.5rem);

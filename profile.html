@@ -212,6 +212,27 @@
                     </div>
                 </div>
 
+                <!-- 환경설정 앱 -->
+                <div class="app-window setting-app setting-app-window hidden-app">
+                    <div class="window-area">
+                        <div class="window-control">
+                            <div class="control-button close-color" onclick="open_app('setting')">
+                                <img src="./res/images/close.svg">
+                            </div>
+                            <div class="control-button minimize-color" onclick="open_app('setting')">
+                                <img src="./res/images/minimize.svg">
+                            </div>
+                            <div class="control-button stretch-color" onclick="stretch_app('setting')">
+                                <img src="./res/images/stretch.svg">
+                            </div>
+                        </div>
+                        <div class="window-title">환경설정</div> 
+                    </div>
+                    <div class="program">
+                        <iframe src="./apps/setting/index.html"></iframe>
+                    </div>
+                </div>
+
             </div>
 
             <!-- 하단 독-->
