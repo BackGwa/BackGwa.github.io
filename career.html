@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <title>PORTFOLIO - 동아리 활동</title>
+    <title>PORTFOLIO - 경력 사항</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="./res/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./res/favicons/favicon-32x32.png">
@@ -71,6 +71,61 @@
                     <div class="time-label"></div>
                 </div>
             </div>
+
+            <div class="restore-window">
+                <div class="col-list">
+                    <div class="list-item" onclick="document_open('crown')">
+                        <img src="./res/images/crown.png" class="item-icon">
+                        <div class="item-title">수상 경력</div>
+                        <div class="item-subtitle">교내와 교내 외 수상 경력 리스트입니다.</div>
+                    </div>
+
+                    <div class="list-item" onclick="document_open('edu')">
+                        <img src="./res/images/edu.png" class="item-icon">
+                        <div class="item-title">교육 이수</div>
+                        <div class="item-subtitle">해당 리스트에 있는 교육을 이수하였습니다.</div>
+                    </div>
+
+                    <div class="list-item" onclick="document_open('display')">
+                        <img src="./res/images/display.png" class="item-icon">
+                        <div class="item-title">전시 활동</div>
+                        <div class="item-subtitle">리스트에 있는 곳에서 전시 활동을 하였습니다.</div>
+                    </div>
+
+                    <div class="list-item" onclick="document_open('project')">
+                        <img src="./res/images/safari.png" class="item-icon">
+                        <div class="item-title">프로젝트</div>
+                        <div class="item-subtitle">현재 진행 중인 개인 및 단체 프로젝트 입니다.</div>
+                    </div>
+
+                    <div class="list-item" onclick="document_open('close_project')">
+                        <img src="./res/images/disk_util.png" class="item-icon">
+                        <div class="item-title">종료 된 프로젝트</div>
+                        <div class="item-subtitle">개발이 완료되거나, 중단되어 종료 된 프로젝트 입니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="safari non-display">
+                <div class="window-area">
+                    <div class="window-control">
+                        <div class="control-button close-color" onclick="document_close()">
+                            <img src="./res/images/close.svg">
+                        </div>
+                        <div class="control-button minimize-color disable-control">
+                            <img src="./res/images/minimize.svg">
+                        </div>
+                        <div class="control-button stretch-color disable-control">
+                            <img src="./res/images/stretch.svg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program">
+                    <iframe src="./apps/safari/document_name/index.html"></iframe>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>

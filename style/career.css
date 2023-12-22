@@ -5,3 +5,181 @@
     background: #2B2B2B;
     overflow: hidden;
 }
+
+.restore-window {
+    position: absolute;
+    width: 38rem;
+    height: 39rem;
+    top: 50%;
+    left: 50%;
+    background: #303030;
+    border: 1px solid #FFFFFF10;
+    filter: drop-shadow(0 1.5rem 1rem #0000002F);
+    -webkit-filter: drop-shadow(0 1.5rem 1rem #0000002F);
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+}
+
+.col-list {
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.list-item {
+    position: relative;
+    width: 100%;
+    height: 7.5rem;
+    border-radius: 1rem;
+    transition: 0.1s ease-in-out;
+}
+
+.list-item:hover {
+    background-color: #FFFFFF10;
+}
+
+.item-icon {
+    position: absolute;
+    width: 5.5rem;
+    height: 5.5rem;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+}
+
+.item-title {
+    position: absolute;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    top: 42%;
+    left: 8.8rem;
+    transform: translateY(-50%);
+}
+
+.item-subtitle {
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #FFFFFFA0;
+    top: 61%;
+    left: 8.8rem;
+    transform: translateY(-50%);
+}
+
+.safari {
+    position: absolute;
+    background: var(--app-background);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: solid 2px #FFFFFF10;
+    border-radius: 0.65rem;
+    filter: drop-shadow(0 0 24px #000000CF);
+    -webkit-filter: drop-shadow(0 0 24px #000000CF);
+    transition: 0.05s;
+    overflow: hidden;
+    width: 68rem;
+    height: 55rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.window-area {
+    width: 100%;
+    height: 2.2rem;
+    border-top-left-radius: 0.65rem;
+    border-top-right-radius: 0.65rem;
+    overflow: hidden;
+}
+
+.window-control {
+    position: absolute;
+    width: 4.1rem;
+    height: 2.2rem;
+    left: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.control-button {
+    position: relative;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-top: 0.6rem;
+    background: white;
+    border-radius: 50%;
+}
+
+.control-button img {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.0;
+    transition: 0.1s ease-in-out;
+}
+
+.window-control:hover img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+.close-color {
+    background-color: #ff5f56;
+    border: solid 1px #e0443e;
+}
+
+.minimize-color {
+    background-color: #ffbd2e;
+    border: solid 1px #dea123;
+}
+
+.stretch-color {
+    background-color: #27c93f;
+    border: solid 1px #1aab29;
+}
+
+.non-focus .control-button {
+    background-color: #b6b6b7;
+    border: solid 1px #89898a;
+}
+
+.disable-control {
+    pointer-events: none;
+    background-color: #b6b6b7;
+    border: solid 1px #89898a;
+}
+
+.program {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    opacity: 1.0;
+    transition: 0.1s;
+}
+
+.non-display {
+    transform: scale(50%) translate(-50%, -50%);
+    opacity: 0.0;
+    pointer-events: none;
+}
