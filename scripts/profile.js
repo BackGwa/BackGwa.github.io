@@ -43,12 +43,12 @@ function event_register() {
             program[index].classList.add("window-focus");
             program[index].style.zIndex = 3;
             refresh_focus();
-            iframe_pointer(true);
+            frame_unfocus(true);
         });
 
         window.addEventListener("mouseup", () => {
             program[index].classList.remove("window-focus");
-            iframe_pointer(false);
+            frame_unfocus(false);
         });
 
         window.addEventListener("mousemove", (e) => {
@@ -64,17 +64,11 @@ function event_register() {
 }
 
 // iframe 상호 상태 설정
-function iframe_pointer(none) {
+function frame_unfocus(has_focus) {
     frames = document.querySelectorAll("iframe");
-    if (none) {
-        frames.forEach(i => {
-            i.style.pointerEvents = "none";
-        });
-    } else {
-        frames.forEach(i => {
-            i.style.pointerEvents = "all";
-        });
-    }
+    frames.forEach(i => {
+        i.style.pointerEvents = has_focus ? "none" : "all";
+    });
 }
 
 // 앱 열기 / 닫기
