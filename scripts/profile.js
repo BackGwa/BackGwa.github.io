@@ -43,10 +43,12 @@ function event_register() {
             program[index].classList.add("window-focus");
             program[index].style.zIndex = 3;
             refresh_focus();
+            iframe_pointer(true);
         });
 
         window.addEventListener("mouseup", () => {
             program[index].classList.remove("window-focus");
+            iframe_pointer(false);
         });
 
         window.addEventListener("mousemove", (e) => {
@@ -59,6 +61,20 @@ function event_register() {
             }
         });
     });
+}
+
+// iframe 상호 상태 설정
+function iframe_pointer(none) {
+    frames = document.querySelectorAll("iframe");
+    if (none) {
+        frames.forEach(i => {
+            i.style.pointerEvents = "none";
+        });
+    } else {
+        frames.forEach(i => {
+            i.style.pointerEvents = "all";
+        });
+    }
 }
 
 // 앱 열기 / 닫기
