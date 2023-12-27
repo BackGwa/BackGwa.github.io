@@ -16,17 +16,22 @@ const app_list = {
         },
 
         "3" : {
+            "name" : "경력 사항",
+            "path" : "memo"
+        },
+
+        "4" : {
             "name" : "연락처",
             "path" : "contact"
         },
 
-        "4" : {
+        "5" : {
             "name" : "환경 설정",
             "path" : "setting"
         },
     },
 
-    "index" : 4
+    "index" : 5
 }
 
 function append_dock() {
