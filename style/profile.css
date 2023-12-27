@@ -153,6 +153,10 @@
     overflow: hidden;
 }
 
+.memo-window-expand {
+    height: 3rem;
+}
+
 .window-focus .program {
     pointer-events: none;
 }
@@ -182,22 +186,21 @@
 .tech-stack-app {
     width: 64rem;
     height: 42rem;
-    top: 200px;
-    left: 240px;
 }
 
 .contact-app {
     width: 38rem;
     height: 22rem;
-    top: 180px;
-    left: 280px;
+}
+
+.memo-app {
+    width: 62rem;
+    height: 40rem;
 }
 
 .setting-app {
     width: 36rem;
     height: 32rem;
-    top: 100px;
-    left: 480px;
 }
 
 .stretch-app {
@@ -217,6 +220,11 @@
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.memo-program {
+    height: calc(100% - 3rem);
+    bottom: 0;
 }
 
 .lang-stack-app .program {
@@ -409,6 +417,16 @@ iframe {
     background: #2424246F;
     z-index: 0;
     border-right: 0.5px solid #00000038;
+}
+
+.memo-window {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 20rem);
+    height: 3rem;
+    background: #262626cf;
+    z-index: 0;
+    border-left: 0.5px solid #00000038;
 }
 
 .setting-window {
