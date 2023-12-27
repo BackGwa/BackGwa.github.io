@@ -1,5 +1,5 @@
 
-const names = ['내 프로필', '경력 사항', '동아리 활동'];
+const names = ['내 프로필', '동아리 활동'];
 
 let disk_item;
 let tip;
@@ -29,10 +29,12 @@ function disk_boot() {
         case 0:
             parent.location.href = "../../profile.html";
             break;
+        /*
         case 1:
             parent.location.href = "../../career.html";
             break;
-        case 2:
+        */
+        case 1:
             parent.location.href = "../../club.html";
             break;
     }
