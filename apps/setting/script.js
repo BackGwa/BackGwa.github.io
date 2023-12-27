@@ -29,11 +29,6 @@ function disk_boot() {
         case 0:
             parent.location.href = "../../profile.html";
             break;
-        /*
-        case 1:
-            parent.location.href = "../../career.html";
-            break;
-        */
         case 1:
             parent.location.href = "../../club.html";
             break;
