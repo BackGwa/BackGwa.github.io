@@ -193,6 +193,27 @@
                     </div>
                 </div>
 
+                <!-- 메모 앱 -->
+                <div class="app-window memo-app hidden-app" style="top: 280px; left: 120px;">
+                    <div class="window-area memo-window-expand">
+                        <div class="window-control">
+                            <div class="control-button close-color" onclick="open_app('memo')">
+                                <img src="./res/images/close.svg">
+                            </div>
+                            <div class="control-button minimize-color" onclick="open_app('memo')">
+                                <img src="./res/images/minimize.svg">
+                            </div>
+                            <div class="control-button stretch-color" onclick="stretch_app('memo')">
+                                <img src="./res/images/stretch.svg">
+                            </div>
+                        </div>
+                        <div class="memo-window"></div> 
+                    </div>
+                    <div class="program memo-program">
+                        <iframe src="./apps/memo/index.html"></iframe>
+                    </div>
+                </div>
+                
                 <!-- 연락처 앱 -->
                 <div class="app-window contact-app contact-app-window hidden-app" style="top: 180px; left: 280px;">
                     <div class="window-area">
