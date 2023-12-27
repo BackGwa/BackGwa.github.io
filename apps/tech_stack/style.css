@@ -403,6 +403,10 @@ html, body {
     background-image: url("./res/plc3.png");
 }
 
+.jetson-img {
+    background-image: url("./res/jetson.png");
+}
+
 .git-img {
     background-image: url("./res/git.png");
 }
