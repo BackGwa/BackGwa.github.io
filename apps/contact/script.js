@@ -1,8 +1,8 @@
 
 const pre_img = [
+    "img2.jpg",
     "img0.jpg",
-    "img0.jpg",
-    "img0.jpg",
+    "img1.jpg",
     "img1.jpg"
 ]
 const pre_content = [
