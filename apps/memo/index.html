@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경력 사항</title>
+
+    <link rel="stylesheet" href="../../style/root.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="side-bar drag-block">
+            <div class="filter">경력</div>
+            <div class="split"></div>
+
+            <div class="side-content focus" onclick="memo_change(0);">
+                <div class="title">수상 경력</div>
+                <div class="subtitle">현재까지 수상한 경력입니다.</div>
+            </div>
+            <div class="side-content" onclick="memo_change(1);">
+                <div class="title">교육 이수</div>
+                <div class="subtitle">현재까지 이수한 교육입니다.</div>
+            </div>
+            <div class="side-content" onclick="memo_change(2);">
+                <div class="title">전시 활동</div>
+                <div class="subtitle">현재까지 전시한 곳 입니다.</div>
+            </div>
+
+            <div class="filter">프로젝트</div>
+
+            <div class="side-content" onclick="memo_change(3);">
+                <div class="title">프로젝트</div>
+                <div class="subtitle">현재 진행 중인 프로젝트 입니다.</div>
+            </div>
+            <div class="side-content" onclick="memo_change(4);">
+                <div class="title">종료 된 프로젝트</div>
+                <div class="subtitle">종료된 프로젝트 입니다.</div>
+            </div>
+        </div>
+        <div class="content-area">
+            <iframe src="./docs/frame0.html"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
