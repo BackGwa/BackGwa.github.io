@@ -5,3 +5,22 @@
     background: #2B2B2B;
     overflow: hidden;
 }
+
+.making {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.small-fonts {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    opacity: 0.75;
+}
