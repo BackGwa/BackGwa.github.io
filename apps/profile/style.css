@@ -238,22 +238,22 @@ a:hover {
 }
 
 .percent-bar .mbti-i {
-    width: calc(70% / 1.5);
+    width: calc(70% / 1.1);
     background: #4298B4;
 }
 
 .percent-bar .mbti-n {
-    width: calc(64% / 1.5);
+    width: calc(64% / 1.1);
     background:#E4AE3A;
 }
 
 .percent-bar .mbti-f {
-    width: calc(78% / 1.5);
+    width: calc(78% / 1.1);
     background: #33A474;
 }
 
 .percent-bar .mbti-p {
-    width: calc(82% / 1.5);
+    width: calc(82% / 1.1);
     background: #88619A;
 }
 
