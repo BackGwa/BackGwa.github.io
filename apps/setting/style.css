@@ -196,3 +196,8 @@ html, body {
 .disk-image3 {
     background-image: url("../../res/images/timemachine_disk.png");
 }
+
+
+.hidden {
+    display: none;
+}
