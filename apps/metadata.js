@@ -16,22 +16,27 @@ const app_list = {
         },
 
         "3" : {
+            "name" : "SUITE Simulator",
+            "path" : "simulator"
+        },
+
+        "4" : {
             "name" : "경력 사항",
             "path" : "memo"
         },
 
-        "4" : {
+        "5" : {
             "name" : "연락처",
             "path" : "contact"
         },
 
-        "5" : {
-            "name" : "환경 설정",
+        "6" : {
+            "name" : "시스템 설정",
             "path" : "setting"
         },
     },
 
-    "index" : 5
+    "index" : 6
 }
 
 function append_dock() {
