@@ -188,6 +188,11 @@
     height: 42rem;
 }
 
+.simulator-app {
+    width: 1280px;
+    height: calc(480px + 2.2rem);
+}
+
 .contact-app {
     width: 38rem;
     height: 22rem;
@@ -233,6 +238,10 @@
 
 .tech-stack-app .program {
     background: #1E1E1E;
+}
+
+.simulator-app .program {
+    background: #000000;
 }
 
 iframe {

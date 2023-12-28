@@ -193,6 +193,27 @@
                     </div>
                 </div>
 
+                <!-- 시뮬레이터 앱 -->
+                <div class="app-window simulator-app hidden-app" style="top: 150px; left: 300px;">
+                    <div class="window-area">
+                        <div class="window-control">
+                            <div class="control-button close-color" onclick="open_app('simulator')">
+                                <img src="./res/images/close.svg">
+                            </div>
+                            <div class="control-button minimize-color" onclick="open_app('simulator')">
+                                <img src="./res/images/minimize.svg">
+                            </div>
+                            <div class="control-button stretch-color disable-control">
+                                <img src="./res/images/stretch.svg">
+                            </div>
+                        </div>
+                        <div class="window-title">SUITE - Simulator [ENV : PORTFOLIO OS]</div>
+                    </div>
+                    <div class="program">
+                        <iframe src="./apps/simulator/index.html"></iframe>
+                    </div>
+                </div>
+
                 <!-- 메모 앱 -->
                 <div class="app-window memo-app hidden-app" style="top: 100px; left: 40px;">
                     <div class="window-area memo-window-expand">
