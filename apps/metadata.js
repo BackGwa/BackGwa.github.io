@@ -31,12 +31,17 @@ const app_list = {
         },
 
         "6" : {
+            "name" : "코멘트",
+            "path" : "terminal"
+        },
+
+        "7" : {
             "name" : "시스템 설정",
             "path" : "setting"
         },
     },
 
-    "index" : 6
+    "index" : 7
 }
 
 function append_dock() {

@@ -203,6 +203,11 @@
     height: 40rem;
 }
 
+.terminal-app {
+    width: 38rem;
+    height: 26rem;
+}
+
 .setting-app {
     width: 36rem;
     height: 32rem;
@@ -219,6 +224,10 @@
 
 .tech-stack-app-window {
     background: #1E1E1E;
+}
+
+.terminal-app-window {
+    background: #413F41;
 }
 
 .program {
@@ -242,6 +251,15 @@
 
 .simulator-app .program {
     background: #000000;
+}
+
+.terminal-app .program {
+    background: #1E1E1E;
+}
+
+.terminal-title {
+    opacity: 0.75;
+    font-weight: 600;
 }
 
 iframe {
