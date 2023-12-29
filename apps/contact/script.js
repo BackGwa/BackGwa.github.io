@@ -9,7 +9,7 @@ const pre_content = [
     ["강찬영", "강찬영", "BackGwa", "k._.iel7"],
     ["전화번호", "주소", "아이디", "아이디"],
     ["<a href='tel:010-2876-5871'>010-2876-5871</a>", "<a href='mailto:backgwa@icloud.com'>backgwa@icloud.com</a>", "<a href='https://github.com/BackGwa' target='_blank'>BackGwa</a>", "<a href='https://www.instagram.com/k._.iel7/' target='_blank'>@k._.iel7</a>"],
-    ["연락 전 문자 메세지를 먼저 남겨주세요.", "", "", ""]
+    ["연락 전 문자 메세지를 먼저 남겨주세요.", "12시간 ~ 2일 내 답장 가능합니다.", "다양한 프로젝트를 하고 있습니다.", ""]
 ]
 
 let side_content;
