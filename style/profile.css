@@ -236,6 +236,11 @@
     height: 100%;
 }
 
+.terminal-program {
+    height: calc(100% - 2.2rem);
+    bottom: 0;
+}
+
 .memo-program {
     height: calc(100% - 3rem);
     bottom: 0;

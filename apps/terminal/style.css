@@ -1,12 +1,59 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
 html, body {
     margin: 0;
-    background: #000000;
+    background: transparent;
+    overflow: hidden;
 }
 
 .app {
     position: absolute;
     width: 100%;
     height: 100%;
+    color: #FFFFFF;
+    padding: 0.6rem;
     overflow: hidden;
-    background: #000000;
+    background: transparent;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    overflow: hidden;
+}
+
+.console-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.console_log {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.command {
+    white-space: nowrap;
+    margin-right: 0.5rem;
+}
+
+input {
+    width: calc(100% - 15rem);
+    height: 100%;
+    background: transparent;
+    outline: none;
+    color: #FFFFFF;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    border: none;
+    margin: 0;
+    padding: 0;
 }

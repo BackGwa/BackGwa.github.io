@@ -31,7 +31,7 @@ const app_list = {
         },
 
         "6" : {
-            "name" : "코멘트",
+            "name" : "터미널",
             "path" : "terminal"
         },
 
