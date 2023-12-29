@@ -20,6 +20,8 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     border-right: 0.5px solid #00000038;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .content-area {
