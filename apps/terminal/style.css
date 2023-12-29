@@ -14,7 +14,7 @@ html, body {
     padding: 0.6rem;
     overflow: hidden;
     background: transparent;
-    font-family: 'Fira Code', monospace;
+    font-family: D2Coding, 'D2 coding', 'Fira Code', monospace;
     font-size: 0.85rem;
     overflow: hidden;
 }
@@ -51,7 +51,7 @@ input {
     background: transparent;
     outline: none;
     color: #FFFFFF;
-    font-family: 'Fira Code', monospace;
+    font-family: D2Coding, 'D2 coding', 'Fira Code', monospace;
     font-size: 0.85rem;
     border: none;
     margin: 0;
