@@ -165,7 +165,7 @@ html, body {
 
 .move-scale {
     width: 125rem;
-    height: 100rem;
+    height: 125rem;
 }
 
 .draft-title {
@@ -423,6 +423,14 @@ html, body {
     background-image: url("./res/tia.png");
 }
 
+.office-img {
+    background-image: url("./res/office.png");
+}
+
+.hancom-img {
+    background-image: url("./res/hancom.png");
+}
+
 .windows-img {
     background-image: url("./res/windows.png");
 }
@@ -465,4 +473,8 @@ html, body {
 
 .notion-img {
     background-image: url("./res/notion.png");
+}
+
+.github-img {
+    background-image: url("./res/github.png");
 }
