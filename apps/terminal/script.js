@@ -27,7 +27,7 @@ window.addEventListener("keydown", (e) => {
                 log_write(`
                     help - 포트폴리오 쉘 도움말을 봅니다.<br>
                     clear - 콘솔 내용을 모두 지웁니다.<br>
-                    profile - 프로필을 앱을 엽니다.<br>
+                    profile - 프로필 앱을 엽니다.<br>
                     lang - 언어 스택 앱을 엽니다.<br>
                     tech - 기술 스택 앱을 엽니다.<br>
                     suite - SUITE Simulator 앱을 엽니다.<br>
