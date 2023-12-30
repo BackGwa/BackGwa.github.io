@@ -23,22 +23,37 @@ window.addEventListener("keydown", (e) => {
         log_write(`Guest@PORTFOLIO-Web ~ % ${command}`);
 
         switch (command) {
+            case "info":
+                log_write("<div class='root-version'></div>");
+                break;
             case "help":
-                log_write(`
-                    help - 포트폴리오 쉘 도움말을 봅니다.<br>
-                    clear - 콘솔 내용을 모두 지웁니다.<br>
-                    profile - 프로필 앱을 엽니다.<br>
-                    lang - 언어 스택 앱을 엽니다.<br>
-                    tech - 기술 스택 앱을 엽니다.<br>
-                    suite - SUITE Simulator 앱을 엽니다.<br>
-                    career - 경력 사항 앱을 엽니다.<br>
-                    contact - 연락처 앱을 엽니다.<br>
-                    setting - 시스템 설정 앱을 엽니다.<br>
-                    <br>
-                `);
+                log_write(`\
+info    - 포트폴리오 페이지의 정보를 출력합니다.
+help    - 포트폴리오 쉘 도움말을 봅니다.
+clear   - 콘솔 내용을 모두 지웁니다
+mail    - 메일로 연락합니다.
+tel     - 전화로 연락합니다.
+profile - 프로필 앱을 엽니다.
+lang    - 언어 스택 앱을 엽니다.
+tech    - 기술 스택 앱을 엽니다.
+suite   - SUITE Simulator 앱을 엽니다.
+career  - 경력 사항 앱을 엽니다.
+contact - 연락처 앱을 엽니다.
+setting - 시스템 설정 앱을 엽니다.
+`);
                 break;
             case "clear":
                 console_log.innerHTML = "";
+                break;
+            case "mail":
+                email = document.createElement('a');
+                email.href = 'mailto:backgwa@icloud.com';
+                email.click();
+                break;
+            case "tel":
+                tel = document.createElement('a');
+                tel.href = 'tel:010-2876-5871';
+                tel.click();
                 break;
             case "profile":
                 parent.open_app("profile", true);
