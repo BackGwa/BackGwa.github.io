@@ -5,6 +5,10 @@ let program;
 let program_window;
 let tab_item;
 let profile_frame;
+let startPosition;
+let dragbox;
+let moving_program;
+let drag = false;
 let tab_index = 0;
 let select_index = 0;
 
@@ -18,6 +22,7 @@ function page_init() {
     program_window = document.querySelectorAll(".window-area");
     tab_item = document.querySelectorAll(".tab-item");
     profile_frame = document.querySelector("#profile-frame");
+    dragbox = document.querySelector(".dragbox");
     event_register();
     refresh_app_stat();
     refresh_profile();
@@ -37,6 +42,39 @@ function event_register() {
         i.addEventListener("mouseout", dock_item_unfocus);
     });
 
+
+    window.addEventListener("mousedown", (e) => {
+        drag = true;
+        startPosition = [e.clientX, e.clientY];
+        dragbox.style.display = 'block';
+    });
+
+    window.addEventListener("mouseup", () => {
+        drag = false;
+        dragbox.style.display = 'none';
+    });
+
+    document.addEventListener("mousemove", (e) => {
+        if (drag && !moving_program) {
+            dragbox.style.left = e.pageX + 'px';
+            dragbox.style.top = e.pageY + 'px';
+    
+            distanceX = e.pageX - startPosition[0];
+            distanceY = e.pageY - startPosition[1];
+            translateX = distanceX < 0 ? '0%' : '-100%';
+            translateY = distanceY < 0 ? '0%' : '-100%';
+    
+            dragbox.style.transform = `translate(${translateX}, ${translateY})`;
+            dragbox.style.width = Math.abs(distanceX) + 'px';
+            dragbox.style.height = Math.abs(distanceY) + 'px';
+        } else {
+            dragbox.style.left = '0px';
+            dragbox.style.top = '0px';
+            dragbox.style.width = '0px';
+            dragbox.style.height = '0px';
+        }
+    });
+
     program_window.forEach((i, index) => {
         i.addEventListener("mousedown", () => {
             zIndex_reset();
@@ -49,6 +87,7 @@ function event_register() {
         window.addEventListener("mouseup", () => {
             program[index].classList.remove("window-focus");
             frame_unfocus(false);
+            moving_program = false;
         });
 
         window.addEventListener("mousemove", (e) => {
@@ -56,6 +95,7 @@ function event_register() {
                 !program[index].classList.contains("stretch-app")) {
                 const top = program[index].style.top;
                 const left = program[index].style.left
+                moving_program = true;
                 program[index].style.top = `${parseInt(top.substring(0, top.length - 2)) + e.movementY}px`;
                 program[index].style.left = `${parseInt(left.substring(0, left.length - 2)) + e.movementX}px`;
             }

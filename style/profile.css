@@ -481,3 +481,10 @@ iframe {
     opacity: 0.8;
     pointer-events: none;
 }
+
+.dragbox {
+    position: absolute;
+    background: #FFFFFF10;
+    border: 1px solid #FFFFFF50;
+    pointer-events: none;
+}
