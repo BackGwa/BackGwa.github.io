@@ -43,6 +43,7 @@ html, body {
 .command {
     white-space: nowrap;
     margin-right: 0.5rem;
+    white-space: pre-wrap;
 }
 
 input {
