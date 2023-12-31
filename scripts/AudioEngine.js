@@ -8,8 +8,14 @@ function AudioEngine_init() {
     }
 }
 
-function play(src) {
+function play(src, loop = false) {
+    audio_engine.loop = loop;
     audio_engine.pause();
     audio_engine.src = src;
     audio_engine.play();
+}
+
+function stop() {
+    audio_engine.loop = false;
+    audio_engine.pause();
 }
