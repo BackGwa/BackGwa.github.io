@@ -125,6 +125,9 @@ function open_app(name, dock = false) {
         app.classList.remove("hidden-app");
         zIndex_reset();
         app.style.zIndex = 3;
+        if (name == "facetime") {
+            document.querySelector("#facetime").contentWindow.facetime_open();
+        }
     } else {
         zIndex_reset();
         if (dock) {
@@ -136,6 +139,10 @@ function open_app(name, dock = false) {
     refresh_focus();
     refresh_profile();
     refresh_app_stat();
+}
+
+function facetime_close() {
+    document.querySelector("#facetime").contentWindow.facetime_close();
 }
 
 function stretch_app(name) {

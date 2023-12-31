@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceTime</title>
+
+    <link rel="stylesheet" href="../../style/root.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js"></script>
+    <script src="../../scripts/AudioEngine.js"></script>
+</head>
+
+<body>
+    <audio></audio>
+
+    <div class="app">
+        <video id="camera"></video>
+        <div class="side-bar">
+            <div class="button-area">
+                <div class="newcall-button">
+                    <div class="button-label">
+                        <div class="icon">
+                            <img src="./res/link.png">
+                        </div>
+                        <div class="label">참여하기</div>
+                    </div>
+                </div>
+                <div class="incoming-button" onclick="newcall();">
+                    <div class="button-label">
+                        <div class="icon">
+                            <img src="./res/video.png">
+                        </div>
+                        <div class="label">새로운 FaceTime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calling-dialog hide-dialog">
+            <div class="dialog-label">
+                <div class="dialog-header-label">상대방을 기다리는 중...</div>
+                <div class="dialog-subheader-label">상대방이 FaceTime 세션에 접속할 때까지 기다리고 있습니다...</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

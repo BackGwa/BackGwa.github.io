@@ -24,24 +24,29 @@ const app_list = {
             "name" : "경력 사항",
             "path" : "memo"
         },
-
+        
         "5" : {
+            "name" : "FaceTime",
+            "path" : "facetime"
+        },
+
+        "6" : {
             "name" : "연락처",
             "path" : "contact"
         },
 
-        "6" : {
+        "7" : {
             "name" : "터미널",
             "path" : "terminal"
         },
 
-        "7" : {
+        "8" : {
             "name" : "시스템 설정",
             "path" : "setting"
         },
     },
 
-    "index" : 7
+    "index" : 8
 }
 
 function append_dock() {
