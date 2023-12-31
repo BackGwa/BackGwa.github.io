@@ -43,6 +43,12 @@ function event_register() {
     });
 
 
+    document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey && e.altKey && e.keyCode === 84) {
+            open_app('terminal', true);
+        }
+    });
+
     window.addEventListener("mousedown", (e) => {
         drag = true;
         startPosition = [e.clientX, e.clientY];
