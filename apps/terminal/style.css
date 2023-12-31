@@ -87,10 +87,8 @@ input::-moz-selection {
 
 .code-warn {
     color: #fff020;
-    font-weight: bold;
 }
 
 .code-err {
     color: #ff001e;
-    font-weight: bold;
 }
