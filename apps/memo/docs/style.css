@@ -18,6 +18,13 @@ body {
     margin: 0.4rem 0.7rem 0 0.7rem ;
     overflow-x: hidden;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {

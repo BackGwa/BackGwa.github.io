@@ -22,6 +22,12 @@ html, body {
     border-right: 0.5px solid #00000038;
     overflow-x: hidden;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.side-bar::-webkit-scrollbar {
+    display: none;
 }
 
 .content-area {
@@ -31,6 +37,7 @@ html, body {
     height: 100%;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 .filter {
