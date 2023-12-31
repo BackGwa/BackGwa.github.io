@@ -45,6 +45,7 @@ function event_register() {
 
     document.addEventListener("keydown", (e) => {
         if (e.ctrlKey && e.altKey && e.keyCode === 84) {
+            e.preventDefault();
             open_app('terminal', true);
         }
     });
