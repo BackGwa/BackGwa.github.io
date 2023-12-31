@@ -24,6 +24,12 @@ html, body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.console-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .console_log {
@@ -46,6 +52,14 @@ html, body {
     white-space: pre-wrap;
 }
 
+.command::selection {
+    background: #ffffff50;
+}
+
+.command::-moz-selection {
+    background: #ffffff50;
+}
+
 input {
     width: calc(100% - 15rem);
     height: 100%;
@@ -57,4 +71,26 @@ input {
     border: none;
     margin: 0;
     padding: 0;
+}
+
+input::selection {
+    background: #ffffff50;
+}
+
+input::-moz-selection {
+    background: #ffffff50;
+}
+
+.code-undefined {
+    color: #9b9b9b;
+}
+
+.code-warn {
+    color: #fff020;
+    font-weight: bold;
+}
+
+.code-err {
+    color: #ff001e;
+    font-weight: bold;
 }
