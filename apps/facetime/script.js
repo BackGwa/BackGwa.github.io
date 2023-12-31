@@ -25,10 +25,8 @@ function facetime_open() {
 
 function facetime_close() {
     if (video.srcObject) {
-        stop();
         video.srcObject = null;
-        sidebar.classList.remove("calling");
-        dialog.classList.add("hide-dialog");
+        call_disconnect();
     }
 }
 
@@ -36,4 +34,12 @@ function newcall() {
     sidebar.classList.add("calling");
     dialog.classList.remove("hide-dialog");
     play("./res/calling.mp3", true);
+
+    setTimeout(call_disconnect, 2000);
+}
+
+function call_disconnect() {
+    stop();
+    sidebar.classList.remove("calling");
+    dialog.classList.add("hide-dialog");
 }
