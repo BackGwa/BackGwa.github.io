@@ -140,6 +140,9 @@ function node_mode(code = "{JOININ_SHELL}") {
         log_write(`> ${code}`);
         log_write(` `);
         command_tip.innerHTML = "Guest@PORTFOLIO-Web ~ %";
+    } else if (code == "node") {
+        log_write(`> ${code}`);
+        log_write(`<div class="code-err">Not authorized</div>`);
     } else if (code != "{JOININ_SHELL}") {
         log_write(`> ${code}`);
         try {
