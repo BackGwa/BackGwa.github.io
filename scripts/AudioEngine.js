@@ -1,11 +1,8 @@
 let audio_engine;
 
 function AudioEngine_init() {
-    try {
-        audio_engine = document.querySelector('audio');
-    } catch {
-        console.error('Audio Element not found!');
-    }
+    try     { audio_engine = document.querySelector('audio'); }
+    catch   { console.error('AudioEngine : AudioEngine is Not Found!'); }
 }
 
 function play(src, loop = false) {
