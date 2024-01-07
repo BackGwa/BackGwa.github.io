@@ -29,6 +29,10 @@ body {
     overflow: hidden;
 }
 
+.mobile-agent {
+    background: #202632;
+}
+
 .background-image {
     background-position: center;
     background-repeat: no-repeat;
