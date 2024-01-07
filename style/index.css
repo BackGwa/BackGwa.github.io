@@ -1,43 +1,4 @@
 
-.kernel-panic {
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    background: #222222;
-    z-index: 5;
-}
-
-.panic-icon {
-    position: absolute;
-    width: 32vw;
-    height: 32vw;
-    top: 50%;
-    left: 50%;
-    background-image: url("../res/images/kernel_panic_icon.png");
-    background-size: cover;
-    opacity: 0.25;
-    transform: translate(-50%, -50%);
-}
-
-.panic-label {
-    position: absolute;
-    text-align: left;
-    color: #FFFFFF;
-    font-size: 2vmin;
-    font-weight: 300;
-    white-space: nowrap;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@media screen and (max-width: 960px) {
-    .kernel-panic {
-        display: block;
-    }
-}
-
 .disk-selector {
     position: absolute;
     width: auto;
