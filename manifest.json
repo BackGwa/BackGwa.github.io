@@ -1,0 +1,16 @@
+{
+    "name" : "PORTFOLIO",
+    "short_name" : "PORTFOLIO",
+    "description" : "강찬영 (BACKGWA)의 포트폴리오 페이지입니다.",
+    "icons" : [
+        {
+            "src" : "./favicons/favicon-512x512.png",
+            "type" : "image/png",
+            "sizes" : "512x512"
+        }
+    ],
+    "start_url" : "index.html",
+    "background_color" : "#000000",
+    "theme_color" : "#000000",
+    "display" : "fullscreen"
+}
