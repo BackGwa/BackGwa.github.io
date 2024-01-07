@@ -6,13 +6,24 @@ let select_index = 0;
 function page_init() {
     disk_item = document.querySelectorAll(".disk-item");
 
-    play("../res/sounds/macOS_Startup.mp3");
+    // play("../res/sounds/macOS_Startup.mp3");
     event_register();
     disk_item_focus();
 }
 
 // 페이지 이벤트 등록
 function event_register() {
+
+    // 모바일 페이지 감지 스크립트
+    user_agent = navigator.userAgent.toLowerCase();
+    mobile_list = ['iphone', 'ipod', 'ipad', 'android', 'blackberry', 'windows ce'];
+
+    mobile_list.forEach(i => {
+        if (user_agent.includes(i)) {
+            location.href = "./profile_mobile.html";
+        }
+    });
+
     disk_item.forEach((i, index) => {
 
         // 마우스 호버 이벤트 등록
