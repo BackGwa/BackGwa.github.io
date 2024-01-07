@@ -26,6 +26,12 @@
     transform: translate(-50%, -50%);
 }
 
+.mobile-agent .boot-logo {
+    width: 5.7rem;
+    height: 5.7rem;
+    top: 50%;
+}
+
 .boot-progress-bar {
     position: absolute;
     width: 18rem;
@@ -36,6 +42,10 @@
     left: 50%;
     transform: translate(-50%, -50%); 
     overflow: hidden;
+}
+
+.mobile-agent .boot-progress-bar {
+    display: none;
 }
 
 .boot-progress {
