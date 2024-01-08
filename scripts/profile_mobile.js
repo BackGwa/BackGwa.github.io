@@ -1,3 +1,5 @@
 function page_init() {
-    play("../res/sounds/iPhone_Startup.mp3");
+    setTimeout(() => {
+        play("../res/sounds/iPhone_Startup.mp3");
+    }, 500);
 }
