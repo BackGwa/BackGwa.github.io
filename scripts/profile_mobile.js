@@ -28,35 +28,36 @@ function event_register() {
 function initTouch(e) {
     initialX = `${e.touches ? e.touches[0].clientX : e.clientX}`;
     initialY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
-  };
+};
   
-  function swipeDirection(e) {
+function swipeDirection(e) {
     if (initialX !== null && initialY !== null) {
-      const currentX = `${e.touches ? e.touches[0].clientX : e.clientX}`,
+        const currentX = `${e.touches ? e.touches[0].clientX : e.clientX}`,
         currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
-  
-      let diffX = initialX - currentX,
+
+        let diffX = initialX - currentX,
         diffY = initialY - currentY;
-  
-      Math.abs(diffX) > Math.abs(diffY)
-      ? (
+
+        Math.abs(diffX) > Math.abs(diffY)
+        ? (
         0 < diffX
         ? console.log("to left")
         : console.log("to right")
-      )
-      : (
+        )
+        : (
         0 < diffY
         ? unshow_app()
         : console.log("to bottom")
-      )
-  
-      initialX = 0;
-      initialY = 0;
+        )
+
+        initialX = 0;
+        initialY = 0;
     }
-  }
+}
 
 function show_app(app_name) {
     app_area.classList.add("show-app");
+    document.querySelector("iframe").src = `../apps/${app_name}/mobile.html`
 }
 
 function unshow_app() {
