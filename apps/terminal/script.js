@@ -1,7 +1,7 @@
 let console_scroll;
 let console_log;
 let input;
-let node = false;
+let __node__ = false;
 const today = new Date();
 
 let ConsoleLog = console.log;
@@ -43,7 +43,7 @@ window.addEventListener("keydown", (e) => {
         command = input.value;
         input.value = "";
 
-        if (!node) {
+        if (!__node__) {
             command_tip.innerHTML = "Guest@PORTFOLIO-Web ~ %";
             log_write(`Guest@PORTFOLIO-Web ~ % ${command}`);
 
@@ -83,7 +83,7 @@ clear    - 콘솔 내용을 모두 지웁니다
                     tel.click();
                     break;
                 case "node":
-                    node = true;
+                    __node__ = true;
                     node_mode()
                     break;
                 case "profile":
@@ -136,11 +136,11 @@ function node_mode(code = "{JOININ_SHELL}") {
         log_write(`Exit the REPL by typing .exit`);
         log_write(` `);
     } else if (code == ".exit") {
-        node = false;
+        __node__ = false;
         log_write(`> ${code}`);
         log_write(` `);
         command_tip.innerHTML = "Guest@PORTFOLIO-Web ~ %";
-    } else if (code == "node") {
+    } else if (code.includes("__node__")) {
         log_write(`> ${code}`);
         log_write(`<div class="code-err">Not authorized</div>`);
     } else if (code != "{JOININ_SHELL}") {
