@@ -1,0 +1,196 @@
+html, body {
+    margin: 0;
+}
+
+.app {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #1f1f24;
+}
+
+.side-bar {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    background: #2a2c2f;
+    border-right: 1px solid #000000;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    bottom: 0;
+}
+
+.side-bar-item {
+    width: 4rem;
+    height: 4rem;
+    background-size: 2.4rem;
+    opacity: 0.5;
+}
+
+.icon-file {
+    background-image: url("./res/File.png");
+}
+
+.icon-search {
+    background-image: url("./res/Search.png");
+}
+
+.content-area {
+    position: absolute;
+    width: calc(100%);
+    height: calc(100% - 4rem);
+    margin-bottom: 4rem;
+    right: 0;
+    overflow: scroll;
+}
+
+.document-area {
+    position: absolute;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    color: #FFFFFF;
+    display: flex;   
+    flex-direction: column;
+}
+
+.document-header {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.document-text {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.75;
+}
+
+.split {
+    margin: 0.5rem 0;
+}
+
+.newline {
+    margin: 0.1rem 0;
+}
+
+.document-hr {
+    width: 100%;
+    height: 0.2rem;
+    background: #FFFFFF10;
+    margin: 1rem 0;
+    border-radius: 0.1rem;
+}
+
+.row-table {
+    display: flex;
+    flex-direction: row;
+}
+
+.badge {
+    margin-right: 0.25rem;
+    height: 1.7rem;
+}
+
+.lang {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #FFFFFFCF;
+    padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+}
+
+.l-1rem {
+    margin-left: 1rem;
+}
+
+.r-1rem { 
+    margin-right: 1rem;
+}
+
+.lang:hover {
+    background: #FFFFFF10;
+}
+
+.content-area::-webkit-scrollbar {
+    width: 16px;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+    background: #ffffff10;
+}
+
+.content-area::-webkit-scrollbar-track {
+    background: #1f1f24;
+    border-left: 1px solid #ffffff10;
+}
+
+table {
+    width: 100%;
+    border-radius: 6px;
+    padding: 3px;
+    margin: none;
+}
+
+th {
+    background: #1f1f24;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 0.5px solid #ffffffCF;
+}
+
+tr {
+    padding: none;
+    margin: none;
+}
+
+td {
+    padding: 6px 10px 3px 10px;
+    margin: none;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.table-10 {
+    width: 10%;
+}
+
+.table-20 {
+    width: 20%;
+}
+
+.table-30 {
+    width: 30%;
+}
+
+.table-40 {
+    width: 40%;
+}
+
+.table-50 {
+    width: 50%;
+}
+
+.table-60 {
+    width: 60%;
+}
+
+.table-70 {
+    width: 80%;
+}
+
+.table-80 {
+    width: 80%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
