@@ -11,6 +11,7 @@ function page_init() {
     time_label = document.querySelector(".time-label");
     mobile_time_register();
     event_register();
+    alert("현재 모바일 페이지는 개발 중이며, 일부 기능은 작동하지 않습니다.")
 }
 
 function event_register() {
