@@ -19,6 +19,7 @@
 
     <script src="./scripts/AudioEngine.js"></script>
     <script src="./scripts/profile_mobile.js"></script>
+    <script src="./scripts/TimeEngine.js"></script>
     <script src="./scripts/root.js"></script>
 </head>
 
@@ -29,17 +30,30 @@
 
         <!-- 비율 제한 컨테이너 -->
         <div class="mobile-container background-image">
-            <!-- 부트 화면 -->
-            <div class="boot-screen boot-screen-close-2500ms">
+            <div class="boot-screen boot-screen-close-1500ms">
                 <div class="boot-logo background-image"></div>
-                <div class="boot-progress-bar">
-                    <div class="boot-progress progress-in-2000ms"></div>
-                </div>
             </div>
 
             <!-- 콘텐츠 영역 -->
             <div class="mobile-content-container">
-                <div class="text-message">현재 모바일 페이지는 개발 중 입니다!</div>
+                <!-- 상단 라벨 -->
+                <div class="top-label">
+                    <div class="time-label"></div>
+                    <div class="top-icon background-image"></div>
+                </div>
+
+                <!-- 하단 독 -->
+                <div class="bottom-dock">
+                    <div onclick="//show_app('contact');" class="dock-item background-image contact-icon"></div>
+                    <div onclick="show_app('lang_stack');" class="dock-item background-image langstack-icon"></div>
+                    <div onclick="//show_app('tech_stack');" class="dock-item background-image techstack-icon"></div>
+                    <div onclick="//show_app('memo');" class="dock-item background-image memo-icon"></div>
+                </div>
+
+                <!-- 애플리케이션 영역 -->
+                <div class="app-area">
+                    <iframe></iframe>
+                </div>
             </div>
         </div>
         <div class="mobile-container-border background-image"></div>
