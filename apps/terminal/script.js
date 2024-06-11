@@ -74,7 +74,7 @@ facetime - FaceTime을 엽니다.
 contact  - 연락처 앱을 엽니다.
 setting  - 시스템 설정 앱을 엽니다.
 history  - 작성한 명령어를 모두 봅니다. (node 포함)
-clear    - 콘솔 내용을 모두 지웁니다
+clear    - 콘솔 내용을 모두 지웁니다.
 `);
                     break;
                 case "clear":
@@ -153,14 +153,14 @@ function node_mode(code = "{JOININ_SHELL}") {
         log_write(`Welcome to Portfolio.js`);
         log_write(`Type ".help" for more information.`);
         command_tip.innerHTML = ">";
-    } else if (code == ".help") {
+    } else if (code.includes(".help")) {
         log_write(`> ${code}`);
         log_write(`.exit    Exit the REPL`);
         log_write(`.help    Print this help message`);
         log_write(` `);
         log_write(`Exit the REPL by typing .exit`);
         log_write(` `);
-    } else if (code == ".exit") {
+    } else if (code.includes(".exit")) {
         __node__ = false;
         log_write(`> ${code}`);
         log_write(` `);
