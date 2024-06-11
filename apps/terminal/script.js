@@ -8,11 +8,16 @@ let ConsoleLog = console.log;
 let ConsoleWarn = console.warn;
 let ConsoleError = console.error;
 
+let history;
+let history_index;
+
 window.onload = () => {
     input = document.querySelector("input");
     command_tip = document.querySelector(".tip");
     console_log = document.querySelector(".console-log");
     console_scroll = document.querySelector(".console-scroll");
+    history = [];
+    history_index = 0;
     log_write(`Last Login: ${today.toLocaleString('en-US')} on portfolio shell`);
 }
 
@@ -42,6 +47,8 @@ window.addEventListener("keydown", (e) => {
     if (e.keyCode == 13 && input.value) {
         command = input.value;
         input.value = "";
+        history.push(command);
+        history_index = history.length - 1;
 
         if (!__node__) {
             command_tip.innerHTML = "Guest@PORTFOLIO-Web ~ %";
@@ -66,6 +73,7 @@ career   - 경력 사항 앱을 엽니다.
 facetime - FaceTime을 엽니다.
 contact  - 연락처 앱을 엽니다.
 setting  - 시스템 설정 앱을 엽니다.
+history  - 작성한 명령어를 모두 봅니다. (node 포함)
 clear    - 콘솔 내용을 모두 지웁니다
 `);
                     break;
@@ -110,6 +118,11 @@ clear    - 콘솔 내용을 모두 지웁니다
                 case "setting":
                     parent.open_app("setting", true);
                     break;
+                case "history":
+                    history.forEach((item, idx) => {
+                        log_write(` ${String(idx).padStart(String(history.length).length, " ")}  ${item}`);
+                    });
+                    break;
                 default:
                     log_write(`portfolio shell: command not found: ${command}`);
                     break;
@@ -120,7 +133,19 @@ clear    - 콘솔 내용을 모두 지웁니다
 
         console_scroll.scrollTop = console_scroll.scrollHeight;
         input.focus();
+    } else if (e.keyCode == 38) {   // history list - UP
+        if (history_index > 0) {
+            history_index--;
+            input.value = history[history_index];
+        }
+    } else if (e.keyCode == 40) {   // history list - DOWN
+        if (history_index < history.length - 1) {
+            history_index++;
+            input.value = history[history_index];
+        }
     }
+
+
 });
 
 function node_mode(code = "{JOININ_SHELL}") {
